@@ -42,8 +42,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Configuration Setup :wrench:
 
-* _Note_ Below is for changing the wordpress rest api endpoint implementation. 
-  Location: `wp-content/themes/yourTheme/functions.php`
+* _Note_ Below is for changing the wordpress rest api endpoint implementation. Location: `wp-content/themes/yourTheme/functions.php`
    
 ```ruby
 
@@ -55,11 +54,23 @@ These instructions will get you a copy of the project up and running on your loc
     
 ```
 
-* _Note_ Below is for apply the woocommerce rest api implementation. 
-  Location: `https://domainName.com/wp-admin/admin.php?page=wc-settings&tab=advanced&section=keys`
+* _Note_ Below is for apply the woocommerce rest api implementation. Location: `https://domainName.com/wp-admin/admin.php?page=wc-settings&tab=advanced&section=keys`
 
 ```ruby
     clicked on Add Key
+```
+
+* _Note_ Configuration for Dotenv. Location: `./.env`
+   
+```ruby
+
+    Change AppName: REACT_APP_NAME 'Your AppName'
+    Change AppUrl: REACT_APP_URL 'https://domainName.com/api'
+
+    * If you changing the wordpress rest api endpoint, If Not then.
+
+    Change AppUrl: REACT_APP_URL 'https://domainName.com/wp-json'
+    
 ```
 
 ## Author :bust_in_silhouette:
