@@ -3,7 +3,7 @@
 > This is a React WooCommerce theme, built with React JS, Webpack, Babel, Woocommerce Api
 
 ## Important Note ⭐:
-This code is using in live site. if you want to use it so please change the ui.
+This code is using in live site. if you want to use it so please change the UI/UX.
 
 ## Live Sites:
 
@@ -12,7 +12,7 @@ This code is using in live site. if you want to use it so please change the ui.
 
 ## Demo Desktop :video_camera:
 
-![](demos/home-demo.gif)
+![](./src/views/dist/img/woo-react.gif)
 
 # Features:
 
@@ -40,25 +40,29 @@ These instructions will get you a copy of the project up and running on your loc
 
 * You can also import default wooCommerce products that come with wooCommerce Plugin for development ( if you don't have any products in your WordPress install ) `WP Dashboard > Tools > Import > WooCommerce products(CSV)`: The WooCommerce default products csv file is available at `wp-content/plugins/woocommerce/sample-data/sample_products.csv`
 
-## Configuration(for Woocommerce Rest Api) :wrench:
+## Configuration Setup :wrench:
 
-* _Note_ Below is for GraphQL implementation , for REST API check [feature/rest-api](https://github.com/imranhsayed/woo-next/tree/feature/rest-api) branch
-
-1. (Required) Create a `.env` file taking reference from `.env-example` and  update your WordPressSite URL.
-2. (optional) You can update your productImagePlaceholder, singleImagePlaceholder in `client-config.js`
+* _Note_ Below is for changing the wordpress rest api endpoint implementation. Location: `wp-content/themes/yourTheme/functions.php`
    
    ```ruby
-   const clientConfig = {
-       productImagePlaceholder: 'https://via.placeholder.com/800', // e.g https://via.placeholder.com/434 - Placeholder image URL for index page
-       singleImagePlaceholder: 'https://via.placeholder.com/200', // e.g https://via.placeholder.com/200 - Placeholder image URL for individual product page
-   };
-   
-   export default clientConfig;
+
+        flush_rewrite_rules(true);
+        add_filter( 'rest_url_prefix', 'api_slug');
+        function api_slug( $slug ) {
+            return 'api';
+        }
+        
    ```
+
+* _Note_ Below is for apply the woocommerce rest api implementation. Location: `https://domainName.com/wp-admin/admin.php?page=wc-settings&tab=advanced&section=keys`
+
+    ```ruby
+        clicked on Add Key
+    ```
 
 ## Author :bust_in_silhouette:
 
-* **[Imran Sayed](https://github.com/shehzadali110/)**
+* **[Shehzad Ali](https://github.com/shehzadali110/)**
 
 ## License :page_with_curl:
 
