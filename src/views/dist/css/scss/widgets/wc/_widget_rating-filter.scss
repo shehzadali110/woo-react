@@ -1,0 +1,27 @@
+@mixin widget_rating_filter
+{
+	.wc-layered-nav-rating
+	{
+		@include widget_layered_nav_checkbox;
+		margin-bottom: rem-calc(8); 
+		
+		.star-rating
+		{
+			transition: all .5s;
+		}
+
+		a
+		{
+			font-size: 11px; 
+		}
+
+		&.chosen 
+		{
+			&:before
+			{
+				// content: "\e9ac";
+			}
+		}
+
+	}
+}

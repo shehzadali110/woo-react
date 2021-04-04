@@ -1,0 +1,1170 @@
+@mixin large_side_paddings($important: false)
+{
+	$multiplier: 3.5;
+
+	@include breakpoint(xlarge) {
+		padding-left: rem-calc($grid-column-gutter*$multiplier);
+		padding-right: rem-calc($grid-column-gutter*$multiplier);
+
+		@if ($important == true) {
+			padding-left: rem-calc($grid-column-gutter*$multiplier) !important;
+			padding-right: rem-calc($grid-column-gutter*$multiplier) !important;
+		}
+	}
+}
+
+@mixin form_items_sizes()
+{
+	height: rem-calc(48);
+	line-height: rem-calc(48);
+	padding: 0 $form-spacing;
+	font-size: rem-calc(13);
+}
+
+@mixin the_retailer_pro_icon($icon)
+{
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'the-hanger' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	content: $icon;
+}
+
+@mixin global_transition()
+{
+	transition: all .3s ease-in-out;
+}
+
+@mixin hover_inherit_color_with_opacity()
+{
+	&:hover
+	{
+		opacity: $opacity-medium;
+	}
+}
+
+@mixin header-style($h)
+{
+	font-size: rem-calc(map-get(map-get(map-get($header-styles, "small"), $h), "fs"));
+	line-height: map-get(map-get(map-get($header-styles, "small"), $h), "lh");
+	margin-top: rem-calc(map-get(map-get(map-get($header-styles, "small"), $h), "mt"));
+	margin-bottom: rem-calc(map-get(map-get(map-get($header-styles, "small"), $h), "mb"));
+
+	@include breakpoint(medium)
+	{
+		font-size: rem-calc(map-get(map-get(map-get($header-styles, "medium"), $h), "fs"));
+		line-height: map-get(map-get(map-get($header-styles, "medium"), $h), "lh");
+		margin-top: rem-calc(map-get(map-get(map-get($header-styles, "medium"), $h), "mt"));
+		margin-bottom: rem-calc(map-get(map-get(map-get($header-styles, "medium"), $h), "mb"));
+	}
+
+	@include breakpoint(large)
+	{
+		font-size: rem-calc(map-get(map-get(map-get($header-styles, "large"), $h), "fs"));
+		line-height: map-get(map-get(map-get($header-styles, "large"), $h), "lh");
+		margin-top: rem-calc(map-get(map-get(map-get($header-styles, "large"), $h), "mt"));
+		margin-bottom: rem-calc(map-get(map-get(map-get($header-styles, "large"), $h), "mb"));
+	}
+}
+
+@mixin site_notice($bg_color, $icon)
+{
+	background-color: $bg_color;
+	color: #FFF;
+	font-size: rem-calc(14);
+	line-height: rem-calc(18);
+	margin: 0;
+	list-style-type: none;
+	position: relative;
+	margin-bottom: rem-calc(40);
+
+	@each $breakpoint, $padding in $content-padding {
+
+		@include breakpoint(small only) {
+			margin-left: rem-calc(-$padding*0.56);
+			margin-right: rem-calc(-$padding*0.56);
+			padding: rem-calc($padding*0.56) rem-calc($padding) rem-calc($padding*0.65) rem-calc($padding*1.5);
+		}
+
+		@include breakpoint(medium only) {
+			margin-left: rem-calc(-$padding*0.67);
+			margin-right: rem-calc(-$padding*0.67);
+		}
+	}
+
+	@include breakpoint(medium)
+	{
+		display: flex;
+	}
+
+	&:before
+	{
+		@include the_retailer_pro_icon('#{$icon}');
+		font-size: 24px;
+		margin-right: 11px;
+		margin-left: rem-calc(-36);
+
+		@include breakpoint(medium)
+		{
+			margin-left: rem-calc(32);
+		}
+	}
+
+	p{
+		margin-bottom: 0;
+		width: 100%;
+		padding-right: rem-calc(40);
+
+		@include breakpoint(small only)
+		{
+			display: inline;
+		}
+
+		&.with-button
+		{
+			@include breakpoint(medium)
+			{
+				padding-right: rem-calc(140);
+			}
+		}
+	}
+}
+
+@mixin small_caps_title
+{
+	text-transform: uppercase;
+	font-size: rem-calc(13);
+	line-height: $global-lineheight;
+}
+
+@mixin tag_links
+{
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: rem-calc(-4);
+
+	a
+	{
+		color: inherit;
+		padding: rem-calc(8) rem-calc(12);
+		margin: 0 rem-calc(4) rem-calc(4) 0;
+		text-transform: capitalize;
+		font-size: 12px !important;
+		line-height: 1.33334;
+
+		&:hover
+		{
+			opacity: 1;
+		}
+	}
+}
+
+@mixin product_title($fsize, $mbottom)
+{
+	font-size: rem-calc(#{$fsize}px);
+	margin-bottom: rem-calc(#{$mbottom}px);
+}
+
+@mixin product_price($fsize, $mbottom)
+{
+	font-size: rem-calc(#{$fsize}px);
+	margin-bottom: rem-calc(#{$mbottom}px);
+	line-height: 1.4;
+
+	ins
+	{
+		text-decoration: none;
+	}
+}
+
+@mixin product_badge($padding-top: 8px, $padding-right: 9px, $padding-bottom: 6px, $padding-left: 9px)
+{
+	padding: $padding-top $padding-right $padding-bottom $padding-left;
+	display: block;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 1;
+	border-radius: 2px;
+}
+
+@mixin shop_product_badges( $left, $top )
+{
+	.product_badges_wrapper
+	{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		position: absolute;
+		top: $top;
+		left: $left;
+		z-index: 1;
+		margin-right: $left;
+
+		.rtl & {
+			margin-left: $left;
+			margin-right: 0;
+			right: $left;
+			left: auto;
+		}
+
+		.getbowtied_new_product
+		{
+			@include product_badge();
+			margin-right: 10px;
+		}
+
+		.onsale
+		{
+			@include product_badge();
+		}
+	}
+}
+
+@mixin out_of_stock_single_product()
+{
+	font-size: 12px;
+	line-height: 16px;
+
+	&:before
+	{
+		content: "";
+		width: 8px;
+		height: 8px;
+		margin-right: rem-calc(8);
+		display: inline-block;
+		border-radius: 50%;
+	}
+}
+
+@mixin tooltip($parent_element, $button, $icon )
+{
+	.#{$parent_element}
+	{
+		opacity: 1;
+		visibility: visible;
+		z-index: 1;
+
+		&:hover
+		{
+			.#{$button}
+			{
+				visibility: visible;
+				overflow: visible;
+			}
+		}
+
+		.#{$button}
+		{
+			background: none;
+			font-size: 0;
+			border-top-width: 0;
+			color: inherit;
+			padding: 0;
+			text-align: right;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			.tooltip
+			{
+				transition: all .3s ease;
+				font-size: 10px;
+				line-height: 1;
+				text-transform: uppercase;
+				border-radius: 2px;
+				position: absolute;
+				top: auto;
+				left: -15px;
+				transform: translate3d(-100%, 0, 0);
+				visibility: hidden;
+				pointer-events: none;
+				white-space: nowrap;
+				text-align: center;
+				padding: 8px 9px 6px 9px;
+
+				@include breakpoint(xlarge)
+				{
+					animation: shop_tooltip_hover_out .3s;
+				}
+
+				&:after
+				{
+				    position: absolute;
+			        top: 2px;
+			        right: -14px;
+			        content: '';
+			        width: 0;
+			        height: 0;
+			        border-style: solid;
+			        border-width: 10px;
+			        border-color: transparent transparent transparent;
+				}
+			}
+
+			&:hover
+			{
+				.tooltip
+				{
+					@include breakpoint(xlarge)
+					{
+						animation: shop_tooltip_hover_in .3s;
+						animation-fill-mode: forwards;
+						visibility: visible;
+					}
+				}
+			}
+
+			&:after
+			{
+				@include the_retailer_pro_icon('#{$icon}');
+				@include global-transition();
+				border-radius: 50%;
+				padding: 10px;
+				font-size: 18px;
+				border-width: 1px;
+				border-style: solid;
+			}
+		}
+	}
+}
+
+@mixin rtl_tooltip($parent_element, $button, $icon )
+{
+	.#{$parent_element}
+	{
+		opacity: 1;
+		visibility: visible;
+		z-index: 1;
+
+		&:hover
+		{
+			.#{$button}
+			{
+				visibility: visible;
+				overflow: visible;
+			}
+		}
+
+		.#{$button}
+		{
+			background: none;
+			font-size: 0;
+			border-top-width: 0;
+			color: inherit;
+			padding: 0;
+			text-align: right;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			.tooltip
+			{
+				transition: all .3s ease;
+				font-size: 10px;
+				line-height: 1;
+				text-transform: uppercase;
+				border-radius: 2px;
+				position: absolute;
+				top: auto;
+				right: -15px;
+				transform: translate3d(100%, 0, 0);
+				visibility: hidden;
+				pointer-events: none;
+				white-space: nowrap;
+				text-align: center;
+				padding: 8px 9px 6px 9px;
+
+				@include breakpoint(xlarge)
+				{
+					animation: shop_tooltip_rtl_hover_out .3s;
+				}
+
+				&:after
+				{
+				    position: absolute;
+			        top: 2px;
+			        left: -14px;
+			        content: '';
+			        width: 0;
+			        height: 0;
+			        border-style: solid;
+			        border-width: 10px;
+			        border-color: transparent transparent transparent;
+				}
+			}
+
+			&:hover
+			{
+				.tooltip
+				{
+					@include breakpoint(xlarge)
+					{
+						animation: shop_tooltip_rtl_hover_in .3s;
+						animation-fill-mode: forwards;
+						visibility: visible;
+					}
+				}
+			}
+
+			&:after
+			{
+				@include the_retailer_pro_icon('#{$icon}');
+				@include global-transition();
+				border-radius: 50%;
+				padding: 10px;
+				font-size: 18px;
+				border-width: 1px;
+				border-style: solid;
+			}
+		}
+	}
+}
+
+@mixin shop_products_per_row($nr)
+{
+	ul.products.columns-#{$nr}
+	{
+		&:not(.shop_display_list)
+		{
+			> .product
+			{
+				width: calc( 100% / #{$nr} );
+			}
+		}
+
+		&.shop_display_list
+		{
+			> .product-category
+			{
+				width: calc( 100% / #{$nr} );
+			}
+		}
+	}
+}
+
+@mixin shop_categories_per_row($nr)
+{
+	ul.categories-list.columns-#{$nr}
+	{
+		> .product-category
+		{
+			width: calc( 100% / #{$nr} );
+		}
+	}
+}
+
+@mixin woocommerce_columns($nr)
+{
+	&.woocommerce.columns-#{$nr}
+	{
+		ul.products
+		{
+			> .product
+			{
+				width: calc( 100% / #{$nr} );
+			}
+		}
+	}
+}
+
+@mixin half_input()
+{
+	&.form-row-first,
+	&.form-row-last
+	{
+		float: left;
+		width: calc(50% - 8px);
+
+		input
+		{
+			margin-bottom: 0;
+		}
+	}
+	&.form-row-first
+	{
+		margin-right: 8px;
+	}
+
+	&.form-row-last
+	{
+		margin-left: 8px;
+	}
+}
+
+
+@mixin loader($width: 14px, $height: 14px)
+{
+	@keyframes loader_spinner
+	{
+		100%
+		{
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes loader_fade
+	{
+		0%
+		{
+			opacity: 0;
+		}
+
+		100%
+		{
+			opacity: 1;
+		}
+	}
+
+	&:before
+	{
+		content: '';
+		display: inline-block;
+		box-sizing: border-box;
+		width: $width;
+		height: $height;
+		border-radius: 100%;
+		border: 1px solid transparent;
+		animation: loader_fade .5s ease-in, loader_spinner .5s linear infinite;
+	}
+}
+
+@mixin thankyou_list()
+{
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: rem-calc(72);
+
+	@include breakpoint(large)
+	{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@include breakpoint(xlarge)
+	{
+		width: 64%;
+	}
+
+	li
+	{
+		text-transform: uppercase;
+		font-size: rem-calc(10);
+		line-height: rem-calc(14);
+		padding-right: rem-calc(16);
+
+		strong
+		{
+			display: block;
+			font-size: rem-calc(16);
+			line-height: rem-calc(22);
+			text-transform: none;
+			margin-top: rem-calc(8);
+		}
+	}
+}
+
+
+@mixin bottom_line_transition()
+{
+	&:before
+	{
+		content: "";
+		width: 0;
+		height: 1px;
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		transition: width ease .15s;
+	}
+
+	&:hover
+	{
+		&:before
+		{
+			width: 100%;
+		}
+	}
+}
+
+@mixin product_categories()
+{
+	.product-category
+	{
+		position: relative;
+		padding: 0 rem-calc($grid-column-gutter/2) 0;
+		width: 50%;
+
+		@include breakpoint(medium)
+		{
+			width: calc(100% / 3);
+		}
+
+		@include breakpoint(large)
+		{
+			padding: 0 rem-calc($grid-column-gutter/2) 0;
+			display: flex;
+			flex-direction: column;
+			width: calc(100% / 4);
+		}
+
+		&:hover
+		{
+			> a
+			{
+				.getbowtied-subcategory-image
+				{
+					@include breakpoint(large)
+					{
+						transform: scale3d(0.98, 0.98, 0.98);
+					}
+				}
+			}
+		}
+
+		> a
+		{
+			display: block;
+			font-size: 0;
+
+			.getbowtied-subcategory-image
+			{
+				width:100%;
+				padding-bottom: 100%;
+				display: inline-block;
+				background-size: cover;
+				background-position: 50% 50%;
+				margin-bottom: rem-calc(16);
+				transition: transform .3s ease-in-out;
+	   			will-change: transform;
+			}
+		}
+
+		img
+		{
+			width: 100%;
+			margin-bottom: rem-calc(16);
+		}
+
+		.woocommerce-loop-category__title
+		{
+			display: inline-block;
+			font-size: rem-calc(13);
+			margin-bottom: rem-calc(16);
+			@include global_transition;
+
+			.count
+			{
+				background: 0;
+				color: inherit;
+				opacity: .5;
+				padding-top: 2px;
+			}
+		}
+	}
+
+}
+
+
+@mixin shopping_cart_mini
+{
+
+	.widget_shopping_cart_content
+	{
+		.minicart-header
+		{
+			display: none;
+		}
+	}
+
+	li
+	{
+		padding-right: rem-calc(10);
+
+		&.mini_cart_item
+		{
+			overflow: hidden;
+
+			a:not(.remove)
+			{
+				margin-right: rem-calc(20);
+				margin-bottom: rem-calc(3);
+			}
+
+			.variation
+			{
+				margin-top: 5px;
+
+				&:after
+				{
+					content: "";
+					display: block;
+					clear: both;
+				}
+
+				dd
+				{
+					margin: 0;
+
+					p
+					{
+						margin: 0;
+						text-align: right;
+
+						@include breakpoint(medium)
+						{
+							text-align: inherit;
+						}
+					}
+				}
+
+				dt
+				{
+					float: left;
+					padding-right: rem-calc(15);
+					margin: 0;
+				}
+			}
+
+		}
+
+		&.empty
+		{
+			// @include empty_widget_cart();
+		}
+
+		a.remove
+		{
+			font-weight: bold;
+			position: absolute;
+			display: block;
+			width: rem-calc(20);
+			height: rem-calc(20);
+			right:rem-calc(-30);
+			top: rem-calc(-7);
+			padding: rem-calc(5);
+			line-height: rem-calc(11);
+			text-align: center;
+			visibility: hidden;
+			opacity: 0;
+			transition: all ease-in-out .3s;
+		}
+
+		.quantity
+		{
+			display: block;
+			opacity: .5;
+
+			.amount
+			{
+				opacity: 1;
+			}
+		}
+
+		&:hover
+		{
+			a.remove
+			{
+				opacity: 1;
+				visibility: visible;
+				right: rem-calc(-7);
+			}
+		}
+
+	}
+
+	.total
+	{
+		display: block;
+		margin: rem-calc(16) 0 0;
+		padding: rem-calc(20) 0 rem-calc(24);
+		border-top: 1px solid $primary-color;
+		text-align: center;
+
+		.amount
+		{
+		}
+
+		.tax_label
+		{
+			font-size: inherit;
+			opacity: .5;
+		}
+	}
+
+	.buttons
+	{
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.button
+	{
+		display: block;
+		padding: rem-calc(15) rem-calc(16) rem-calc(13);
+		margin: 0;
+
+		&:not(.checkout)
+		{
+			background: 0;
+			color: inherit;
+			order: 1;
+		}
+	}
+
+	.wcppec-cart-widget-button
+	{
+		text-align: center;
+		margin-bottom: rem-calc(16);
+	}
+
+	.return-to-shop
+	{
+		a
+		{
+			background: none;
+			color: $primary-color;
+			font-size: 13px;
+
+			&:after
+			{
+				@include the_retailer_pro_icon('\e900');
+				padding-left: rem-calc(10);
+			}
+		}
+	}
+
+	.woocommerce-mini-cart__empty-message
+	{
+		// @include empty-widget-cart();
+	}
+
+}
+
+
+@mixin gbt-mega-dropdown-animation()
+{
+	@include breakpoint(large)
+	{
+		&.is-active
+		{
+			.gbt-mega-dropdown-content
+			{
+				.gbt-mega-dropdown-content-inside
+				{
+					animation: mega_drop_down_out .25s ease-in-out;
+					animation-fill-mode: forwards;
+					transform-origin: center top;
+				}
+			}
+
+			&:hover
+			{
+				.gbt-mega-dropdown-content
+				{
+					.gbt-mega-dropdown-content-inside
+					{
+						animation: mega_drop_down_in .3s ease-in-out;
+						animation-fill-mode: forwards;
+						transform-origin: center top;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@mixin foundation_dropdown_animation()
+{
+	@include breakpoint(large)
+	{
+		> .js-dropdown-active
+		{
+			animation: drop_down_out .25s ease-in-out;
+			animation-fill-mode: forwards;
+			transform-origin: center top;
+		}
+
+		&:hover
+		{
+			> .js-dropdown-active
+			{
+				animation: drop_down_in .3s ease-in-out;
+				animation-fill-mode: forwards;
+				transform-origin: center top;
+			}
+		}
+	}
+}
+
+
+@mixin foundation_dropdown-pane_animation($direction: "top")
+{
+	@include breakpoint(large)
+	{
+		.dropdown-pane
+		{
+			opacity: 0;
+			transition: all .3s ease-in-out;
+			transition-delay: .05s;
+			outline: 1px solid transparent;
+
+			transform: perspective(500px) rotateX(-5deg);
+			transform-origin: center top;
+
+			@if ($direction == "left") {
+				transform: perspective(500px) rotateY(2deg);
+        		transform-origin: left center;
+			}
+
+			&:hover,
+			&.is-open.animated
+			{
+				opacity: 1;
+        		transform: perspective(9999px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+		}
+	}
+}
+
+
+@mixin rotate_close_btn()
+{
+	&:after
+	{
+		transition: transform .3s;
+		display: inline-block;
+	}
+
+	&:hover
+	{
+		&:after
+		{
+			transform: rotate(90deg);
+		}
+	}
+}
+
+
+@mixin dropdowns_shadow()
+{
+	box-shadow: 0px 0px 35px -10px rgba(0,0,0,0.25);
+}
+
+@mixin drilldown_navigation()
+{
+	.is-drilldown
+	{
+		max-width: 100% !important;
+
+		ul
+		{
+			margin: 0;
+			padding: 0;
+
+			&.mega-dropdown-categories
+			{
+				li:first-child
+				{
+					&:before
+					{
+						display: none;
+					}
+				}
+			}
+
+			&.has-icons
+			{
+				li
+				{
+					a
+					{
+						margin-left: 3em;
+						line-height: 1;
+
+						i
+						{
+							font-size: 1.85em;
+							position: absolute;
+							@each $breakpoint, $padding in $content-padding
+							{
+								@include breakpoint($breakpoint) {
+									left: rem-calc($padding);
+								}
+							}
+						}
+
+						img
+						{
+							font-size: 1.85em;
+							width: 1em;
+							position: absolute;
+							@each $breakpoint, $padding in $content-padding
+							{
+								@include breakpoint($breakpoint) {
+									left: rem-calc($padding);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			li
+			{
+				margin: 0;
+				padding: 0;
+
+				&:before
+				{
+					content: "";
+					border-bottom: 1px solid;
+					display: block;
+
+					@each $breakpoint, $padding in $content-padding
+					{
+						@include breakpoint($breakpoint) {
+							margin: 0 rem-calc($padding);
+						}
+					}
+				}
+
+				&.js-drilldown-back
+				{
+					> a
+					{
+						text-transform: uppercase;
+						margin-left: 0 !important;
+
+						&:before
+						{
+							@include the_retailer_pro_icon('\e905');
+							font-size: .7em;
+							margin-right: .7em;
+						}
+
+						&:after
+						{
+							display: none;
+						}
+					}
+				}
+
+				&.menu-item-has-children
+				{
+					> a
+					{
+						display: flex;
+
+						&:after
+						{
+							@include the_retailer_pro_icon('\e906');
+							font-size: .7em;
+						    margin-left: auto;
+
+						    @include breakpoint(xlarge up) {
+						   		margin-right: 1em;
+						   	}
+						}
+					}
+				}
+
+				> a
+				{
+					font-size: 1em;
+					line-height: 1.4em;
+					min-height: 4.5em;
+					display: flex;
+					align-items: center;
+					background: inherit;
+
+					@each $breakpoint, $padding in $content-padding
+					{
+						@include breakpoint($breakpoint) {
+							padding-left: rem-calc($padding);
+							padding-right: rem-calc($padding);
+						}
+					}
+
+					span.count
+					{
+						padding: 0 rem-calc(10) 0 rem-calc(5);
+					    position: relative;
+					    font-size: rem-calc(11);
+
+					    @include breakpoint(medium down)
+					    {
+					    	margin-top: -2px;
+					    }
+					}
+				}
+
+				a
+				{
+					background: inherit;
+				}
+
+				.is-drilldown-submenu
+				{
+					&.is-active
+					{
+						li:not(.js-drilldown-back)
+						{
+							> a
+							{
+								margin-left: 1.2em;
+
+								img
+								{
+									display: none;
+								}
+
+								i
+								{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+@mixin in_lucru($mood: "light")
+{
+	@if ($mood == "light") {
+		background: repeating-linear-gradient(
+			-55deg,
+			#fff,
+			#fff 10px,
+			#f5f5f5 10px,
+			#f5f5f5 20px
+		);
+	} @else if ($mood == "dark") {
+		background: repeating-linear-gradient(
+			-55deg,
+			#222,
+			#222 10px,
+			#333 10px,
+			#333 20px
+		) !important;
+	}
+}

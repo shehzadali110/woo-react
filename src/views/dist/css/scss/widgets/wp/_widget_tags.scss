@@ -1,0 +1,15 @@
+@mixin widget_tags()
+{
+	.tagcloud
+	{
+		@include tag_links;
+		
+		.tag-cloud-link 
+		{
+			.tag-link-count
+			{
+				font-size: 11px; 
+			}	
+		}
+	}
+}

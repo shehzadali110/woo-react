@@ -1,0 +1,4 @@
+ul.products 
+{
+	@include product_categories();
+}

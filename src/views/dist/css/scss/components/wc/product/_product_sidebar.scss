@@ -1,0 +1,22 @@
+.single-product-sidebar-right
+{
+	.woocommerce-single-sidebar-sticky
+	{
+		@include breakpoint(large)
+		{
+			padding-left: rem-calc($grid-column-gutter/2);
+		} 
+	}
+
+}
+
+.single-product-sidebar-left
+{
+	.woocommerce-single-sidebar-sticky
+	{
+		@include breakpoint(large)
+		{
+			padding-right: rem-calc($grid-column-gutter/2);
+		} 
+	}
+}

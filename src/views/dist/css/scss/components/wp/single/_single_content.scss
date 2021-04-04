@@ -1,0 +1,39 @@
+.entry-content
+{
+	@include breakpoint(large)
+	{
+		max-width: 792px;
+		margin: 0 auto;
+	}
+
+	.blog-sidebar-active & 
+	{
+		padding: 0 rem-calc(48); 
+	}
+
+	.page-links
+	{
+		display: flex;
+		justify-content: center;
+		font-size: rem-calc(13); 
+		clear: both;
+		
+		> .pages
+		{
+			display: none;
+		}
+
+		span
+		{
+			margin-right: rem-calc(32); 
+		}
+
+	}
+
+	.entry-tags
+	{
+		clear: both;
+		padding-top: 1px;
+	}
+
+}

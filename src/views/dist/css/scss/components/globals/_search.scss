@@ -1,0 +1,93 @@
+@mixin submit_button_position
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: rem-calc(50);
+}
+
+.search-form,
+.woocommerce-product-search
+{
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid;
+
+	.screen-reader-text
+	{
+		display: none;
+	}
+
+	label
+	{
+		padding: 0;
+		width: 100%;
+	}
+
+	@include bottom_line_transition();
+
+	&:after
+	{
+		@include submit_button_position;
+		@include the_retailer_pro_icon('\e90a');
+		font-size: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: $input-transition;
+		pointer-events: none;
+	}
+
+	.search-field
+	{
+		margin: 0;
+		padding-right: rem-calc(48);
+		width: 100%;
+		border: 0;
+		box-shadow: none;
+		font-size: 13px; 
+		
+		&::placeholder
+		{
+			@include global-transition();
+			opacity: $opacity-medium;
+		}
+		
+		&:hover,
+		&:focus
+		{
+			border-top: none;
+			border-left: none;
+			border-right: none;  
+			background: none; 
+			box-shadow: none; 
+		}
+
+		&:focus
+		{
+			&::placeholder
+			{
+				opacity: 1; 
+			}
+		}
+
+	}
+
+	[type=submit]
+	{
+		@include submit_button_position;
+
+		padding: 0;
+		font-size: 0;
+		color: transparent;
+		opacity: 0;
+		
+		&:hover,
+		&:focus
+		{
+			opacity: 0;
+		}
+	}
+
+}

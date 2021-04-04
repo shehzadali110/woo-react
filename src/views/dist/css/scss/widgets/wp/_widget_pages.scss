@@ -1,0 +1,10 @@
+@mixin widget_pages()
+{
+	ul
+	{
+		.page_item
+		{
+			margin: 0 0 8px; 
+		}
+	}
+}

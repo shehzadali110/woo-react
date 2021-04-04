@@ -1,0 +1,94 @@
+&.woocommerce-edit-address
+{
+	.woocommerce 
+	{
+		.woocommerce-MyAccount-content 
+		{
+			> p
+			{
+				margin-bottom: rem-calc(32); 
+			}
+		}
+	}
+
+	.addresses
+	{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		
+		@include breakpoint(large)
+		{
+			flex-direction: row;
+		}
+
+		.woocommerce-Address
+		{
+			width: 100%; 
+			margin-bottom: rem-calc(30); 
+			
+			@include breakpoint(large)
+			{
+				width: 50%; 
+			}
+			
+			.woocommerce-Address-title
+			{
+				> h3
+				{
+					font-size: rem-calc(19); 
+					margin-bottom: rem-calc(34); 
+				}
+
+				.edit
+				{
+					color: inherit;
+					font-size: rem-calc(10);
+					line-height: rem-calc(13); 
+					text-transform: uppercase;   
+					display: flex;
+					align-items: center;
+					margin-bottom: rem-calc(17); 
+					font-weight: bold;
+					
+					&:before
+					{
+						@include the_retailer_pro_icon('\e9bc');
+						font-size: rem-calc(16);
+						padding-right: rem-calc(8);  
+					}
+				}
+			}
+
+			address
+			{
+				font-style: normal; 
+				font-size: rem-calc(13); 
+			}
+		}
+	}
+
+	// Edit Addresses
+	
+	form
+	{
+		> h3
+		{
+			display: none;
+		}
+	}
+
+	.woocommerce-address-fields__field-wrapper
+	{
+		.form-row
+		{
+			@include half_input();
+			
+			&#billing_email_field,
+			&#shipping_postcode_field
+			{
+				margin-bottom: rem-calc(24); 
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.site-sidebar--blog
+{
+	.blog-sidebar-right &
+	{
+		padding-left: rem-calc(24); 
+	}
+
+	.blog-sidebar-left &
+	{
+		padding-right: rem-calc(24); 
+	}
+}

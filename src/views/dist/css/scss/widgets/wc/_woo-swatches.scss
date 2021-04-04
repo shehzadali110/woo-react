@@ -1,0 +1,259 @@
+// shop page
+ul.products {
+    li.product {
+        .slick-slider {
+            .slick-arrow {
+                cursor: pointer;
+                margin-top: 10px !important;
+            }
+            .slick-list {
+                margin-right: 10px;
+            }
+            .slick-slide {
+                width: fit-content !important;
+                a {
+                    overflow: visible;
+                    position: relative;
+                    display: block!important;
+                    margin-top: 0;
+                }
+            }
+        }
+        div.wcvashopswatchlabel {
+            background-size: cover !important;
+            outline: transparent;
+            margin-bottom: 2px;
+            margin-top: 2px;
+            transition: all .3s ease;
+        }
+        .shopswatchinput {
+            margin-right: 5px;
+            margin-top: 3px;
+        }
+        .wcvashopswatchlabel.wcva_shop_textblock {
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .wcvashopswatchlabel.wcva_shop_textblock.wcvaround {
+            font-weight: bold;
+            padding: 9px 7px;
+            margin-right: 0;
+
+            &:not(:hover) {
+                border: 1px solid transparent;
+            }
+        }
+    }
+
+    &.shop_display_list {
+        .shopswatchinput  {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+}
+
+// quickview
+.getbowtied_qv_content {
+    .variations {
+        .label {
+            .swatchtitlelabel {
+                display: inline-block;
+                padding: 0.25rem 0 0.5rem;
+                font-size: 0.8125rem;
+                font-weight: normal;
+                line-height: 1.125rem;
+                text-transform: capitalize;
+            }
+            .wcva_attribute_sep,
+            .wcva_selected_attribute {
+                display: none;
+            }
+        }
+        .attribute-swatch {
+            display: none !important;
+        }
+    }
+}
+
+// single product
+body.single-product {
+    .variations {
+        .wcva-single-select + .select2 {
+            display: none;
+        }
+        .label * {
+            display: inline-block;
+            padding: 0.25rem 0 0.5rem;
+            font-size: 0.8125rem;
+            font-weight: normal;
+            line-height: 1.125rem;
+            text-transform: capitalize;
+        }
+        .value {
+            padding-left: 3px !important;
+        }
+        label.wcva_single_textblock {
+            padding: 0px 6px;
+        }
+        label.selectedswatch {
+            :not(.wcvaround) {
+                border: solid 0px white !important;
+                outline: solid 1px #000000 !important;
+            }
+            &.wcvaround {
+                box-shadow: 0px 0px 0px 2px white inset;
+                border: solid 1px black !important;
+            }
+            &.wcvasquare {
+                border: solid 1px white !important;
+                outline: solid 1px black !important;
+            }
+        }
+        .swatchinput label.wcvaswatchlabel {
+            transition: all .3s ease;
+
+            &:not(.selectedswatch):not(:hover) {
+                border: 1px solid transparent !important;
+                outline: transparent !important;
+            }
+            &:not(.wcvaround) {
+                &:hover {
+                    border: 1px solid #fff!important;
+                    outline: solid 1px #000 !important;
+                }
+            }
+            &.wcvaround {
+                &:hover {
+                    border: solid 1px #000 !important;
+                    box-shadow: 0px 0px 0px 2px white inset;
+                }
+            }
+        }
+        span.belowtext {
+            display: block;
+            line-height: 1;
+            margin-top: 10px;
+        }
+
+        .reset_variations {
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 0.625rem;
+            line-height: 0.8125rem;
+            color: inherit;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                font-family: 'the-hanger'!important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "";
+                position: relative;
+                top: -2px;
+                font-size: 0.5rem;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+// widgets
+.wcva-filter-widget {
+    .widget {
+        overflow: hidden;
+        margin-top: 0 !important;
+        padding-bottom: 3.125rem;
+        .wcva_filter-widget-title
+    	{
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+    	}
+
+        .wcvashopswatchlabel {
+            outline: transparent;
+            &:not(.selectedswatch):not(:hover) {
+                border: 1px solid transparent;
+            }
+        }
+    }
+}
+
+body.woocommerce-shop.shop-sidebar-left .site-sidebar div.wcva-filter-widget:first-child {
+    margin-top: 21px;
+}
+
+.widget-area .wcva-filter-widget {
+    position: relative;
+    .widget {
+        display: block;
+        margin: 0;
+        padding-left: 3px;
+        .wcvashopswatchlabel {
+            background-size: cover !important;
+            outline: transparent;
+            transition: all .3s ease;
+            &:not(.selectedswatch):not(:hover) {
+                border: 2px solid transparent !important;
+                outline: solid 1px transparent !important;
+                &.wcvaround {
+                    border: 1px solid transparent !important;
+                }
+            }
+        }
+        .wcvashopswatchlabel.wcva_filter_textblock {
+            padding: 7px 4px;
+
+            &.wcvaround {
+                padding: 7px 6px;
+            }
+        }
+    }
+}
+
+// globals
+.wcva_filter_widget div.wcvashopswatchlabel.wcva_filter_textblock,
+label.wcva_single_textblock,
+label.wcva_single_textblock.selectedswatch {
+    font-size: 12px;
+    font-weight: 700 !important;
+    margin-right: 5px;
+    transition: all .3s ease;
+    &:hover {
+        transition: all .3s ease;
+    }
+}
+
+.wcvasquare {
+    border-radius: 0 !important;
+}
+
+.wcva_show_more_link {
+    font-size: 12px;
+}
+
+div.swatchinput {
+    line-height: 0;
+    text-align: center;
+    vertical-align: top;
+}
+
+label.wcvaround {
+    border-radius: 50% !important;
+}
+
+#powerTip
+{
+    font-size: 12px;
+    opacity: 1;
+}

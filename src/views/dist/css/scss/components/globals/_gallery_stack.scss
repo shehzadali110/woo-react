@@ -1,0 +1,167 @@
+dl.gbt-stack-gallery
+{
+	margin-top: 1.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	user-select: none;
+
+	> dt
+	{
+		position: relative;
+		font-weight: normal;
+		padding: 0;
+		margin: 0;
+		transform-style: preserve-3d;
+
+		&:hover
+		{
+			.gbt-stack-item-middle {
+				transform: translate3d(0, 0, -20px);
+				opacity: .8;
+			}
+
+			.gbt-stack-item-back {
+				transform: translate3d(0, 0, -40px);
+				opacity: .4;
+			}
+
+			dl.gbt-stack-nav {
+				a 
+				{
+					&.next {
+						&:not(.hidden) {
+							opacity: 1;
+							right: -1.1em;
+						}
+					}
+					&.prev {
+						&:not(.hidden) {
+							opacity: 1;
+							left: -1.1em;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	dl.gbt-stack-items
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		perspective: 300px;
+		perspective-origin: 50% -30%;
+
+		dt
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0;
+			margin: 0;
+			background: #fff;
+			font-weight: normal;
+			transform: translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			transition: all 0.3s ease-in-out;
+
+			&.gbt-stack-item-front
+			{
+				position: relative;
+				z-index: 3;
+			}
+
+			&.gbt-stack-item-middle
+			{
+				z-index: 2;
+			}
+
+			&.gbt-stack-item-back
+			{
+				z-index: 1;
+			}
+
+			&.gbt-stack-item-out
+			{
+				z-index: 0;
+				opacity: 0;
+				transform: translate3d(0, 0, -100px);
+			}
+
+			&.item-moved
+			{
+				transform: translate3d(0, 0, 20px);
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				z-index: 4 !important;
+			}
+
+			.gbt_featured_title
+			{
+				display: block;
+				padding: 1.25em 0 0 0;
+			}
+
+			.amount
+			{
+				display: block;
+				padding: .25em 0 1em 0;	
+			}
+		}
+	}
+
+	dl.gbt-stack-nav
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		dt
+		{
+			padding: 0;
+			margin: 0;
+			font-weight: normal;
+
+			a
+			{
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-top: -2em;
+				display: flex;
+				text-align: center;
+				z-index: 5;
+				border-radius: 50%;
+				border-width: 1px;
+				border-style: solid;
+				padding: rem-calc(10);
+				font-size: rem-calc(18);
+
+				&.hidden
+				{
+					pointer-events: none;
+					opacity: 0;
+				}
+
+				&.prev
+				{
+					left: -2.2em;
+					opacity: 0;
+				}
+
+				&.next
+				{
+					right: -2.2em;
+					opacity: 0;
+				}
+
+				&:hover {
+					transform: translateY(-50%) scale3d(1.1, 1.1, 1.1);
+				}
+			}
+		}
+	}
+}

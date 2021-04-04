@@ -1,0 +1,113 @@
+.cart
+{
+	margin-bottom: 0;
+
+	@include breakpoint(medium)
+	{
+		margin-bottom: rem-calc(24);
+	}
+
+	.add_to_cart_wrapper
+	{
+		display: flex;
+		margin-bottom: rem-calc(24);
+		width: 100%;
+
+		&.stripe-button
+		{
+			flex-direction: column;
+
+			.quantity
+			{
+				order: 3;
+			}
+
+			.single_add_to_cart_button
+			{
+				order: 4;
+			}
+
+			#wc-stripe-payment-request-button-separator + .single_add_to_cart_button
+			{
+			    width: 75%;
+			    margin-top: -37px;
+			    margin-left: 4.5rem;
+			    margin-bottom: 2.5rem;
+			}
+
+			#wc-stripe-payment-request-wrapper
+			{
+			    clear: both;
+			    width: 100%;
+			    padding-top: 0;
+			    order: 1;
+			}
+
+			#wc-stripe-payment-request-button-separator
+			{
+			    margin: 1rem 0;
+			    text-align: center;
+			    clear: both;
+			    width: 100%;
+			    order: 2;
+			}
+		}
+
+		.bundle_wrap
+		{
+			width: 100%;
+		}
+
+		.bundle_button
+		{
+			display: flex;
+			width: 100%;
+		}
+	
+		.quantity.hidden
+		{
+			margin-left: 0;
+			height: 56px;
+			padding: 0;
+			
+			& ~ button
+			{
+				padding: 0; 
+				height: rem-calc(56); 
+			}
+		}
+	}
+
+	.quantity
+	{
+		text-align: center;
+
+		input
+		{
+			border: none;
+			border-right: 1px solid;
+			border-color: rgba(255, 255, 255, .25);
+		}
+	}
+
+	.button
+	{
+		padding: 0 rem-calc(56) 0 0;
+
+		@include breakpoint(large)
+		{
+			padding: 0 rem-calc(72) 0 0;
+		}
+
+		&:before
+		{
+			@include the_retailer_pro_icon('\e9be');
+			font-size: rem-calc(16); 
+			margin-right: rem-calc(16); 
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			top: -2px; 
+		}
+	}
+}

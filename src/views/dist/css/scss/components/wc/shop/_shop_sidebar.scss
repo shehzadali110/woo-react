@@ -1,0 +1,57 @@
+&.shop-sidebar-left
+{
+	.site-sidebar
+	{
+		@include breakpoint(large)
+		{
+			padding-right: rem-calc($grid-column-gutter/2);
+		}
+
+		aside:first-child:not(.widget_product_categories_with_icon) {				
+			margin-top: 21px;
+		}
+	}
+
+	.site-main-content-wrapper
+	{
+		order: 1; 
+	}
+}
+
+&.shop-sidebar-right
+{
+	.site-sidebar
+	{
+		@include breakpoint(large)
+		{
+			padding-left: rem-calc($grid-column-gutter/2);
+		}
+
+		aside:first-child:not(.widget_product_categories_with_icon) {				
+			margin-top: 21px;
+		}
+	}
+}
+
+.woocommerce-sidebar-active
+{
+	//position: relative;
+	 
+	.woocommerce-sidebar 
+	{
+		.site-sidebar--shop
+		{
+			display: none;
+			
+			@include breakpoint(large)
+			{
+				display: block;
+			}
+		}
+	}
+}
+
+.site-main-content
+{
+	text-align: center;
+}

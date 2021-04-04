@@ -1,0 +1,58 @@
+@mixin widget_layered_nav
+{
+	@include widget_links_list;
+	
+	.woocommerce-widget-layered-nav-list 
+	{
+		&.add_scroll
+        {
+            max-height: 130px;
+            overflow-y: scroll;
+            margin-bottom: rem-calc(24);
+            transform: translateZ(0);
+            
+			&::-webkit-scrollbar
+			{
+				width: 2px;
+			}
+        }
+
+		.wc-layered-nav-term
+		{
+			@include widget_layered_nav_checkbox;
+			
+			> a
+			{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: rem-calc(5);
+			}
+
+			> .count
+			{
+				font-size: 11px; 
+				line-height: 1.5
+			}
+		}
+	}
+
+	.woocommerce-widget-layered-nav-dropdown
+	{
+		ul
+		{
+		    li
+		    {
+				height: 35px;
+		    	line-height: 2.5;
+		    	margin-top: 5px;
+		    	margin-right: 5px;
+		    	margin-bottom: 0;
+		    }
+
+		    .select2-selection__clear
+		    {
+		    	margin-top: 0;
+		    }
+		}
+	}
+}

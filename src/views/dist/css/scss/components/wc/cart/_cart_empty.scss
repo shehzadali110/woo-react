@@ -1,0 +1,32 @@
+.woocommerce
+{
+	.cart-empty
+	{
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto rem-calc(104);
+		text-align: center;
+		font-size: rem-calc(23);
+		line-height: 1.4; 
+		
+		&:before
+		{
+			@include the_retailer_pro_icon('\e9c6');
+			font-size: rem-calc(104);
+			margin-bottom: rem-calc(40); 
+		}
+
+	}
+
+	.after-cart-empty-title
+	{
+		display: inline-block;
+		margin-bottom: rem-calc(32); 
+	}
+
+	.return-to-shop
+	{
+		display: flex;
+		justify-content: center; 
+	}
+}

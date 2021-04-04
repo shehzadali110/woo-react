@@ -1,0 +1,10 @@
+@import "notices/notice";
+@import "notices/success";
+@import "notices/error";
+
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info
+{
+	animation: fadeIn 1s;
+}

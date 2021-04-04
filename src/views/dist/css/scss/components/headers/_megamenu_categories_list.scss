@@ -1,0 +1,134 @@
+.megamenu_category_wrapper
+{
+	@each $breakpoint, $padding in $content-padding
+	{
+		@include breakpoint($breakpoint) {
+			padding: rem-calc($padding) rem-calc($padding) 0 rem-calc($padding);
+		}
+	}
+
+	.megamenu_category_list
+	{
+		a
+		{
+			display: inline-block;
+		}
+
+		.megamenu_category 
+		{
+			margin-bottom: rem-calc(40);
+			opacity: 0;
+			animation: megamenu_categories;
+			animation-duration: .4s;
+			animation-fill-mode: forwards;
+
+			@for $i from 1 through 30 {
+				&:nth-child(#{$i}) {
+					animation-delay: (0.1s * $i);
+				}
+			}
+						
+			> a
+			{ 
+				margin-bottom: rem-calc(16); 
+				width: 100%;
+				
+				&:hover
+				{
+					.megamenu_thumbnail
+					{
+						transform: scale(0.975);
+					}
+				}
+				
+				.megamenu_thumbnail
+				{
+					margin-bottom: rem-calc(16);
+					height: 140px;
+					width: 100%; 
+					background-size: cover;
+					background-position: center center;
+					background-repeat: no-repeat;
+					display: inline-block; 
+					transition: transform 0.3s ease-in-out;
+		   			will-change: transform;
+				}
+
+				> .count {
+					font-size: rem-calc(11);
+				}
+			}
+
+			.megamenu_subcategory_list
+			{
+				> div > a
+				{
+					margin-bottom: rem-calc(8);
+					line-height: 1.4;
+					
+					> .count {
+						font-size: rem-calc(11);
+					}
+				}
+
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		.gbt-stack-gallery-wrapper
+		{
+			display: none;
+		}
+	}
+}
+
+.megamenu_bottom_links
+{
+	position: relative;
+	border-top: 1px solid;
+
+	@each $breakpoint, $padding in $content-padding
+	{
+		@include breakpoint($breakpoint) {
+			padding: 0 rem-calc($padding);
+			margin: 0;
+		}
+	}
+	 
+	> a
+	{ 
+		margin-right: rem-calc(32);
+		padding: rem-calc(24) 0;
+		display: inline-block;
+	}
+
+	.gbt-mega-dropdown-wrapper & {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		background-color: inherit;
+		
+		~ .megamenu_cta {
+			top: calc(100% + 66.2px);
+		}
+	}
+}
+
+.megamenu_cta
+{
+	text-align: center;
+	padding: rem-calc(20);
+	
+	p
+	{
+		line-height: rem-calc(20); 
+		margin-bottom: 0;
+	}
+
+	.gbt-mega-dropdown-wrapper & {
+		position: absolute;
+		top: 100%;
+		width: 100%;		
+	}
+}

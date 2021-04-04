@@ -1,0 +1,226 @@
+.customizer-repeater-general-control-repeater-container .customizer-repeater-box-content-hidden {
+	display: none;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.customizer-repeater-general-control-repeater-container {
+	margin-bottom: 20px;
+}
+
+.customizer-repeater-customize-control-title {
+	background: #fff;
+	margin: 0;
+	padding: 15px 10px 15px 15px;
+    font-size: 13px;
+	line-height: 1;
+	user-select: none;
+	display: block;
+	font-weight: 600;
+	color: #23282d;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	transition: opacity .5s;
+	cursor: move;
+
+	&:hover {
+		border: 1px solid #999;
+		box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	}
+
+	&:after {
+		bottom: 4px;
+		position: relative;
+		float: right;
+		content: "\f140";
+		color: #72777c;
+		font: normal 20px/1 dashicons;
+		speak: none;
+		display: block;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: none!important;
+		padding: 1px 2px 1px 0;
+		border-radius: 50%;
+	}
+
+	&.repeater-expanded:after {
+		content: "\f142";
+	}
+}
+
+.customizer-repeater-box-content-hidden {
+	background-color: #fff;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	border-top: none;
+	line-height: 1.23076923;
+	padding: 1em 10px;
+
+	> div {
+		margin: 1em 0;
+	}
+
+	.customize-control-notifications-container {
+		margin: 0 !important;
+	}
+
+	.customizer-repeater-icon-control {
+		margin-top: 0;
+	}
+
+	.customizer-repeater-image-control {
+		.customize-control-title {
+			margin-bottom: 0.5em;
+		}
+		.custom-media-url-preview {
+			display: block;
+			max-width: 60px !important;
+		}
+
+		.customizer-repeater-custom-media-button {
+			margin-top: 0.75em;
+		}
+	}
+
+	.customizer-repeater-icons {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-gap: 10px;
+
+		.tooltip {
+			visibility: hidden;
+			width: 75px;
+    		word-break: break-word;
+			background-color: #555;
+			color: #fff;
+			text-align: center;
+			font-size: 13px;
+			border-radius: 6px;
+			padding: 5px;
+			position: absolute;
+			z-index: 1;
+			bottom: 120%;
+			left: 50%;
+			margin-left: -42px;
+			opacity: 0;
+			transition: opacity 0.3s;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #555 transparent transparent transparent;
+			}
+		}
+
+		div {
+			position: relative;
+		}
+
+		input[type="radio"] {
+			appearance: none;
+			background-size: 24px;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 0;
+			margin: 0;
+			width: 100%;
+			height: 40px;
+
+			&:nth-child() {
+				margin-right: 0;
+			}
+
+			&:hover + .tooltip {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			&:focus {
+				box-shadow: none;
+			}
+
+			&:checked::before {
+				content: '';
+				appearance: none;
+				border-radius: 0;
+				border: 3px solid #007cba;
+				box-shadow: 0 0 0 1px #007cba;
+				outline: 2px solid transparent;
+				width: calc( 100% - 2px );
+				height: calc( 40px - 4px );
+				padding: 0;
+				display: block;
+				top: -2px;
+				left: -2px;
+				position: relative;
+				margin: 0;
+				background-color: transparent;
+			}
+		}
+	}
+
+	.customize-control-title {
+		font-size: 13px;
+		line-height: 1.6;
+		font-weight: normal;
+		margin: 1em 0 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.social-repeater-general-control-done-field,
+.social-repeater-general-control-remove-field {
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+	margin-top: 1em;
+	text-decoration: underline;
+	transition: all .05s ease-in-out;
+}
+
+.social-repeater-general-control-remove-field {
+	color: #a00;
+
+	&:hover {
+		color: #dc3232;
+	}
+}
+
+.social-repeater-general-control-done-field {
+	color: #0073aa;
+
+	&:hover {
+		color: #00a0d2;
+	}
+}
+
+button.customizer-repeater-new-field {
+	float: right;
+
+	&:before {
+		content: "\f132";
+		display: inline-block;
+		position: relative;
+		left: -2px;
+		top: 0;
+		font: 400 20px/1 dashicons;
+		vertical-align: middle;
+		transition: all .2s;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

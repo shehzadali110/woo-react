@@ -1,0 +1,501 @@
+// =============================================================================
+// Shop Display Gird
+// =============================================================================
+
+body.woocommerce-shop .site-main-content-wrapper .widget_layered_nav_filters
+{
+	margin: 0 0 rem-calc(20) 0;
+
+	@include breakpoint(large)
+	{
+		margin: 0 0 rem-calc(20) 0;
+	}
+}
+
+ul.products
+{
+	list-style: none;
+	margin: 0 rem-calc(-$grid-column-gutter/2) rem-calc(40);
+	display: flex;
+	flex-wrap: wrap;
+
+	@include breakpoint(large)
+	{
+		margin: 0 rem-calc(-$grid-column-gutter/2) rem-calc(24);
+	}
+
+	.flex-break {
+		width: 100%;
+	}
+
+	&:not(.shop_display_list)
+	{
+		.product
+		{
+			position: relative;
+			padding: 0 rem-calc($grid-column-gutter/2) 0;
+			width: 50%;
+
+			@include breakpoint(medium)
+			{
+				width: calc(100% / 3);
+			}
+
+			@include breakpoint(xlarge)
+			{
+				padding: 0 rem-calc($grid-column-gutter/2) rem-calc(32);
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				width: calc(100% / 4);
+			}
+
+			.yith-wcwl-add-to-wishlist
+			{
+				display: none;
+			}
+
+			&.product-type-variable,
+			&.outofstock
+			{
+				.buttons
+				{
+					.button
+					{
+						&:after
+						{
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+			.rtl &
+			{
+				@include rtl_tooltip(buttons, getbowtied_product_wishlist_button,'\e90b');
+				@include rtl_tooltip(buttons, button, '\e900');
+				@include rtl_tooltip(buttons, product_type_variable, '\e908' );
+
+				&.outofstock
+				{
+					@include rtl_tooltip(buttons, button, '\e908');
+				}
+
+				@include breakpoint(xlarge)
+				{
+					@include rtl_tooltip(buttons, getbowtied_product_quick_view_button, '\e9c4');
+				}
+			}
+
+			body:not(.rtl) &
+			{
+				// Include Tooltips
+				@include tooltip(buttons, getbowtied_product_wishlist_button,'\e90b');
+				@include tooltip(buttons, button, '\e900');
+				@include tooltip(buttons, product_type_variable, '\e908' );
+
+				&.outofstock
+				{
+					@include tooltip(buttons, button, '\e908');
+				}
+
+				@include breakpoint(xlarge)
+				{
+					@include tooltip(buttons, getbowtied_product_quick_view_button, '\e9c4');
+				}
+			}
+
+			// Include Badges
+			@include shop_product_badges(10px, 10px);
+
+			@include breakpoint(xlarge)
+			{
+				@include shop_product_badges(27px, 25px);
+			}
+
+			.main-container
+			{
+				transition: opacity 1s ease, transform 1.5s ease;
+				position: relative;
+
+				body.shop-products-per-row-6 .woocommerce-sidebar-active &
+				{
+					overflow: visible;
+				}
+
+				&:hover
+				{
+					.product_image.with_second_image.second_image_loaded
+					{
+						a img
+						{
+							opacity: 0;
+							transition: opacity 300ms ease-in-out 0.05s, transform .3s ease-in-out;
+							transform: scale3d(0.98, 0.98, 0.98);
+						}
+
+						.product_second_image
+						{
+							opacity: 1;
+							transition: opacity 300ms ease-in-out 0.05s, transform .3s ease-in-out;
+							transform: scale3d(0.98, 0.98, 0.98);
+
+						}
+					}
+				}
+
+				.product_image.with_second_image.second_image_loaded
+				{
+					a img
+					{
+						opacity: 1;
+						transition: opacity 300ms ease-in-out 0.05s, transform .3s ease-in-out;
+					}
+
+					.product_second_image
+					{
+						opacity: 0;
+						transition: opacity 300ms ease-in-out 0.05s, transform .3s ease-in-out;
+			   			width: 100%;
+					}
+				}
+
+				.product_image
+				{
+					margin-bottom: rem-calc(8);
+
+					&.with_second_image
+					{
+						.product_second_image
+						{
+						    width: 100%;
+						    height: 100%;
+						    display: block;
+						    opacity: 0;
+						    position: absolute;
+						    background-size: cover;
+						    background-repeat: no-repeat;
+						    transition: opacity 0ms ease 0.05s;
+						}
+					}
+
+					a
+					{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: relative;
+						color: inherit !important;
+						flex-direction: column;
+						cursor: pointer;
+
+						img
+						{
+							transition: transform .3s ease-in-out;
+				   			will-change: transform;
+				   			width: 100%;
+						}
+
+						.out-of-stock
+						{
+							position: absolute;
+							@include product_badge();
+							top: 50%;
+							margin-top: -8px;
+						}
+					}
+				}
+
+				.second-container
+				{
+					@include global-transition();
+
+					.product_info
+					{
+						text-align: left;
+						margin-bottom: rem-calc(16);
+						border-bottom: 1px solid;
+						padding-bottom: rem-calc(16);
+						@include global-transition();
+
+						@include breakpoint(xlarge)
+						{
+							margin-bottom: 0;
+							border-bottom: 0;
+							padding-bottom: 0;
+						}
+
+						a.title
+						{
+							.woocommerce-loop-product__title
+							{
+								@include global-transition();
+								@include product_title(12, 4);
+
+								@include breakpoint(xlarge)
+								{
+									@include product_title(13, 4);
+								}
+							}
+						}
+
+						span.price
+						{
+							@include product_price(12, 0);
+							display: block;
+
+							@include breakpoint(xlarge)
+							{
+								border-bottom: none;
+								width: 75%;
+								word-wrap: break-word;
+								@include product_price(13, 0);
+							}
+						}
+
+						.star-rating
+						{
+							font-size: rem-calc(9);
+
+							@include breakpoint(xlarge)
+							{
+								@include global-transition();
+								opacity: 0;
+								visibility: hidden;
+								position: absolute;
+							    bottom: 5px;
+							    right: 0;
+
+								.rtl & {
+									left: 0;
+									right: auto;
+								}
+							}
+						}
+					}
+
+					.buttons
+					{
+						pointer-events: none;
+					    .button
+					    {
+					    	border: none;
+
+					    	@include breakpoint(xlarge)
+							{
+								margin-top: auto;
+							}
+					    }
+
+					    .getbowtied_product_quick_view_button
+					    {
+					    	display: none;
+
+					    	@include breakpoint(xlarge)
+					    	{
+					    		display: flex;
+					    	}
+					    }
+
+					    > a
+					    {
+					    	position: relative;
+					    	pointer-events: auto;
+
+					    	&:first-child
+					    	{
+					    		@include breakpoint(large down)
+					    		{
+					    			margin-right: 16px;
+					    		}
+					    	}
+
+					    	&.clicked
+					    	{
+
+					    		&:after
+					    		{
+					    			animation: shop_tooltip_clicked .3s ease-out;
+
+					    			@include breakpoint(xlarge)
+					    			{
+					    				animation: shop_tooltip_clicked_desktop .3s ease-out;
+					    			}
+					    		}
+					    	}
+
+					    	&.loading
+					    	{
+					    		@include loader(24px, 24px);
+
+
+					    		&:before
+								{
+								    border-top: 1px solid;
+								    position: absolute;
+								    left: 50%;
+								    top: 50%;
+								    margin-top: -12px;
+								    margin-left: -12px;
+								   	z-index: 1;
+								}
+
+								&:after
+								{
+
+								}
+					    	}
+					    }
+
+						@include global-transition();
+
+						@include breakpoint(large down)
+						{
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							margin-bottom: rem-calc(24);
+						}
+
+						@include breakpoint(xlarge)
+						{
+							position: absolute;
+							top: 0;
+							right: 0;
+							padding: 15px;
+							display: flex;
+							flex-direction: column;
+
+							> a
+							{
+								margin-bottom: rem-calc(4);
+								margin-right: 0;
+								cursor: pointer;
+
+								&:last-child
+								{
+									margin-bottom: 0;
+								}
+
+								&:hover
+				    	    	{
+				    	    		transition: all .3s ease-out;
+
+				    	    		&:after
+				    	    		{
+				    	    			transform: scale3d(1.1, 1.1, 1.1);
+				    	    		}
+				    	    	}
+							}
+						}
+
+						.getbowtied_product_wishlist_button,
+						.getbowtied_product_quick_view_button,
+						.button:not(.added)
+						{
+							@include breakpoint(xlarge)
+							{
+								transform: translate3d(30px, 0, 0);
+								opacity: 0;
+								pointer-events: none;
+							}
+
+							.blockUI
+							{
+								display: none !important;
+							}
+						}
+					}
+				}
+
+				&:hover,
+				&.adding
+				{
+					.product_image
+					{
+						@include breakpoint(xlarge)
+						{
+							img
+							{
+								transform: scale3d(0.98, 0.98, 0.98);
+							}
+						}
+					}
+
+					.second-container
+					{
+						.buttons
+						{
+							.getbowtied_product_wishlist_button,
+							.getbowtied_product_quick_view_button,
+							.button:not(.added)
+							{
+								@include breakpoint(xlarge)
+								{
+									transform: translate3d(0, 0, 0);
+									opacity: 1;
+									pointer-events: auto;
+								}
+							}
+
+							.getbowtied_product_wishlist_button
+							{
+								@include breakpoint(xlarge)
+								{
+									transition-delay: 75ms;
+								}
+							}
+
+							.getbowtied_product_quick_view_button
+							{
+								@include breakpoint(xlarge)
+								{
+									transition-delay: 50ms;
+								}
+							}
+
+							.button
+							{
+								@include breakpoint(xlarge)
+								{
+									transition-delay: 0ms;
+								}
+							}
+						}
+
+						.product_info
+						{
+							.star-rating
+							{
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(large up)
+{
+	@include shop_products_per_row(1)
+	@include shop_products_per_row(2)
+	@include shop_products_per_row(3)
+	@include shop_products_per_row(4)
+	@include shop_products_per_row(5)
+	@include shop_products_per_row(6)
+}
+
+
+@include woocommerce_columns(1)
+@include woocommerce_columns(2)
+
+@include breakpoint(medium up)
+{
+	@include woocommerce_columns(3)
+	@include woocommerce_columns(4)
+	@include woocommerce_columns(5)
+	@include woocommerce_columns(6)
+}

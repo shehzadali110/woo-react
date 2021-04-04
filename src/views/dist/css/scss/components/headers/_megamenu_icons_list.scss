@@ -1,0 +1,88 @@
+.megamenu_icon_list
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: -2em;
+	overflow: hidden;
+
+	@each $breakpoint, $padding in $content-padding
+	{
+		@include breakpoint($breakpoint) {
+			padding: rem-calc($padding);
+		}
+	}
+
+	a
+	{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 2em;
+		width: calc(100% / 4);
+		font-size: 0.8em;
+		opacity: 0;
+		animation: megamenu_icons;
+		animation-duration: .4s;
+		animation-fill-mode: forwards;
+
+		@for $i from 1 through 100 {
+			&:nth-child(#{$i}) {
+				animation-delay: (0.05s * $i);
+			}
+		}
+
+		&:hover
+		{
+			img, i
+			{
+				transform: scale(0.95);
+			}
+		}
+
+		.gbt-mega-dropdown-megamenu-placeholder & {
+			@include breakpoint(medium)
+			{
+				width: calc(100% / 6);
+
+			}
+		}
+
+		i
+		{
+			font-size: 3em;
+			transition: transform .3s ease-in-out;
+		}
+
+		@include breakpoint(medium)
+		{
+			width: calc(100% / 8);
+			font-size: 1em;
+		}
+
+		@include breakpoint(large)
+		{
+			width: calc(100% / 8);
+
+			i
+			{
+				font-size: 4em;
+			}
+		}
+
+		img
+		{
+			width: auto;
+			height: 1em;
+			font-size: 4em;
+			transition: transform .3s ease-in-out;
+		}
+
+		span
+		{
+			margin-top: 2em;
+		}
+	}
+}

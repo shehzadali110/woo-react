@@ -1,0 +1,311 @@
+.gallery
+{
+    margin: rem-calc(80) 0;
+     
+    .gallery-item
+    {
+        float: left;
+        
+        transition: opacity .8s ease;
+        
+        &:hover {
+            opacity: .5;
+        }
+
+    }
+
+    .gallery-icon
+    {
+        img
+        {
+            width: 100%;
+            border-right: 1px solid #FFF;  
+            border-bottom: 1px solid #FFF;
+        }
+    }
+
+    &:after
+    {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.gallery-columns-1
+{
+    .gallery-item
+    {
+        width: 100%; 
+    }
+}
+
+.gallery-columns-2
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 2);
+        }
+
+        &:nth-child(2n+2)
+        {
+            &:after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        
+    }
+}
+
+.gallery-columns-3
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 3);
+        }
+        
+        &:nth-child(3n+3)
+        {
+            &:after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        
+    }
+}
+
+.gallery-columns-4
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 4);
+        }
+        
+        &:nth-child(4n+4)
+        {
+            &:after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        
+    }
+}
+
+.gallery-columns-5
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 5);
+        }    
+    }
+}
+
+.gallery-columns-6
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 6);
+        }  
+    }
+}
+
+.gallery-columns-7
+{ 
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 7);
+        }  
+    }
+}
+
+.gallery-columns-8
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 8);
+        } 
+    }
+}
+
+ .gallery-columns-9
+{
+    .gallery-item
+    {
+        width: 100%; 
+        
+        @include breakpoint(medium)
+        {
+            width: calc(100% / 9);
+        } 
+    }
+}
+
+.gb-gallery {
+    text-align: center;
+    z-index: 999999;
+    img {
+        max-height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: auto;
+        animation: fadeIn 1s;
+    }
+
+    // Lighbox Gallery 
+
+    button
+    {
+        background: none;
+        width: auto;
+        height: auto;
+        margin: 0;
+        border-color: transparent;
+        background-color: transparent !important;
+        position: absolute;
+        padding: 0;
+        
+        &:active,
+        &:focus {
+            background-color: transparent;
+        }
+        
+        &:after,
+        &:before
+        {
+            @include global-transition();
+        }
+
+            &.close-button
+            {
+                margin-top: 20px;
+                margin-right: 17px; 
+                top: 0;
+                right: 0;
+                position: absolute;
+                
+                    @include rotate_close_btn();
+                    
+                &:after
+                {
+                    @include the_retailer_pro_icon('\e9c5');
+                    font-size: rem-calc(24); 
+                }
+            }
+
+            &.prev,
+            &.next
+            {
+                margin-top: -15px;
+                transition: all .3s ease-in-out;
+                
+                
+                &:before
+                {
+                    display: none;
+                }
+            }
+
+            &.prev
+            {
+                margin-left: rem-calc(17);
+                top: 50%;
+                left: 0;
+                
+                &:after
+                {
+                    @include the_retailer_pro_icon('\e9cd');
+                    font-size: rem-calc(30); 
+                }
+
+                &:hover
+                {
+                    transform: translate3d(-5px, 0, 0);
+                }
+            }
+
+            &.next
+            {
+                margin-right: rem-calc(17); 
+                right: 0;
+                top: 50%;
+                
+                &:after
+                {
+                    @include the_retailer_pro_icon('\e9ce');
+                    font-size: rem-calc(30); 
+                }
+
+                &:hover
+                {
+                    transform: translate3d(5px, 0, 0);
+                }
+            }
+            
+            &:hover
+            {
+                    background-color: transparent; 
+                    outline: none; 
+            }
+
+            &:before
+            {
+                    background: none; 
+            }
+
+            &.prev
+            {
+                    &:before
+                    {
+                            content: "\e905";
+                    } 
+            }
+
+            &.next
+            {
+                    &:before
+                    {
+                            content: "\e906";
+                    }
+            }
+    }
+}

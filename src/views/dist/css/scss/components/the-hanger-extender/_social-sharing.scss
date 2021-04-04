@@ -1,0 +1,153 @@
+.single-product,
+#getbowtied_woocommerce_quickview
+{
+    .product
+    {
+        .getbowtied-single-product-share-wrapper
+        {
+            font-size: 0.75rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0  auto 2rem;
+            order: 9;
+
+            @media print, screen and (max-width: 640px) {
+                margin-left: -20px;
+                margin-right: -20px;
+                margin-bottom: 1rem;
+            }
+
+            @media print, screen and (min-width: 640px) and (max-width: 1024px) {
+                margin-left: -24px;
+                margin-right: -24px;
+                margin-bottom: 1rem;
+            }
+
+            @media print, screen and (min-width: 1024px) {
+                float: right;
+                align-items: center;
+                margin: 0  0 3rem;
+                margin-top: -2px;
+            }
+
+            .getbowtied-single-product-share
+            {
+                margin-right: 1rem;
+                display: none;
+
+                @media print, screen and (min-width: 1024px) {
+                    display: inline-block;
+                }
+            }
+
+            a
+            {
+                @media print, screen and (max-width: 1023px) {
+                    width: calc(100% / 3);
+                    border-top: 1px solid;
+                    border-bottom: 1px solid;
+                    border-right: 1px solid;
+                    padding: 1.125rem 0 1rem 0;
+
+                    &:last-child
+                    {
+                        border-right: none;
+                    }
+                }
+
+                &:last-child
+                {
+                    svg
+                    {
+                        margin-right: 0;
+                    }
+                }
+
+                svg
+                {
+                    margin-right: 0.75rem;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+}
+
+.rtl
+{
+    .single-product .product
+    {
+        .getbowtied-single-product-share-wrapper
+        {
+            @media print, screen and (min-width: 1024px) {
+                float: left;
+            }
+
+            a
+            {
+                svg
+                {
+                    margin-left: 0.75rem;
+                    margin-right: 0;
+                }
+
+                &:last-child
+                {
+                    svg
+                    {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #getbowtied_woocommerce_quickview
+    {
+        .getbowtied_qv_content .site-content .product
+        {
+            .getbowtied-single-product-share-wrapper
+            {
+                float: left;
+
+                .getbowtied-single-product-share
+                {
+                    margin-left: 1rem;
+                    margin-right: 0;
+                }
+
+                a
+                {
+                    svg
+                    {
+                        margin-left: 0.75rem;
+                        margin-right: 0;
+                    }
+
+                    &:last-child
+                    {
+                        svg
+                        {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-sticky-product,
+.header-sticky-blog
+{
+    .header-sticky-blog-facebook,
+    .header-sticky-blog-twitter
+    {
+        svg
+        {
+            transition: all .3s ease;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+// Lighbox Gallery 
+
+.pswp
+{
+	.pswp__bg
+	{
+		background: #FFF;
+	}
+	.pswp__ui--idle .pswp__top-bar,
+	.pswp__ui--hidden .pswp__top-bar,
+	.pswp__ui--idle .pswp__button--arrow--left,
+	.pswp__ui--idle .pswp__button--arrow--right
+	{
+		opacity: 1; 
+	}	
+
+	.pswp__top-bar
+	{
+		background: #FFF;
+		height: 0; 
+	}
+
+	.pswp__counter,
+	.pswp__caption
+	{
+		display: none;
+	}
+	 
+		button.pswp__button
+		{
+			background: none;
+			width: auto;
+			height: auto;
+			
+			&:after,
+			&:before
+			{
+				@include global-transition();
+			}
+
+				&.pswp__button--share,
+				&.pswp__button--fs,
+				&.pswp__button--zoom
+				{
+					display: none;
+				}
+
+				&.pswp__button--close
+				{
+					margin-top: 20px;
+					margin-right: 17px; 
+					
+						@include rotate_close_btn();
+						
+					&:after
+					{
+						@include the_retailer_pro_icon('\e9c5');
+						font-size: rem-calc(24); 
+					}
+				}
+
+				&.pswp__button--arrow--left,
+				&.pswp__button--arrow--right
+				{
+					margin-top: -15px;
+					transition: all .3s ease-in-out;
+					
+					
+					&:before
+					{
+						display: none;
+					}
+				}
+
+				&.pswp__button--arrow--left
+				{
+					margin-left: rem-calc(17);
+					
+					&:after
+					{
+						@include the_retailer_pro_icon('\e9cd');
+						font-size: rem-calc(30); 
+					}
+
+					&:hover
+					{
+						transform: translate3d(-5px, 0, 0);
+					}
+				}
+
+				&.pswp__button--arrow--right
+				{
+					margin-right: rem-calc(17); 
+					
+					&:after
+					{
+						@include the_retailer_pro_icon('\e9ce');
+						font-size: rem-calc(30); 
+					}
+
+					&:hover
+					{
+						transform: translate3d(5px, 0, 0);
+					}
+				}
+				
+				&:hover
+				{
+						background-color: transparent; 
+						outline: none; 
+				}
+
+				&:before
+				{
+						background: none; 
+				}
+
+				&.pswp__button--arrow--left
+				{
+						&:before
+						{
+								content: "\e905";
+						} 
+				}
+
+				&.pswp__button--arrow--right
+				{
+						&:before
+						{
+								content: "\e906";
+						}
+				}
+		}
+}
+
+
+.pswp--open 
+{
+	 transition: opacity .5s ease-in-out;
+	 transition-delay: .75s;
+}

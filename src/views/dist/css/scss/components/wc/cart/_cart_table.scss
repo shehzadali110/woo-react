@@ -1,0 +1,552 @@
+// =============================================================================
+// Cart Table
+// =============================================================================
+
+&
+{
+	.entry-title
+	{
+		font-size: rem-calc(23); 
+		margin-bottom: rem-calc(32); 
+		margin-top: rem-calc(8); 
+		
+		@include breakpoint(large)
+		{
+			margin-top: rem-calc(32); 
+			margin-bottom: rem-calc(72); 
+		}
+	}
+
+	.woocommerce
+	{
+		font-size: 0;
+		
+		.woocommerce-cart-form
+		{
+			display: inline-block;
+			vertical-align: top;
+			font-size: rem-calc(13); 
+			width: 100%; 
+			position: relative;
+
+			@include breakpoint(medium down)
+			{
+				display: block;
+			}
+
+			@include breakpoint(large)
+			{
+				margin-bottom: rem-calc(60);
+			}
+
+			&.processing
+			{
+				.blockUI
+				{
+					@include loader(24px, 24px);
+			
+					&:before
+					{
+						position: absolute;
+					    top: 50%;
+					    left: 50%;
+					    margin-right: -14px; 
+					}
+				}
+			}
+			
+			.shop_table
+			{
+				@include breakpoint(medium down)
+				{
+					margin-bottom: rem-calc(64);
+				} 
+			}
+			
+			@include breakpoint(large)
+			{
+				width: 63%;
+				padding-right: rem-calc(65); 
+			}
+			
+			input:not(.button)
+			{
+				background: none;
+				box-shadow: none;
+				
+				&:focus
+				{
+					background: none; 
+				} 
+			}
+
+			thead
+			{
+				th
+				{
+					display: none;
+				}
+			}
+
+			td
+			{
+				padding: rem-calc(40) 0;
+				
+				@include breakpoint(medium down)
+				{
+					display: block;
+					width: 100%; 
+					text-align: left;
+					padding: rem-calc(16) 0;
+				}
+			}
+
+			tr
+			{
+				&.cart_item
+				{
+					position: relative;	
+					
+					.product-remove
+					{
+						@include breakpoint(medium down)
+						{
+							position: absolute;
+							right: -10px; 
+						}
+
+						@include breakpoint(large)
+						{
+							width: 14px;
+						}
+						 
+						a.remove
+						{
+							font-size: 0;
+							display: block;
+							
+							@include breakpoint(large)
+							{
+								margin-left: -10px; 
+								padding: 10px; 
+								margin-right: rem-calc(6); 
+								@include rotate_close_btn();
+							}
+							
+							@include breakpoint(medium down)
+							{
+								width: 20px;
+								height: 20px;  
+								margin-right: 0;
+								float: right;
+								padding: 5px;
+								margin-top: -4px;
+								margin-right: 5px;
+							}
+						
+							&:after
+							{
+								@include the_retailer_pro_icon('\e903');
+								@include global-transition();
+								font-size: rem-calc(8); 
+							}
+						}
+					}
+
+					.product-thumbnail
+					{
+
+						@include breakpoint(small)
+						{
+							display: block;
+							margin: auto;
+							width: 35%; 
+							text-align: center;
+						}
+						
+						@include breakpoint(medium only)
+						{
+							width: 100%; 
+						}
+
+					    @include breakpoint(large)
+					    {
+				    		width: 96px;
+				    	    padding-right: 16px;
+				    	    min-width: 78px;
+					    }
+
+					    .wp-post-image
+					    {
+					    	transition: transform .3s ease-in-out, transform .3s ease-in-out;
+					    	will-change: transform;
+					    }
+
+					    &:hover
+					    {
+					    	@include breakpoint(large)
+					    	{
+					    		.wp-post-image
+					    		{
+					    			transform: scale3d(0.98, 0.98, 0.98);
+					    		}
+					    	}
+					    }
+						
+						a
+						{
+							display: block;
+							width: 100%; 
+							
+							img
+							{
+								@include breakpoint(large)
+								{
+									width: 78px;
+								}
+							}
+						}
+					}
+
+					.product-name
+					{
+						@include breakpoint(medium down)
+						{
+							display: table;
+						    width: 100%;
+						    text-align: left;
+						    margin: 1.1rem 0;
+						    vertical-align: middle;
+						    position: relative;
+						}
+
+						&:before
+						{
+							@include breakpoint(medium down)
+							{
+								content: attr(data-title);
+								width: 50%; 
+								// float: left;
+								display: table-cell;
+    							vertical-align: middle;
+							}
+						}
+
+						@include breakpoint(large)
+						{
+							max-width: 150px;
+							padding-right: rem-calc(72); 
+						}
+						
+						a
+						{
+							@include breakpoint(medium down)
+							{
+								float: right;
+							    text-align: right;
+							    display: block;
+							}
+
+							@include breakpoint(large)
+							{
+								margin-right: 72px; 
+							}
+						}
+
+						dl.variation
+						{
+							font-size: rem-calc(12);
+
+							@include breakpoint(medium down)
+							{
+								text-align: right;
+							    width: 100%;
+							    display: block;
+							    float: right;
+							    margin-bottom: 0;
+							}
+
+							@include breakpoint(large)
+							{
+								margin-top: 8px;
+								margin-bottom: 0;
+							}
+							 
+							dt
+							{
+								font-weight: normal;
+
+								@include breakpoint(medium down)
+								{
+									margin-bottom: 0;
+	    							margin-top: 10px;
+								}
+
+								@include breakpoint(large)
+								{
+									margin: 0 5px 0 0;
+									float: left;
+									clear: both;
+								}
+							}
+
+							dd
+							{
+								@include breakpoint(large)
+								{
+									margin: 0 5px 0 0;
+									float: left;
+								}
+							}
+						}
+					}
+
+					.product-price
+					{
+						@include breakpoint(medium down)
+						{
+							display: flex;
+							align-items: center;
+
+						}
+
+						&:before
+						{
+							@include breakpoint(medium down)
+							{
+								content: attr(data-title);
+								width: 50%; 
+							}
+						}
+
+						.amount
+						{
+							@include breakpoint(medium down)
+							{
+								text-align: right;
+								width: 50%;
+							}
+						}
+					}
+
+					.product-quantity
+					{
+						@include breakpoint(medium down)
+						{
+							display: flex;
+							align-items: center;
+						}
+
+						@include breakpoint(large)
+						{
+							width: 56px;
+						}
+						
+						&:before
+						{
+							@include breakpoint(medium down)
+							{
+								content: attr(data-title);
+								width: 50%; 
+							}
+						}
+
+						.quantity
+						{
+							width: 56px;
+							height: 56px; 
+							
+							@include breakpoint(medium down)
+							{
+								text-align: right;
+								margin-left: auto;
+								width: 40px;
+								height: 40px;  
+							}
+
+							input
+							{
+								width: 56px;
+								height: 56px; 
+								border-bottom: 1px solid; 
+								font-size: rem-calc(14); 
+								
+								@include breakpoint(medium down)
+								{
+									height: 40px;
+									width: 40px;
+								}
+
+								@include breakpoint(large down)
+								{
+									padding-left: 0;
+								}
+
+								@include breakpoint(large)
+								{
+									font-size: rem-calc(19); 
+								}
+							}
+						}
+					}
+
+					.product-subtotal
+					{
+						@include breakpoint(medium down)
+						{
+							display: flex;
+							align-items: center;
+							margin-bottom: rem-calc(24); 
+						}
+
+						@include breakpoint(large)
+						{
+							padding-right: rem-calc(27); 
+							text-align: right;
+						}
+						
+						&:before
+						{
+							@include breakpoint(medium down)
+							{
+								content: attr(data-title);
+								width: 50%; 
+							}
+						}
+
+						.amount
+						{
+							@include breakpoint(medium down)
+							{
+								text-align: right;
+								width: 50%;
+							}
+						}
+
+						small
+						{
+							display: none;
+						}
+					}
+				}
+
+				&:not(.cart_item)
+				{
+					border-bottom: 0; 
+
+					td.actions
+					{
+						padding-top: rem-calc(38); 
+						padding-bottom: 0;
+						position: relative;
+						
+						button
+						{
+							outline: none; 
+						}
+							
+						.coupon
+						{
+							display: flex;
+							align-items: center;
+							position: relative;
+							margin-bottom: rem-calc(16); 
+							
+							&:before
+							{
+								content: "";
+								width: 0;
+								height: 1px;
+								display: block;  
+								position: absolute;
+								bottom: 0; 
+								transition: width ease .15s;
+							}
+							
+							&.bottom_line
+							{
+								&:before
+								{
+									width: 100%; 
+								}
+							}
+
+							@include breakpoint(large)
+							{
+								width: 50%; 
+								position: relative;
+								margin-bottom: 0;
+							}
+
+							label
+							{
+								display: none;
+							}
+
+							#coupon_code
+							{
+								border-top: 0;
+								border-left: 0;
+								border-right: 0;  
+								font-size: rem-calc(13);
+								line-height: rem-calc(16);  
+								width: 100%; 
+								margin-bottom: 0;
+								padding-right: 40%; 
+
+								@include breakpoint(medium down)
+								{
+									padding-left: 0;
+								}
+							}
+
+							button[name="apply_coupon"]
+							{
+								background: none;
+							    padding: 0;
+							    width: auto;
+							    position: absolute;
+    							right: 0;
+    							top: 50%;
+    							transform: translateY(-50%);
+    							padding-right: rem-calc(20); 
+    							height: 48px;
+    							outline: none;
+							    
+    							@include breakpoint(medium down)
+    							{
+								    right: 0; 
+								    bottom: 50%;
+	    							margin-bottom: -18px;
+	    							padding-right: 0;
+	    							height: inherit; 
+	    							line-height: inherit; 
+    							}
+							}
+						}
+
+						button[name="update_cart"]
+						{
+							width: auto;
+							background: none;
+							color: inherit;
+							padding: 0;
+							outline: none;
+							padding: rem-calc(15) 0; 
+							
+							@include breakpoint(large)
+							{
+								position: absolute;
+								top: calc(50% + 38px);
+								margin-top: -19px;
+								transform: translateY(-50%);
+								right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

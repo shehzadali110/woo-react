@@ -1,0 +1,36 @@
+.single-product
+{
+    @import 'product/product_notices';
+    @import 'product/product_tabs';
+
+    .product
+    {
+        .entry-summary
+        {
+            @import 'product/product_add_to_wishlist';
+            @import 'product/product_out_of_stock';
+            @import 'product/product_elements_order';
+        }
+
+        @import 'product/product_breadcrumb';
+        @import 'product/product_title';
+        @import 'product/product_rating';
+        @import 'product/product_price';
+        @import 'product/product_description';
+        @import 'product/product_add_to_cart';
+        @import 'product/product_meta';
+        @import 'product/product_gallery';
+        @import 'product/product_badges';
+
+        // Product Types
+        @import 'product/product_variable';
+        @import 'product/product_external';
+        @import 'product/product_grouped';
+    }
+
+    @import 'product/product_infos';
+    @import 'product/product_related';
+    @import 'product/product_video';
+}
+
+    @import 'product/product_sidebar';

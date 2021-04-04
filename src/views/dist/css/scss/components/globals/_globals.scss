@@ -1,0 +1,269 @@
+html
+{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	word-wrap: break-word;
+
+	&.mobile-menu-open {
+		margin-top: 0 !important;
+		overflow: hidden !important;
+
+		body,
+		.site-wrapper {
+			overflow: hidden !important;
+			position: relative;
+		}
+	}
+}
+
+a
+{
+	@include global_transition;
+
+	&:focus
+	{
+		outline: none;
+	}
+}
+
+label
+{
+	padding: rem-calc(4) 0 rem-calc(8);
+	font-size: rem-calc(13);
+	line-height: rem-calc(18);
+}
+
+fieldset,
+.fieldset
+{
+	legend
+	{
+		background: none;
+	}
+}
+
+abbr
+{
+	text-decoration: none !important;
+	color: inherit;
+}
+
+p:empty
+{
+	display: none;
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea,
+select,
+.select2,
+.select2 .select2-selection,
+.select2 .select2-selection .select2-selection__rendered,
+.select2-dropdown .select2-search .select2-search__field
+{
+	@include form_items_sizes();
+}
+
+[type='submit']
+{
+	width: 100%;
+}
+
+select
+{
+	background-position: right 0 center;
+	background-size: 6px 6px;
+
+	option
+	{
+		color: $black;
+	}
+}
+
+textarea
+{
+	padding: $form-spacing;
+	resize: vertical;
+	height: auto;
+	line-height: inherit;
+}
+
+input[type=checkbox],
+input[type=radio]
+{
+	& + label
+	{
+		position: relative;
+		padding: 0;
+		text-transform: none;
+		color: $input-color;
+		font-family: inherit;
+	}
+}
+
+table
+{
+
+	border-collapse: collapse;
+	margin-bottom: rem-calc(32);
+
+	tr
+	{
+		border-bottom: 1px solid;
+
+		th, td
+		{
+			padding: rem-calc(15) 0;
+		}
+
+		th
+		{
+			text-align: left;
+			padding-right: rem-calc(15);
+			font-weight: normal;
+		}
+
+		td
+		{
+			p:last-child
+			{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+ul, ol, dl
+{
+	ul, ol, dl
+	{
+		margin-top: rem-calc(8);
+	}
+
+	> li
+	{
+		margin-bottom: rem-calc(8);
+	}
+}
+
+ul ul, ol ul, ul ol, ol ol
+{
+  margin-left: rem-calc(35);
+}
+
+
+dl dt
+{
+	margin-top: rem-calc(30);
+}
+
+figure
+{
+	//margin: 0;
+}
+
+figcaption
+{
+	margin-top: rem-calc(16);
+	margin-bottom: rem-calc(32);
+	font-size: rem-calc(14);
+}
+
+pre
+{
+	padding: rem-calc(25);
+	margin: rem-calc(30) 0;
+}
+
+kbd
+{
+	background-color: $content-background;
+	color: $primary-color;
+	padding: $code-padding;
+	border-radius: 0;
+}
+
+blockquote
+{
+	font-size: rem-calc(20);
+
+	p
+	{
+		margin-bottom: 0;
+	}
+}
+
+cite
+{
+	display: inline-block;
+	font-size: $cite-font-size;
+	color: $cite-color;
+
+	&:before
+	{
+		content: '\2014 \0020';
+	}
+}
+
+hr
+{
+	margin-bottom: rem-calc(32);
+	margin-top: rem-calc(32);
+	border-bottom-color: $primary-color;
+}
+
+.sticky
+{
+	z-index: 10;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.alignleft
+{
+	float: left;
+	margin-right: rem-calc(30);
+}
+
+.aligncenter
+{
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.alignright
+{
+	float: right;
+	margin-left: rem-calc(30);
+}
+
+.wp-caption
+{
+    max-width: 100%;
+}
+
+.screen-reader-text
+{
+	@extend .show-for-sr;
+}
+
+.kirki-customizer-loading-wrapper
+{
+	background-image: none !important;
+}

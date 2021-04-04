@@ -1,0 +1,169 @@
+.woocommerce-table--order-downloads
+{
+	font-size: rem-calc(13); 
+	
+	thead
+	{
+		tr
+		{
+			th
+			{
+				font-size: rem-calc(13); 
+				padding-bottom: rem-calc(24);
+				
+				&.download-file
+				{
+					font-size: 0;
+					opacity: 0; 
+				} 
+
+				@include breakpoint(small only)
+				{
+					display: none;
+				}
+			}
+		}
+	}
+
+	tbody
+	{
+		tr
+		{
+			td
+			{
+				@include breakpoint(small only)
+				{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+
+				&:before
+				{
+					@include breakpoint(small only)
+					{
+						content: attr(data-title);
+						width: 30%; 
+					}
+				}
+
+
+				&.download-product
+				{
+					a
+					{
+						color: inherit; 
+					}
+				}
+				
+				&.download-file
+				{				
+					
+					@include breakpoint(large)
+					{
+						width: 30% 
+					}
+					 	
+					a.button
+					{
+						display: flex;
+						align-items: center;
+						background: none; 
+						text-align: left;
+						font-size: rem-calc(12);
+						line-height: rem-calc(14);  
+						padding: rem-calc(9) 0;
+						border: 0; 
+						
+						@include breakpoint(small only)
+						{
+							width: 70%; 
+						    justify-content: flex-end;
+
+						}
+
+						&:before
+						{
+							padding-right: rem-calc(8);
+							font-size: rem-calc(16);  
+							@include the_retailer_pro_icon('\e9c1');
+						}
+					}
+				} 
+			}
+		}
+	}
+}
+
+
+@media screen and #{breakpoint(small only)} 
+{
+	.woocommerce-MyAccount-downloads
+	{
+		&.shop_table_responsive
+		{
+			thead 
+			{
+				display: none;
+			}
+
+			tbody 
+			{
+				tr:first-child 
+				{
+					td:first-child 
+					{
+						border-top: 0;
+					}
+				}
+
+				th 
+				{
+					display: none;
+				}
+			}
+
+			tr 
+			{
+				display: block;
+
+				td 
+				{
+					display: block;
+					text-align: right !important; 
+					padding: rem-calc(15) 0; 
+			
+					&.download-file
+					{					
+						a
+						{
+							padding-right: rem-calc(9);
+							display: inline-block;
+							vertical-align: middle;
+							
+							&:last-of-type
+							{
+								padding-right: 0;
+							}
+							
+							&:before
+							{
+								vertical-align: middle;
+							}
+						}
+					}
+
+					&::before 
+					{
+						content: attr(data-title) ': ';
+						font-weight: bold;
+						float: left;
+						font-size: rem-calc(13); 
+					}
+				}
+				
+			}
+		}
+	}
+	
+}

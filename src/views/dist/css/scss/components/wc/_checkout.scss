@@ -1,0 +1,11 @@
+body.woocommerce-checkout
+{
+	@import "checkout/checkout_notices";
+	@import "checkout/checkout_coupon";
+	@import "checkout/checkout_login";
+	@import "checkout/checkout_layout";
+    @import "checkout/checkout_billing";
+    @import "checkout/checkout_shipping";
+    @import "checkout/checkout_order_review";
+	@import "checkout/checkout_order_received";
+}

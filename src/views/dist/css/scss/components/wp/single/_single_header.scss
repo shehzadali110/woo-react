@@ -1,0 +1,77 @@
+.single_post_header
+{
+	.entry-title
+	{
+		margin-bottom: rem-calc(32); 
+		font-size: rem-calc(32); 
+		
+		@include breakpoint(large)
+		{
+			margin-bottom: rem-calc(48); 
+			font-size: rem-calc(48); 
+		}
+	}
+
+	.entry-categories
+	{
+		margin-bottom: rem-calc(26);
+		
+		@include breakpoint(large)
+		{
+			margin-bottom: rem-calc(32);
+		}
+
+		ul.post-categories
+		{
+			margin: 0;
+			list-style-type: none; 
+			font-size: 0;
+			
+			li
+			{
+				display: inline-block;
+				margin-right: rem-calc(8); 
+				margin-bottom: 0;
+				border-right: 1px solid;
+
+				&:last-of-type
+				{
+					border-right: 0; 
+				}
+				
+				a
+				{
+					font-size: rem-calc(10);
+					line-height: rem-calc(13); 
+					text-transform: uppercase;
+					padding-right: rem-calc(8); 
+				}
+			}
+		}
+	}
+}
+
+.entry-header
+{
+	margin-bottom: rem-calc(32);
+	text-align: center;
+	
+	@include breakpoint(large)
+	{
+		margin-bottom: rem-calc(48); 
+	}
+	
+	@each $breakpoint, $padding in $content-padding
+	{
+		@include breakpoint($breakpoint) {
+			margin-left: 	rem-calc(-$padding);
+			margin-right: 	rem-calc(-$padding);
+		}
+	}
+
+	@include breakpoint(large)
+	{
+		margin-left: auto;
+		margin-right: auto;  
+	}
+}

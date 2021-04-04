@@ -1,0 +1,8 @@
+@mixin widget_product_categories
+{
+	@include widget_links_list;
+
+	.product-categories
+	{
+	}
+}

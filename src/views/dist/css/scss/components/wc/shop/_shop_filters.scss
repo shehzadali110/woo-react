@@ -1,0 +1,60 @@
+.site-shop-filters
+{
+	display: none;
+
+	.site-shop-filters-inside
+	{
+		@include breakpoint(large)
+		{
+			padding: rem-calc(40) 0 0 0;
+			border-top: 1px solid;
+		}
+
+		.widget-area
+		{
+			padding: rem-calc(20) 0;
+
+			@include breakpoint(large up)
+			{
+				padding: 0;
+			}
+
+			.column
+			{
+				margin-bottom: rem-calc(32);
+				
+				@include breakpoint(large up)
+				{
+					margin-bottom: 0;
+				}
+
+				ul
+				{
+					padding: 0;
+					margin: 0;
+				}
+
+				aside
+				{
+					padding-bottom: rem-calc(20);
+					 
+					@include breakpoint(large)
+					{
+						padding-bottom: rem-calc(40);
+					}
+				}
+			}
+
+			&.shop-widget-area
+			{
+				padding: rem-calc(20) 0;
+
+				aside
+				{
+					padding-bottom: rem-calc(20);
+				}
+				
+			}
+		}
+	}
+}

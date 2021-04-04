@@ -1,0 +1,115 @@
+.entry-title
+{
+    font-size: rem-calc(23); 
+    margin-bottom: rem-calc(32); 
+    margin-top: rem-calc(32);
+}
+
+.woocommerce
+{
+    .woocommerce-billing-fields,
+	.woocommerce-shipping-fields
+    {
+        > h3
+        {
+            font-size: rem-calc(19); 
+            margin-bottom: rem-calc(32); 
+        }   
+        
+        .form-row
+        {
+            margin-bottom: rem-calc(24);
+            position: relative;
+
+            input,
+            select,
+            .select2
+            {
+                margin-bottom: 0;
+            }
+            
+            .required
+            {
+                border-bottom: none; 
+            }
+
+            &:before
+            {
+                content: "";
+                width: 0;
+                height: 2px;
+                display: block;  
+                position: absolute;
+                bottom: 0; 
+                transition: width ease .5s;
+            }
+
+            &.woocommerce-invalid-required-field,
+            &.woocommerce-validated
+            {
+                &.form-row-first,
+                &.form-row-last
+                {
+                    &:before
+                    {
+                        width: calc(100% - 10px); 
+                    }
+                }
+            }
+           
+            &.woocommerce-invalid-required-field
+            {
+                &:before
+                {
+                    width: 100%; 
+                    background: $alert-color; 
+                }
+            }
+
+            &.woocommerce-validated
+            {
+                &:before
+                {
+                    width: 100%; 
+                    background: $success-color; 
+                }
+            }
+        }
+             
+        .form-row-wide
+        {
+            clear: both;
+        }
+        
+        .form-row-first
+        {
+            width: 50%;
+            float: left;
+            padding-right: 10px;
+        }
+        
+        .form-row-last
+        {
+            width: 50%;
+            float: left;
+            padding-left: 10px;
+        }
+	}
+
+    .woocommerce-additional-fields
+    {
+       > h3
+       {
+           font-size: rem-calc(19); 
+           margin-bottom: rem-calc(32); 
+       }   
+    }
+
+    .woocommerce-account-fields
+    {
+        p.create-account
+        {
+            margin-bottom: rem-calc(48); 
+        }
+    }
+}

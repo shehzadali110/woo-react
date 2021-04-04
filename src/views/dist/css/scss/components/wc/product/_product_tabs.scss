@@ -1,0 +1,117 @@
+.woocommerce-gb_accordion
+{
+	clear: both;
+
+	ul.accordion
+	{
+		.accordion-item
+		{
+			border-bottom: 1px solid;
+			margin-bottom: 0;
+
+			&:focus
+			{
+				outline: none;
+			}
+
+			&:not(.is-active)
+			{
+				.accordion-title
+				{
+					&:before
+					{
+						@include the_retailer_pro_icon('\e901');
+					}
+				}
+			}
+
+			.accordion-title
+			{
+				line-height: rem-calc(18);
+
+				&:before
+				{
+					@include the_retailer_pro_icon('\e9c9');
+					font-size: rem-calc(8);
+					top: 50%;
+					margin-top: rem-calc(-4);
+				}
+			}
+
+			.accordion-content
+			{
+				padding-bottom: rem-calc(32);
+				margin-bottom: 0;
+
+				ul, ol, dl
+				{
+					margin-bottom: rem-calc(32);
+				}
+
+				ul ul, ol ol, dl dl
+				{
+					margin-bottom: 0;
+				}
+
+				h1
+				{
+					font-size: rem-calc(20);
+				}
+
+				h2
+				{
+					font-size: rem-calc(17);
+				}
+
+				h3
+				{
+					font-size: rem-calc(14);
+				}
+
+				h4
+				{
+					font-size: rem-calc(12.5);
+				}
+
+				h5
+
+				{
+					font-size: rem-calc(12);
+				}
+
+				h6
+				{
+					font-size: rem-calc(12);
+				}
+
+				.shop_attributes
+				{
+					margin-bottom: 0;
+				}
+
+				> p
+				{
+					&:last-of-type
+					{
+						margin-bottom: 0;
+					}
+				}
+
+				@import 'tabs/additional_information';
+				@import 'tabs/reviews_tab';
+			}
+		}
+	}
+}
+
+.woocommerce_tabs .woocommerce-gb_accordion {
+    font-size: 0.875rem;
+	margin-bottom: 3rem;
+
+	@include breakpoint(large)
+	{
+    	margin-right: 1.5rem;
+		padding-right: 0.75rem;
+		margin-bottom: 5rem;
+	}
+}

@@ -1,0 +1,35 @@
+.footer-style-1
+{
+	body.footer-layout-full &
+	{
+		border-top: 1px solid;
+	}
+
+	body.footer-layout-boxed &
+	{
+		.footer-content
+		{
+			border-top: 1px solid;
+			position: relative;
+		}
+	}
+
+	@include footer-widget-area();
+		
+	@include footer-trigger();
+		
+	.footer-navigation
+	{
+		@include footer-navigation;
+	}
+
+	.footer-text
+	{
+		@include footer-text;
+	}
+
+	.footer-credit-card-icons
+	{
+		@include footer-credit-card-icons;
+	}
+}

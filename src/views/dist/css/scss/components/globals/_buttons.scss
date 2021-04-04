@@ -1,0 +1,53 @@
+button,
+.button,
+input[type="submit"]
+{
+	@include button;
+	@include global_transition;
+
+	border-width: 2px;
+	text-transform: capitalize;
+	font-family: inherit;
+	user-select: none;
+	font-size: map-get($button-sizes, default);
+
+	&.tiny
+	{
+		border-width: 1px;
+	}
+
+	&.tiny,
+	&.small
+	{
+		padding: rem-calc(8) rem-calc(16);
+	}
+
+	&.large
+	{
+		padding: rem-calc(20) rem-calc(48);
+	}
+
+	&.hollow
+	{
+		border-width: 2px;
+	}
+
+	&:focus
+	{
+		outline: none;
+	}
+}
+
+.gbt_custom_link
+{
+	background-color: transparent;
+	text-transform: uppercase;
+	border-bottom: 3px solid;
+	padding: 0 0 8px;
+	font-size: rem-calc(13);
+
+	&:hover
+	{
+		border-color: transparent !important;
+	}
+}

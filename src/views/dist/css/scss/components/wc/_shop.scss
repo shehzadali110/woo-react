@@ -1,0 +1,11 @@
+body.woocommerce-shop
+{
+	@import "shop/shop_header";
+	@import "shop/shop_filters";
+	@import "shop/shop_categories";
+	@import "shop/shop_sidebar";
+}
+
+@import "shop/shop_products";
+@import "shop/shop_products_list";
+@import "shop/shop_products_animation";

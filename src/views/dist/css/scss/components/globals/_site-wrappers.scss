@@ -1,0 +1,99 @@
+.site-wrapper
+{
+	position: relative;
+
+	.site-content-wrapper
+	{
+		position: relative;
+		overflow-x: hidden;
+
+		.site-content
+		{
+			@each $breakpoint, $padding in $content-padding {
+
+				@include breakpoint($breakpoint) {
+					padding: rem-calc($padding*1.35) rem-calc($padding);
+				}
+
+				.blog &
+				{
+					@include breakpoint(small only) {
+						padding: 0 rem-calc($padding*0.6) rem-calc($padding*1.25);
+					}
+				}
+
+				.single-product &
+				{
+					padding-bottom: 0;
+
+					@include breakpoint(small only) {
+						padding: 0 rem-calc($padding*0.56);
+					}
+				}
+
+				.woocommerce-account &
+				{
+					padding-bottom: rem-calc($padding*2.35);
+				}
+			}
+
+			@include large_side_paddings(true);
+
+			&:after
+			{
+				content: "";
+				display: block;
+				clear: both;
+			}
+
+			body:not(.archive).page-without-title &
+			{
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			body.content-layout-boxed &
+			{
+				position: relative;
+			}
+
+			.calendar_wrap
+			{
+				padding: 25px 15px;
+			}
+		}
+	}
+}
+
+.hover_overlay_header,
+.hover_overlay_content,
+.hover_overlay_footer,
+.hover_overlay_body
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	opacity: 0;
+	background: rgba($black, $opacity-ultra-light);
+	transition: opacity .3s ease-in-out;
+	transition-delay: .2s;
+	animation: no_space_and_hidden 0s;
+	animation-fill-mode: forwards;
+	animation-delay: .6s;
+
+	&.visible
+	{
+		opacity: 1;
+		animation: full_and_visible 0s;
+		animation-fill-mode: forwards;
+	}
+}
+
+.hover_overlay_content
+{
+	max-width: 100%;
+	margin: 0;
+}

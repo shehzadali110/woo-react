@@ -1,0 +1,203 @@
+.wpml-ls-statics-post_translations
+{
+	clear: both;
+	font-size: rem-calc(12);
+
+	.page-without-title &
+	{
+		padding-top: rem-calc(32);
+	}
+
+	.wpml-ls-flag
+	{
+		display: inline;
+		vertical-align: baseline;
+		width: 16px;
+		height: 10px;
+		margin-right: 3px;
+		margin-left: 5px;
+	}
+}
+
+.wpml-ls-menu-item
+{
+	.wpml-ls-flag
+	{
+		display: inline;
+		vertical-align: baseline;
+		width: 16px;
+		height: 10px;
+		margin-right: 3px;
+	}
+}
+
+.site-footer
+{
+	.wpml-ls-menu-item
+	{
+		z-index: 9999;
+
+		a
+		{
+			&:hover
+			{
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+.wpml-ls-statics-footer
+{
+	margin: rem-calc(30) auto;
+	font-size: rem-calc(13);
+	padding: 0 rem-calc(20);
+	clear: both;
+
+	&.wpml-ls-legacy-list-horizontal
+	{
+		ul
+		{
+			li
+			{
+				margin: 0;
+			}
+		}
+	}
+}
+
+.wpml-ls-legacy-list-horizontal,
+.wpml-ls-legacy-list-vertical
+{
+	border: 0;
+	clear: both;
+
+	&:not(.wpml-ls-statics-footer)
+	{
+		padding: 0;
+
+		ul
+		{
+			li
+			{
+				&:not(:last-child)
+				{
+				    margin: 0 0 0.5rem;
+				}
+
+				&:last-child
+				{
+					margin: 0;
+				}
+
+				a
+				{
+					padding-left: 0;
+					padding-top: 0;
+				}
+			}
+		}
+	}
+}
+
+.wpml-ls-legacy-dropdown,
+.wpml-ls-legacy-dropdown-click
+{
+	width: 100%;
+	max-width: 100%;
+
+	ul
+	{
+		li
+		{
+			a
+			{
+				border: 0;
+				background: transparent;
+
+				&:hover,
+				&:focus
+				{
+					background: transparent;
+				}
+			}
+
+			&.wpml-ls-current-language
+			{
+				border-bottom: 1px solid;
+				@include bottom_line_transition();
+
+				&.active
+				{
+					.wpml-ls-item-toggle
+					{
+						&:after
+						{
+							transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+						}
+					}
+				}
+
+				&:before
+				{
+				    width: 0 !important;
+				}
+
+				&:hover
+				{
+					border: none;
+					padding-bottom: 1px;
+
+					&:before
+					{
+					    width: 100% !important;
+					}
+
+					a
+					{
+						background: transparent;
+						opacity: 1 !important;
+					}
+				}
+
+				> a
+				{
+					padding: rem-calc(16);
+					line-height: 0.9rem;
+					background: transparent;
+
+					&:after
+					{
+						@include the_retailer_pro_icon('\e904');
+						font-size: .6em;
+						border: 0;
+						transition: all .7s;
+						top: rem-calc(20);
+					}
+				}
+			}
+
+			.wpml-ls-sub-menu
+			{
+				border: 0;
+				box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.25);
+				border-color: inherit;
+				margin-top: 1px !important;
+
+				li
+				{
+					margin: 0;
+				    height: auto;
+				    padding: rem-calc(12) !important;
+				}
+
+				a
+				{
+					border: 0;
+					padding: 0;
+					transition: none;
+				}
+			}
+		}
+	}
+}

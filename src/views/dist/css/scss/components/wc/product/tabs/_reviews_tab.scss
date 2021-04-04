@@ -1,0 +1,163 @@
+.woocommerce-Reviews
+{
+	#comments
+	{
+		margin-bottom: rem-calc(48);
+		 
+		.meta
+		{
+			margin: 0;
+		}
+
+		.woocommerce-Reviews-title
+		{
+			font-size: rem-calc(13); 
+			margin-bottom: rem-calc(24); 
+			font-family: inherit; 
+			opacity: $opacity-dark; 
+		}
+
+		.woocommerce-noreviews
+		{
+			font-size: rem-calc(13); 
+			line-height: 1.4; 
+			margin-bottom: rem-calc(24); 
+		}
+
+		.commentlist
+		{
+			list-style-type: none;
+			margin: 0; 
+			
+			.review,
+			.comment
+			{
+				margin-bottom: rem-calc(24);
+				 
+				.comment_container
+				{
+					display: flex;
+
+					.description
+					{
+						@extend .comment-content;
+					}
+
+					.avatar
+					{
+						width: rem-calc(40); 
+						height: rem-calc(40); 
+						margin-right: rem-calc(16); 
+						border-radius: 50%;
+					}
+
+					.comment-text
+					{
+						margin-top: rem-calc(-5);
+						 
+						p.meta
+						{
+							.woocommerce-review__author
+							{
+								font-size: rem-calc(12);
+								font-weight: normal;
+								margin-bottom: rem-calc(8);  
+							} 
+
+							.woocommerce-review__published-date
+							{
+								font-size: rem-calc(11); 
+							}
+						}
+
+						.description
+						{
+							font-size: rem-calc(14);
+							
+							p
+							{
+								margin-bottom: 0; 
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+
+		.woocommerce-pagination
+		{
+			> ul
+			{
+				justify-content: flex-start;
+			}
+		}
+
+	}
+
+	#review_form_wrapper
+	{
+		#review_form
+		{
+			.comment-reply-title
+			{
+				font-size: rem-calc(13); 
+				margin-bottom: rem-calc(4); 
+			}
+
+			.comment-form
+			{
+				label
+				{
+					font-size: rem-calc(12); 
+				}
+
+				.comment-notes
+				{
+					font-size: rem-calc(13);
+					line-height: 1.4;  
+				}
+
+				.comment-form-rating
+				{
+					margin-bottom: rem-calc(24);
+					 
+					p.stars
+					{
+						font-size: rem-calc(16);
+					}
+				}
+			}
+
+			.comment-form-comment
+			{
+				margin-bottom: rem-calc(16); 
+			}
+		}
+
+		@include breakpoint(medium up)
+		{
+			.comment-form-author,
+			.comment-form-email
+			{
+				width: 49%;
+				margin-right: 2%;
+				float: left;
+				margin-bottom: rem-calc(16); 
+				
+				input
+				{
+					margin-bottom: 0;
+				}
+			}
+			.comment-form-email
+			{
+				margin-right: 0;
+			}
+		}
+
+	}
+	
+}
+

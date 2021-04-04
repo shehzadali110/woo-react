@@ -1,0 +1,31 @@
+.widget_theme_ecommerce_info
+{
+	display: flex;
+
+	.ecommerce-info-widget-txt-wrapper
+	{
+		.ecommerce-info-widget-title
+		{
+			display: flex;
+			align-items: center;
+			
+			.ecommerce-info-widget-icon
+			{
+				font-size: 24px; 
+				margin-right: 16px;
+				line-height: 1; 
+			}
+			
+			.widget-title
+			{
+				margin-bottom: 4px;
+			}
+		}
+
+		.ecommerce-info-widget-subtitle
+		{
+			padding-left: 2.5rem; 
+		}
+	}
+
+}

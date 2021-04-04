@@ -1,0 +1,32 @@
+.header-megamenu-placeholder
+{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 100%;
+
+	@each $breakpoint, $padding in $content-padding
+	{
+		@include breakpoint($breakpoint) {
+			padding: 0 rem-calc($padding) !important;
+		}
+	}
+
+	@include large_side_paddings(true);
+}
+
+.gbt-mega-menu-content
+{
+	position: relative;
+	width: 100% !important;
+	height: 100%;
+	left: 0 !important;
+	top: 100% !important;
+	padding: 0;
+	@include dropdowns_shadow();
+
+	@import 'megamenu_categories_list';
+	@import 'megamenu_posts_list';
+	@import 'megamenu_icons_list';
+	@import 'megamenu_contact';
+}

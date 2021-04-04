@@ -1,0 +1,11 @@
+.woocommerce-breadcrumb
+{
+	text-align: left;
+	font-size: rem-calc(11);
+	margin-bottom: rem-calc(5);
+	
+	.delimiter
+	{
+		margin: 0 rem-calc(4);
+	}
+}

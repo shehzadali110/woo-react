@@ -1,0 +1,387 @@
+.site-content .woocommerce-archive-header
+{
+	margin-bottom: rem-calc(20);
+
+	@include breakpoint(large)
+	{
+		margin-bottom: rem-calc(50);
+	}
+}
+
+.woocommerce-archive-header
+{
+	position: relative;
+
+	.woocommerce-archive-header-inside
+	{
+		position: relative;	
+
+		@each $breakpoint, $padding in $content-padding {
+			@include breakpoint($breakpoint) {
+				margin: 0 rem-calc(-$padding);
+			}
+		}
+
+		min-height: 57px;
+
+		@include breakpoint(large)
+		{
+			display: flex;
+			align-items: center;
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+		}
+
+		@include breakpoint(large)
+		{
+			margin: 0;
+			padding: rem-calc(4) 0 rem-calc(5) 0;
+			border: 0;
+		}
+
+		.woocommerce-archive-header-title
+		{
+			margin: 0;
+			display: flex;
+			text-transform: capitalize;
+			font-size: rem-calc(20);
+			padding: rem-calc(10) rem-calc(20) rem-calc(25);
+
+			@include breakpoint(medium)
+			{
+				padding: rem-calc(10) rem-calc(25) rem-calc(25);
+			}
+
+			@include breakpoint(large)
+			{
+				align-items: center;
+				font-size: rem-calc(23); 
+				padding: 0;
+			}
+		}
+
+		.category-title-count
+		{
+			font-size: rem-calc(13);
+			padding-top: rem-calc(5);
+		}
+
+		.woocommerce-archive-header-tools 
+		{
+			display: flex;
+			margin-left: auto;
+			flex: 1;
+
+			@include breakpoint(medium down)
+			{
+				align-items: center;
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+			}
+
+			@include breakpoint(large)
+			{
+				flex: inherit;
+			}
+
+			.filters-button
+			{
+				display: none;
+				align-items: center;
+				position: relative;
+				cursor: pointer;
+				user-select: none;
+				flex: 1;
+				border-right: 1px solid;
+				@include global-transition();
+
+				@include form_items_sizes();
+
+				@each $breakpoint, $padding in $content-padding {
+					@include breakpoint($breakpoint) {
+						padding: 0 rem-calc($padding);
+					}
+				}
+
+				@include breakpoint(large)
+				{
+					padding: 0 $form-spacing;
+					}
+				
+				@include breakpoint(large)
+				{
+					flex: inherit;
+					border: 0;
+				}
+
+				&.with-filters
+				{
+					display: flex;
+				}
+				
+				&.active
+				{
+					&:after
+					{
+						transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+					}
+				}
+				
+				&:after
+				{
+					display: flex;
+					align-items: center;
+					@include the_retailer_pro_icon('\e904');
+					margin-left: $form-spacing;
+					font-size: rem-calc(8);
+					transition: transform .7s;
+				}
+			}
+
+			.woocommerce-ordering
+			{
+				display: flex;
+				align-items: center;
+				flex: 1;
+				border-right: 1px solid;
+				//min-width: rem-calc(150);
+				
+				@include breakpoint(large)
+				{
+					flex: inherit;
+					border: 0;
+					//min-width: auto;
+				}
+
+				select
+				{
+					margin: 0;
+					border: 0;
+					background: none;
+					
+					@each $breakpoint, $padding in $content-padding {
+						@include breakpoint($breakpoint) {
+							padding: 0 rem-calc($padding);
+						}
+					}
+
+					@include breakpoint(large)
+					{
+						padding: 0 $form-spacing;
+					}
+				}
+
+				.select2
+				{
+					margin: 0;
+					border: 0;
+					@include global-transition();
+					//background-color: green;
+
+					.select2-selection
+					{
+						border: 0;
+
+						@each $breakpoint, $padding in $content-padding {
+							@include breakpoint($breakpoint) {
+								padding: 0 rem-calc($padding);
+							}
+						}
+
+						@include breakpoint(large)
+						{
+							padding: 0 $form-spacing;
+						}
+						
+						.select2-selection__rendered
+						{
+							display: inline-block;
+							position: relative;
+
+							&:after
+							{
+								position: absolute;
+								top: 0;
+								right: 0;
+								display: flex;
+								height: 100%;
+								align-items: center;
+								@include the_retailer_pro_icon('\e904');
+								font-size: rem-calc(8);
+								transition: transform .7s;
+							}
+						}
+
+						.select2-selection__arrow
+						{
+							display: none;
+						}
+					}
+
+					&.select2-container--open
+					{
+						.select2-selection__rendered:after
+						{
+							transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+						}
+					}					
+				}			
+			}
+		
+			.shop-tools
+			{
+				display: flex;
+				align-items: center;
+
+				.shop-display-grid,
+				.shop-display-list
+				{
+					display: flex;
+					align-items: center;
+					cursor: pointer;
+					opacity: $opacity-medium;
+					border-right: 1px solid;
+					@include form_items_sizes();
+					@include global-transition();
+					font-size: inherit;
+					//background: #333;
+
+					@each $breakpoint, $padding in $content-padding {
+						@include breakpoint($breakpoint) {
+							padding: 0 rem-calc($padding);
+						}
+					}
+
+					@include breakpoint(large)
+					{
+						padding: 0 rem-calc(6);
+						border: 0;
+					}
+
+					&.active
+					{
+						opacity: 1;
+					}
+				}
+
+				span:last-child
+				{
+					border-right: 0;
+				}
+
+				@include breakpoint(large)
+				{
+					span:last-child
+					{
+						padding-right: 0;
+					}
+				}
+			}
+		}
+
+		> .select2-container
+		{
+			top: 100% !important;
+
+			.select2-dropdown
+			{
+				border: 0;
+				@include dropdowns_shadow();
+
+				.select2-results__options
+				{
+					max-height: inherit;
+				}
+			}
+		}
+	}
+}
+
+.woocommerce_category_header_image
+{
+	margin-bottom: rem-calc(15);
+
+	@include breakpoint(small only)
+	{
+		margin-left: rem-calc(-20);
+		margin-right: rem-calc(-20);
+		margin-top: rem-calc(-20)
+	}
+
+	@include breakpoint(large)
+	{
+		margin-bottom: rem-calc(70);
+	}
+}
+
+.term-description
+{
+	font-size: rem-calc(14);
+	 
+	p
+	{
+		margin-bottom: rem-calc(24); 
+		line-height: rem-calc(22); 
+	}	
+
+	@include breakpoint(large)
+	{
+		max-width: rem-calc(720); 
+		margin-bottom: rem-calc(63); 
+	}
+}
+
+
+
+
+
+
+
+/*.woocommerce-archive-header-sticky
+{
+	margin: 0 rem-calc(-20);
+	margin-bottom: rem-calc(20);
+
+	@include breakpoint(large)
+	{
+		margin-bottom: rem-calc(40);
+	}
+	
+	& + .woocommerce_category_header_image
+	{
+		margin-bottom: rem-calc(12); 
+		margin-left: -20px;
+		margin-right: -20px;
+		
+		@include breakpoint(medium)
+		{
+			margin-left: -24px;
+			margin-right: -24px;
+		}
+	
+		@include breakpoint(large)
+		{
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			margin-bottom: rem-calc(52); 
+		}
+
+		& + .term-description
+		{
+			font-size: rem-calc(14);
+			 
+			p
+			{
+				margin-bottom: rem-calc(24); 
+				line-height: rem-calc(22); 
+			}	
+
+			@include breakpoint(large)
+			{
+				max-width: rem-calc(720); 
+				margin-bottom: rem-calc(72); 
+			}
+		}
+	}
+}*/

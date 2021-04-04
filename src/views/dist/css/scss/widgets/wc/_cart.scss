@@ -1,0 +1,174 @@
+.offcanvas_minicart {
+
+	//height: 100%;
+	//padding-bottom: 180px;
+	display: none;
+
+	.offcanvas_for_cart & {
+		display: block;
+	}
+
+	//height: 100%;
+
+	ul.cart_list {
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow: auto;
+		height: calc(100vh - 180px);
+		//height: 100%;
+		//margin-bottom: 180px;
+
+		li {
+
+			position: relative;
+			display: block;
+			border-bottom: 1px solid #e0e0e0;
+			padding: rem-calc(20) rem-calc(50) 0 rem-calc(125);
+			min-height: 100px;
+			width: 100%;
+			overflow: hidden;
+			transition: all .3s ease;
+
+			@keyframes cart_item_scale {
+				0%   { transform: scale(.9, .9); }
+				100% { transform: scale(1, 1); }
+			}
+
+			&:hover {
+				background: #FFF;
+			}
+
+			&.empty {
+
+				margin-top: rem-calc(50);
+				text-align: center;
+				border: none;
+				padding: 0;
+
+				&:hover {
+					background: transparent;
+				}
+
+			}
+
+			a {
+
+				display: block;
+				font-size: 13px;
+				font-weight: bold;
+				line-height: 1.5;
+
+				&.remove {
+
+					position: absolute;
+					top: 20px;
+					right: 30px;
+					margin: 0;
+					font-weight: bold;
+					font-size: rem-calc(16);
+
+				}
+
+			}
+
+
+			img {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				max-width: 100px;
+				width: 100px;
+				height: 100px;
+
+				@include breakpoint(large) {
+					max-width: 150px;
+					width: 100px;
+					height: 100px;
+				}
+
+			}
+
+			.quantity {
+
+				font-size: rem-calc(12);
+				padding-bottom: 15px;
+				display: inline-block;
+
+				@include breakpoint(large) {
+					padding-bottom: 0;
+				}
+
+			}
+
+			dl, dd {
+				margin: 0;
+			}
+
+		}
+
+	}
+
+	p {
+
+		&.total {
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 120px;
+			margin: 0;
+			padding: 20px 30px;
+			background: #FFF;
+			line-height: 20px;
+			box-shadow: 0px -1px 10px 0 rgba(0,0,0,0.1);
+			//width: 100%;
+			//width: $offcanvas_mobile_width;
+			//@include breakpoint(large) { width: $offcanvas_largeup_width; }
+
+			strong {
+				font-size: 13px;
+				float: left;
+				text-transform: uppercase;
+			}
+
+			.amount {
+				float: right;
+				font-size: rem-calc(18);
+				font-weight: bold;
+			}
+
+		}
+
+		&.buttons {
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			//top: 0;
+			bottom: 0;
+			margin: 0;
+			//width: 100%;
+			//width: $offcanvas_mobile_width;
+			//@include breakpoint(large) { width: $offcanvas_largeup_width; }
+
+			a {
+				display: block;
+				padding: 0;
+				height: 60px;
+				line-height: 60px;
+
+				&:not(.checkout)
+				{
+					background: #777;
+				}
+			}
+
+		}
+
+	}
+
+}

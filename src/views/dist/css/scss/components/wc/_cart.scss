@@ -1,0 +1,8 @@
+body.woocommerce-cart
+{
+	@import "cart/cart_collaterals";
+	@import "cart/cart_cross_sells";
+	@import "cart/cart_empty";
+	@import "cart/cart_table";
+	@import "cart/cart_totals";
+}

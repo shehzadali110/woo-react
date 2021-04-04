@@ -1,0 +1,29 @@
+.woocommerce-breadcrumb
+{
+	text-align: left;
+	margin-bottom: rem-calc(24);
+	font-size: 0;
+	
+	@include breakpoint(medium)
+	{
+		margin-bottom: rem-calc(48);
+	}
+
+	@include breakpoint(medium only)
+	{
+		margin-top: rem-calc(16);
+	}
+
+	> a,
+	> span:not(:last-of-type)
+	{
+		font-size: rem-calc(11);
+		line-height: rem-calc(15); 
+	}
+
+	.delimiter
+	{
+		padding: 0 rem-calc(5);
+	}
+	
+}

@@ -1,0 +1,218 @@
+.getbowtied_popular_posts_container
+{
+	body.content-layout-full &
+	{
+		border-bottom: 1px solid;
+	}
+
+	.popular_posts_columns
+	{		
+		width: 100%;
+
+		@each $breakpoint, $padding in $content-padding 
+		{ 
+			@include breakpoint($breakpoint) { 
+				padding: rem-calc($padding*1.35) rem-calc($padding) rem-calc($padding*0.8); 
+			} 
+		}
+
+		@include large_side_paddings;
+
+		body.content-layout-boxed &
+		{
+			border-bottom: 1px solid;
+		}
+	}
+
+	.popular_posts_title
+	{
+		font-size: rem-calc(16); 
+		margin-bottom: rem-calc(33); 
+
+		@include breakpoint(small only)
+		{
+			text-transform: uppercase;
+			font-size: rem-calc(13);
+			margin-bottom: rem-calc(20);
+		}
+	}
+
+	.getbowtied_popular_posts
+	{		
+		.popular-post
+		{
+			display: flex;
+			opacity: 0;
+		    transform: scale(.95);
+		    
+		    animation: post_fade_in .25s;
+		    animation-fill-mode: forwards;
+		    animation-delay: 1s;
+
+		    will-change: opacity, transform;
+
+		    &:last-child
+		    {
+		    	@include breakpoint(small only)
+				{
+					margin-bottom: 0;
+				}
+		    }
+		    
+			@include breakpoint(medium)
+			{
+				display: inline-block;
+			}
+
+			&.sticky
+			{
+				.sticky_post_content
+				{
+					.sticky_post_title
+					{
+						a
+						{
+							&:before
+							{
+								content: "★";
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+
+			&.with-image
+			{
+				.sticky_post_content
+				{
+					width: 70%;
+			
+					@include breakpoint(medium)
+					{
+						width: 100%; 
+					} 
+				}
+			}
+
+			.sticky_post_image
+			{
+				position: relative;
+				font-size: 0;
+				margin-right: rem-calc(16); 
+				width: 30%;
+
+				.wp-post-image.size-medium
+				{
+					display: block;
+					max-width: 300px;
+					width: 100%;
+
+					@include breakpoint(small only)
+					{
+						display: none;
+					}
+				}
+
+				.wp-post-image.size-thumbnail
+				{
+					display: none;
+					max-width: 150px;
+					width: 100%;
+
+					@include breakpoint(small only)
+					{
+						display: block
+					}
+				}
+				
+				@include breakpoint(medium)
+				{
+					width: 100%; 
+					margin-right: 0; 
+					margin-bottom: rem-calc(24); 
+				} 
+
+				@include breakpoint(large)
+				{
+					transition: transform .3s ease-in-out;
+					will-change: transform;
+				}
+
+				a
+				{
+					display: block;
+					
+					span
+					{
+						display: inline-block;
+						width: 100%; 
+						height: rem-calc(90); 
+						background-size: cover;
+						background-repeat: no-repeat;
+						transition: transform .3s ease-in-out;
+						will-change: transform;
+						
+						@include breakpoint(medium)
+						{
+							height: rem-calc(160); 
+						}
+					}
+				}
+			}
+
+			.sticky_post_content
+			{
+				.entry-meta
+				{
+					font-size: rem-calc(11);   
+					line-height: rem-calc(15); 
+					margin-bottom: rem-calc(12); 
+					@include global-transition();
+					
+					a
+					{
+						opacity: $opacity-dark;
+						
+						&:hover
+						{
+							opacity: 1; 
+						}
+						
+					}
+				}
+
+				.sticky_post_title
+				{
+					font-size: rem-calc(13); 
+					line-height: rem-calc(18); 
+					word-wrap: break-word; 
+
+					@include breakpoint(medium)
+					{
+						font-size: rem-calc(16);
+						line-height: rem-calc(22);
+					} 
+				}
+			}
+
+			margin-bottom: rem-calc(24);
+			
+			@include breakpoint(large)
+			{
+				margin-bottom: 0;
+			} 
+
+			&:hover
+			{
+				.sticky_post_image
+				{
+					@include breakpoint(large)
+					{
+						transform: scale3d(0.98, 0.98, 0.98);
+					}
+				}
+			}
+		}
+	}
+}

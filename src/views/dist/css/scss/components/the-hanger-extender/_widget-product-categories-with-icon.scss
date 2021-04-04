@@ -1,0 +1,166 @@
+.widget.woocommerce.widget_product_categories_with_icon
+{
+	.product-categories-with-icon
+	{
+		> li
+		{
+			border-bottom: 1px solid;
+			margin: 0;
+			display: flex;
+			align-items: center; 
+			flex-wrap: wrap; 
+			cursor: pointer; 
+
+			&:last-child
+			{
+				border-bottom: 0;
+			}
+			
+			.dropdown_icon
+			{
+				&:before
+				{
+					display: flex;
+					justify-content: flex-end;
+					transition: transform .7s;
+				}
+			}
+
+			&.active-item
+			{
+				.dropdown_icon
+				{
+					&:before
+					{
+						transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+					}
+				}
+			}
+
+			> ul
+			{
+				&.children
+				{	
+					margin: 0px 0.5rem 1rem 2.5rem;
+					width: 100%; 
+					
+					&.add_scroll
+					{
+						max-height: 200px;
+					    overflow-y: scroll;
+					    margin-bottom: 1.5rem;
+					    
+					    &::-webkit-scrollbar-track
+					    {
+					    	border-radius: 3px;
+					    	background: rgba(#000,.1); 
+					    }
+
+					    &::-webkit-scrollbar
+					    {
+					    	width: 2px;
+					    	background: rgba(#000,.1); 
+					    }
+
+					    &::-webkit-scrollbar-thumb
+						{
+							border-radius: 3px;
+							background: rgba(#000,.1); 
+						}
+					}
+
+					li
+					{
+						[class^="thehanger-icons-"],
+						[class*=" thehanger-icons-"]
+						{
+							display: none;
+						}
+
+					}
+				}
+			}
+
+			> a
+			{
+				display: flex;
+				align-items: center; 
+				min-height: 4.5em;
+				padding-top: 1.2em;
+				padding-bottom: 1.2em;
+				max-width: 70%;
+				
+				i
+				{
+					font-size: 1.5rem;
+					padding-right: 0.9375rem;
+				}
+
+				img 
+				{
+					width: 1.5rem;
+					margin-right: 0.9375rem;
+				}
+			}
+
+			.count
+			{
+				margin-left: 0.1875rem;
+			}
+			
+		}
+
+		> .cat-parent
+		{
+			position: relative;
+			
+			&.no-icon
+			{
+				> .children
+				{
+					margin-left: 1.25rem;
+				}
+			}
+
+			&.current-cat-parent
+			{
+				&.active
+				{
+					ul.children
+					{
+						display: block;
+					}
+				}
+			}
+
+			.dropdown_icon
+			{
+				transition: all .3s ease-in-out;
+				padding: 0.25rem;
+				font-size: 0.5rem;
+				flex-grow: 1;
+				justify-content: flex-end;
+				text-align: right;
+			}
+
+			.cat-item
+			{
+				margin-bottom: 0.3125rem;
+			}
+
+			> .children
+			{
+				display: none;
+				
+				li
+				{
+					ul.children
+					{
+					    margin: 0.5rem 0.5rem 0px 1.25rem;
+					}
+				}
+			}
+			
+		}
+	}
+}

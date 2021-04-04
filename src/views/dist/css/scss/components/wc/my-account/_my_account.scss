@@ -1,0 +1,29 @@
+.woocommerce-account
+{
+	.entry-title
+	{
+		font-size: rem-calc(23); 
+		margin-bottom: rem-calc(32); 
+		margin-top: rem-calc(32); 
+		
+		@include breakpoint(large)
+		{
+			margin-bottom: rem-calc(50); 
+		}
+	}
+
+	@import 'login';
+	@import 'dashboard';
+	@import 'orders';
+	@import 'view_order';
+	@import 'downloads';
+	@import 'account_details';
+	@import 'addresses';
+	@import 'payment_methods';
+}
+
+.woocommerce-lost-password
+{
+	@import 'lost_password';
+}
+

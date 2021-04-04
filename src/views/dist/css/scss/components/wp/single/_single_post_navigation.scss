@@ -1,0 +1,107 @@
+.single_navigation_container
+{
+	.single_navigation
+	{
+		width: 100%;
+		 
+		@each $breakpoint, $padding in $content-padding
+		{
+			@include breakpoint($breakpoint) {
+				padding: rem-calc($padding*1.35) rem-calc($padding);
+			}
+
+			@include breakpoint(small only)
+			{
+				padding: 0;
+
+				.nav-previous,
+				.nav-next
+				{
+					padding: rem-calc($padding*0.75) rem-calc($padding*0.2);
+				}
+			}
+		}
+
+		@include large_side_paddings;
+
+		.row
+		{
+			@include breakpoint(small only)
+			{
+				margin: 0;
+			}
+		}
+	}
+	
+	.border-mobile 
+	{
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+		
+		&:last-child
+		{
+			border-top: 0; 
+		}
+		
+		@include breakpoint(medium)
+		{
+			border-bottom: 0;
+			border-top: 0;
+		} 
+	}
+	
+	.post-navigation
+	{
+		position: relative;
+		width: 100%; 
+	}	
+	
+	.nav-previous,
+	.nav-next
+	{
+		a
+		{
+			.nav-previous-title,
+			.nav-next-title
+			{
+				margin-bottom: rem-calc(12); 
+				font-size: rem-calc(13); 
+				
+				& + span
+				{
+					padding-bottom: rem-calc(24);
+					@include global-transition();
+					
+					@include breakpoint(large)
+					{
+						padding-bottom: 0;
+					}
+
+					@include breakpoint(small only)
+					{
+						font-size: rem-calc(13); 
+					}
+				} 
+			}
+		}
+	}
+
+	.nav-next
+	{
+		@include breakpoint(large)
+		{
+			text-align: right;
+		}
+	}
+
+	.medium-6
+	{
+		.nav-next
+		{
+			@include breakpoint(small only)
+			{
+				border-top: 1px solid;
+			}
+		}
+	}
+}

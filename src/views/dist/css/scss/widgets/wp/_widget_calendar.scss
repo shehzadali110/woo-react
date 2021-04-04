@@ -1,0 +1,104 @@
+@mixin widget_calendar()
+{
+	table
+	{
+		margin-bottom: 0;
+		font-size: 13px;
+		
+		caption
+		{
+			text-align: center;
+		    font-size: rem-calc(11);
+		    line-height: 1.4;
+		    text-transform: uppercase;
+		    letter-spacing: 3px;
+		    padding: 10px 0px;
+		}
+
+		th, td
+		{
+			border: 0;
+			text-align: center;
+			
+			a
+			{
+				color: inherit;
+			}
+		}
+
+		tbody
+		{
+			tr
+			{
+				> td
+				{
+					font-size: rem-calc(11);
+					 
+					a
+					{
+						border-bottom: 1px solid;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		tfoot
+		{
+			tr
+			{
+				> td
+				{
+					text-align: left;
+					
+					&#next
+					{
+						text-align: right;
+					}
+
+				}
+			}
+		}
+
+		th
+		{
+			font-size: rem-calc(10);
+			padding-right: 0;
+		}
+
+		tr
+		{
+			border: none;
+		}
+
+		td
+		{
+			padding: rem-calc(4.8);
+			
+			&#today
+			{
+				position: relative;
+		
+				&:after
+				{
+					content: "";
+					position: absolute;
+					top: 1px;
+					border-radius: 100%; 
+					width: 4px;
+					height: 4px; 
+					
+				}
+			}
+		}
+
+		a
+		{
+			font-size: rem-calc(11);
+			font-weight: 500;
+			text-transform: uppercase;
+		} 
+
+	}
+
+}

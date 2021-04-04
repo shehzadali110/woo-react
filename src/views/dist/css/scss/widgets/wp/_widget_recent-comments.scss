@@ -1,0 +1,14 @@
+@mixin widget_recent_comments()
+{
+	.recentcomments
+	{	 
+		.comment-author-link
+		{
+			& + a
+			{
+				display: block !important;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,149 @@
+.woocommerce-Payment
+{
+	ul.payment_methods
+	{
+		list-style-type: none;
+		margin: 0; 
+
+		.woocommerce-PaymentMethod
+		{
+			border-bottom: 1px solid;
+			margin-bottom: rem-calc(24); 
+			padding-bottom: rem-calc(24); 
+
+			&:last-child
+			{
+				border-bottom: 0px;
+			}
+
+			input
+			{
+				margin: 0 !important;
+				top: 0 !important;
+			}
+
+			label
+			{
+			    line-height: 1.7;
+			}
+
+			.payment_box
+			{
+				font-size: rem-calc(13); 
+				padding: 1.5rem 33px 0; 
+
+				> p
+				{
+					margin-bottom: 0.5rem;
+					margin-top: 0; 
+				}
+
+				> div
+				{
+					> p
+					{
+						margin-bottom: 1rem;
+					}
+				}
+
+				&.payment_method_stripe_sepa
+				{
+					> div
+					{
+						> p
+						{
+							margin-bottom: 1.5rem;
+						}
+					}
+
+					fieldset
+					{
+						padding: 0 !important;
+
+						> p
+						{
+							margin-bottom: 1.5rem !important;
+						}
+					}
+
+					.form-row
+					{
+						input
+						{
+						    width: 100%;
+						}
+					}
+				}
+
+				.wc-payment-form
+				{
+					.form-row
+					{
+						margin-bottom: 1.5rem;
+
+						label
+						{
+							padding: 0;
+						}
+					}
+				}
+
+				.woocommerce-error
+				{
+					background-color: $alert-color;
+					color: #FFF;
+					font-size: rem-calc(14);
+					line-height: rem-calc(18);  
+					margin: 0;
+					list-style-type: none;
+					position: relative; 
+					padding: rem-calc(25) 0;
+					display: flex;
+					
+					&:before
+					{
+						@include the_retailer_pro_icon('\e9cc');
+						font-size: 24px; 
+						margin-right: 11px; 
+						margin-left: 11px;
+						margin-top: -4px;
+
+						@include breakpoint(medium)
+						{
+							margin-left: rem-calc(32); 
+						}
+					}
+
+					p{
+						margin-bottom: 0;
+						width: 100%;
+						padding-right: rem-calc(40);
+
+						@include breakpoint(small only)
+						{
+							display: inline;
+						}
+					}
+
+					li
+					{
+						margin-bottom: 0;
+						line-height: 19px;
+						width: 100%;	
+					}
+				}
+
+				.woocommerce-validated
+				{
+					margin-bottom: 0 !important;
+
+					input
+					{
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	
+}

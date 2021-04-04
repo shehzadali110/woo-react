@@ -1,0 +1,36 @@
+.entry-content-wrap
+{
+	.entry-meta
+	{
+		margin-bottom: rem-calc(12); 
+		
+		time
+		{
+			font-size: rem-calc(11);
+			line-height: rem-calc(16); 
+			 
+			 @include breakpoint(medium)
+			 {
+			 	font-size: rem-calc(12);
+			 }
+		}
+	}
+}
+
+.entry-title
+{
+	hyphens: auto;
+	margin-bottom: rem-calc(16); 
+}
+
+.entry-content
+{
+	font-size: rem-calc(14);
+	margin-bottom: rem-calc(16); 
+
+	p
+	{
+		margin-bottom: 0;
+	}
+
+}

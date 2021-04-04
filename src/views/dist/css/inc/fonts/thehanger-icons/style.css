@@ -1,0 +1,1853 @@
+@font-face {
+  font-family: 'the-hanger';
+  src: url("fonts/the-hanger.woff2") format("woff2"), url("fonts/the-hanger.ttf") format("truetype"), url("fonts/the-hanger.woff") format("woff"), url("fonts/the-hanger.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="thehanger-icons-"], [class*=" thehanger-icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'the-hanger' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.thehanger-icons-cafe_wine-glass:before {
+  content: "\eaa0";
+}
+
+.thehanger-icons-cafe_take-away-drink:before {
+  content: "\eaa1";
+}
+
+.thehanger-icons-cafe_take-away-drink-2:before {
+  content: "\eaa2";
+}
+
+.thehanger-icons-cafe_pizza-slice2:before {
+  content: "\eaa3";
+}
+
+.thehanger-icons-health_diet-tape2:before {
+  content: "\eaa4";
+}
+
+.thehanger-icons-health_kg-weight2:before {
+  content: "\eaa5";
+}
+
+.thehanger-icons-health_scale2:before {
+  content: "\eaa6";
+}
+
+.thehanger-icons-health_sunset:before {
+  content: "\eaa7";
+}
+
+.thehanger-icons-health_tape-52:before {
+  content: "\eaa8";
+}
+
+.thehanger-icons-hotel_hair-dryer:before {
+  content: "\eaa9";
+}
+
+.thehanger-icons-spa_sunflower:before {
+  content: "\eaaa";
+}
+
+.thehanger-icons-spa_swim-pool:before {
+  content: "\eaab";
+}
+
+.thehanger-icons-spa_sunbed:before {
+  content: "\eaac";
+}
+
+.thehanger-icons-spa_stones:before {
+  content: "\eaad";
+}
+
+.thehanger-icons-spa_spa-sign:before {
+  content: "\eaae";
+}
+
+.thehanger-icons-spa_shower2:before {
+  content: "\eaaf";
+}
+
+.thehanger-icons-spa_small-candles:before {
+  content: "\eab0";
+}
+
+.thehanger-icons-spa_perfume2:before {
+  content: "\eab1";
+}
+
+.thehanger-icons-spa_razor2:before {
+  content: "\eab2";
+}
+
+.thehanger-icons-spa_mortar-pestle:before {
+  content: "\eab3";
+}
+
+.thehanger-icons-spa_nail-polish:before {
+  content: "\eab4";
+}
+
+.thehanger-icons-spa_night-cream:before {
+  content: "\eab5";
+}
+
+.thehanger-icons-spa_massage-oil-2:before {
+  content: "\eab6";
+}
+
+.thehanger-icons-spa_massage-oil:before {
+  content: "\eab7";
+}
+
+.thehanger-icons-spa_lipstick2:before {
+  content: "\eab8";
+}
+
+.thehanger-icons-spa_makeup-brush-set:before {
+  content: "\eab9";
+}
+
+.thehanger-icons-spa_makeup-set:before {
+  content: "\eaba";
+}
+
+.thehanger-icons-spa_hot-bath:before {
+  content: "\eabb";
+}
+
+.thehanger-icons-spa_hand-mirror-2:before {
+  content: "\eabc";
+}
+
+.thehanger-icons-spa_hand-cream2:before {
+  content: "\eabd";
+}
+
+.thehanger-icons-spa_flower-4:before {
+  content: "\eabe";
+}
+
+.thehanger-icons-spa_face-brush:before {
+  content: "\eabf";
+}
+
+.thehanger-icons-spa_eye-makeup:before {
+  content: "\eac0";
+}
+
+.thehanger-icons-spa_eye-cream:before {
+  content: "\eac1";
+}
+
+.thehanger-icons-spa_cream:before {
+  content: "\eac2";
+}
+
+.thehanger-icons-spa_comb:before {
+  content: "\eac3";
+}
+
+.thehanger-icons-spa_cleansing-oil:before {
+  content: "\eac4";
+}
+
+.thehanger-icons-spa_clean-brush:before {
+  content: "\eac5";
+}
+
+.thehanger-icons-spa_candle-fire:before {
+  content: "\eac6";
+}
+
+.thehanger-icons-spa_bamboo:before {
+  content: "\eac7";
+}
+
+.thehanger-icons-health_tape-apple2:before {
+  content: "\eac8";
+}
+
+.thehanger-icons-health_water-bottle-small:before {
+  content: "\eac9";
+}
+
+.thehanger-icons-ecommerce_shop-location2:before {
+  content: "\e9d0";
+}
+
+.thehanger-icons-mail_mail:before {
+  content: "\e9d1";
+}
+
+.thehanger-icons-calendar_wall-clock-2:before {
+  content: "\e9d2";
+}
+
+.thehanger-icons-phone_phone-symbol:before {
+  content: "\e9d3";
+}
+
+.thehanger-icons-phone_iphone:before {
+  content: "\e9d4";
+}
+
+.thehanger-icons-three_dots:before {
+  content: "\e9cf";
+}
+
+.thehanger-icons-arrow-left:before {
+  content: "\e9cd";
+}
+
+.thehanger-icons-arrow-right:before {
+  content: "\e9ce";
+}
+
+.thehanger-icons-external-link:before {
+  content: "\e9ca";
+}
+
+.thehanger-icons-enlarge:before {
+  content: "\e9c7";
+}
+
+.thehanger-icons-video-play:before {
+  content: "\e9c8";
+}
+
+.thehanger-icons-building_home:before {
+  content: "\e9c2";
+}
+
+.thehanger-icons-security_fingerprint:before {
+  content: "\e9c3";
+}
+
+.thehanger-icons-quick-view:before {
+  content: "\e9c4";
+}
+
+.thehanger-icons-download:before {
+  content: "\e9c1";
+}
+
+.thehanger-icons-design_pencil-2:before {
+  content: "\e9bc";
+}
+
+.thehanger-icons-arrows_rounded-arrow-left:before {
+  content: "\e9bf";
+}
+
+.thehanger-icons-alignment_column-row-horizontal:before {
+  content: "\e9b9";
+}
+
+.thehanger-icons-alignment_align-all-1:before {
+  content: "\e9ba";
+}
+
+.thehanger-icons-alignment_align-all:before {
+  content: "\e9b6";
+}
+
+.thehanger-icons-ui_more-options:before {
+  content: "\e9bb";
+}
+
+.thehanger-icons-alignment_align-justify-all:before {
+  content: "\e9b7";
+}
+
+.thehanger-icons-ui_remove_selection:before {
+  content: "\e9ac";
+}
+
+.thehanger-icons-chat_chat-15:before {
+  content: "\e9cb";
+}
+
+.thehanger-icons-ui_notice:before {
+  content: "\e9cc";
+}
+
+.thehanger-icons-close-dark-larger:before {
+  content: "\e9c5";
+}
+
+.thehanger-icons-404:before {
+  content: "\e9c0";
+}
+
+.thehanger-icons-wishlist-empty:before {
+  content: "\e9bd";
+}
+
+.thehanger-icons-empty-cart:before {
+  content: "\e9c6";
+}
+
+.thehanger-icons-snapchat:before {
+  content: "\ea9f";
+}
+
+.thehanger-icons-ecommerce_watchlist-eye:before {
+  content: "\e98c";
+}
+
+.thehanger-icons-display-list:before {
+  content: "\e908";
+}
+
+.thehanger-icons-ui_add_selection:before {
+  content: "\e9ad";
+}
+
+.thehanger-icons-ui_window:before {
+  content: "\e9ae";
+}
+
+.thehanger-icons-seo_video-marketing:before {
+  content: "\e9af";
+}
+
+.thehanger-icons-ui_add:before {
+  content: "\e9b0";
+}
+
+.thehanger-icons-ui_minus:before {
+  content: "\e9b1";
+}
+
+.thehanger-icons-ui_delete:before {
+  content: "\e9b2";
+}
+
+.thehanger-icons-ui_confirm:before {
+  content: "\e9b3";
+}
+
+.thehanger-icons-ui_forbidden:before {
+  content: "\e911";
+}
+
+.thehanger-icons-ui_plus-window:before {
+  content: "\e9b4";
+}
+
+.thehanger-icons-ui_minus-window:before {
+  content: "\e9b5";
+}
+
+.thehanger-icons-ui_logout:before {
+  content: "\e98d";
+}
+
+.thehanger-icons-ui_edit:before {
+  content: "\e98e";
+}
+
+.thehanger-icons-ui_edit-profile:before {
+  content: "\e98f";
+}
+
+.thehanger-icons-ui_star_full:before {
+  content: "\e97f";
+}
+
+.thehanger-icons-ui_star:before {
+  content: "\e983";
+}
+
+.thehanger-icons-hamburger:before {
+  content: "\e909";
+}
+
+.thehanger-icons-search:before {
+  content: "\e90a";
+}
+
+.thehanger-icons-wishlist:before {
+  content: "\e90b";
+}
+
+.thehanger-icons-ecommerce_wishlist:before {
+  content: "\e990";
+}
+
+.thehanger-icons-account-24x24-dark-alt:before {
+  content: "\e90c";
+}
+
+.thehanger-icons-account:before {
+  content: "\e962";
+}
+
+.thehanger-icons-add-dark:before {
+  content: "\e901";
+}
+
+.thehanger-icons-remove-dark:before {
+  content: "\e9c9";
+}
+
+.thehanger-icons-add-dark-large:before {
+  content: "\e9be";
+}
+
+.thehanger-icons-close-dark:before {
+  content: "\e903";
+}
+
+.thehanger-icons-arrow-down-dark:before {
+  content: "\e904";
+}
+
+.thehanger-icons-arrow-left-dark:before {
+  content: "\e905";
+}
+
+.thehanger-icons-arrow-right-dark:before {
+  content: "\e906";
+}
+
+.thehanger-icons-arrow-up-dark:before {
+  content: "\e907";
+}
+
+.thehanger-icons-arrows_refresh:before {
+  content: "\e90d";
+}
+
+.thehanger-icons-ui_refresh-sync:before {
+  content: "\e90e";
+}
+
+.thehanger-icons-ui_question:before {
+  content: "\e90f";
+}
+
+.thehanger-icons-ui_options:before {
+  content: "\e910";
+}
+
+.thehanger-icons-shopping-bag:before {
+  content: "\e900";
+}
+
+.thehanger-icons-ecommerce_shopping-bag-2:before {
+  content: "\e991";
+}
+
+.thehanger-icons-ecommerce_shopping-bag-3:before {
+  content: "\e992";
+}
+
+.thehanger-icons-ecommerce_shopping-bag:before {
+  content: "\e993";
+}
+
+.thehanger-icons-ecommerce_shopping-basket-2:before {
+  content: "\e994";
+}
+
+.thehanger-icons-ecommerce_shopping-basket:before {
+  content: "\e995";
+}
+
+.thehanger-icons-ecommerce_shopping-bags:before {
+  content: "\e996";
+}
+
+.thehanger-icons-ecommerce_shopping-cart:before {
+  content: "\e997";
+}
+
+.thehanger-icons-ecommerce_cart-checkout:before {
+  content: "\e998";
+}
+
+.thehanger-icons-ecommerce_wallet:before {
+  content: "\e999";
+}
+
+.thehanger-icons-ecommerce_money:before {
+  content: "\e99a";
+}
+
+.thehanger-icons-ecommerce_accepted-cards:before {
+  content: "\e99b";
+}
+
+.thehanger-icons-ecommerce_smartphone-shopping:before {
+  content: "\e99c";
+}
+
+.thehanger-icons-ecommerce_shop:before {
+  content: "\e99d";
+}
+
+.thehanger-icons-ecommerce_shop-location:before {
+  content: "\e99e";
+}
+
+.thehanger-icons-ecommerce_purchase-receipt:before {
+  content: "\e99f";
+}
+
+.thehanger-icons-ecommerce_product-tag-6:before {
+  content: "\e9a0";
+}
+
+.thehanger-icons-ecommerce_discount-symbol:before {
+  content: "\e9a1";
+}
+
+.thehanger-icons-ecommerce_discount-coupon:before {
+  content: "\e9a2";
+}
+
+.thehanger-icons-ecommerce_shopping-coupons:before {
+  content: "\e9a3";
+}
+
+.thehanger-icons-ecommerce_discount-coupon-scissors:before {
+  content: "\e9a4";
+}
+
+.thehanger-icons-ecommerce_24h-support:before {
+  content: "\e9a5";
+}
+
+.thehanger-icons-ecommerce_credit-card:before {
+  content: "\e9a6";
+}
+
+.thehanger-icons-ecommerce_cash-register:before {
+  content: "\e9a7";
+}
+
+.thehanger-icons-ecommerce_box-transport:before {
+  content: "\e9a8";
+}
+
+.thehanger-icons-ecommerce_box-2:before {
+  content: "\e9a9";
+}
+
+.thehanger-icons-ecommerce_present:before {
+  content: "\e9aa";
+}
+
+.thehanger-icons-ecommerce_money-calculator:before {
+  content: "\e9ab";
+}
+
+.thehanger-icons-display-grid:before {
+  content: "\e902";
+}
+
+.thehanger-icons-ui_expand:before {
+  content: "\e9b8";
+}
+
+.thehanger-icons-love_valentine-cake:before {
+  content: "\e9d5";
+}
+
+.thehanger-icons-love_hearts:before {
+  content: "\e9d6";
+}
+
+.thehanger-icons-sports_badminton:before {
+  content: "\e9d7";
+}
+
+.thehanger-icons-sports_baseball-ball:before {
+  content: "\e9d8";
+}
+
+.thehanger-icons-sports_basketball-2:before {
+  content: "\e9d9";
+}
+
+.thehanger-icons-sports_basketball-arena:before {
+  content: "\e9da";
+}
+
+.thehanger-icons-sports_basketball-table:before {
+  content: "\e9db";
+}
+
+.thehanger-icons-sports_basketball:before {
+  content: "\e9dc";
+}
+
+.thehanger-icons-sports_billiard-8-ball:before {
+  content: "\e9dd";
+}
+
+.thehanger-icons-sports_fencing:before {
+  content: "\e9de";
+}
+
+.thehanger-icons-sports_football-ball:before {
+  content: "\e9df";
+}
+
+.thehanger-icons-sports_roller-skates:before {
+  content: "\e9e0";
+}
+
+.thehanger-icons-sports_rugby-ball:before {
+  content: "\e9e1";
+}
+
+.thehanger-icons-sports_rugby-helmet:before {
+  content: "\e9e2";
+}
+
+.thehanger-icons-sports_sport-shirt:before {
+  content: "\e9e3";
+}
+
+.thehanger-icons-sports_stopwatch:before {
+  content: "\e9e4";
+}
+
+.thehanger-icons-sports_tennis-ball:before {
+  content: "\e9e5";
+}
+
+.thehanger-icons-sports_tennis-baseball:before {
+  content: "\e9e6";
+}
+
+.thehanger-icons-sports_tennis-rockets:before {
+  content: "\e9e7";
+}
+
+.thehanger-icons-sports_ticket:before {
+  content: "\e9e8";
+}
+
+.thehanger-icons-sports_volleyball:before {
+  content: "\e9e9";
+}
+
+.thehanger-icons-sports_wight-lifting-3:before {
+  content: "\e9ea";
+}
+
+.thehanger-icons-spa_flip-flops:before {
+  content: "\e9eb";
+}
+
+.thehanger-icons-spa_hand-cream:before {
+  content: "\e9ec";
+}
+
+.thehanger-icons-spa_hand-mirror:before {
+  content: "\e9ed";
+}
+
+.thehanger-icons-spa_lipstick:before {
+  content: "\e9ee";
+}
+
+.thehanger-icons-spa_perfume:before {
+  content: "\e9ef";
+}
+
+.thehanger-icons-spa_razor-2:before {
+  content: "\e9f0";
+}
+
+.thehanger-icons-spa_razor:before {
+  content: "\e9f1";
+}
+
+.thehanger-icons-spa_rose:before {
+  content: "\e9f2";
+}
+
+.thehanger-icons-spa_scissors:before {
+  content: "\e9f3";
+}
+
+.thehanger-icons-spa_shower:before {
+  content: "\e9f4";
+}
+
+.thehanger-icons-spa_spa-flower:before {
+  content: "\e9f5";
+}
+
+.thehanger-icons-spa_spa-oil:before {
+  content: "\e9f6";
+}
+
+.thehanger-icons-party_balloons:before {
+  content: "\e9f7";
+}
+
+.thehanger-icons-party_christmas-candle:before {
+  content: "\e9f8";
+}
+
+.thehanger-icons-party_christmas-cute-cap:before {
+  content: "\e9f9";
+}
+
+.thehanger-icons-party_christmas-glove-2:before {
+  content: "\e9fa";
+}
+
+.thehanger-icons-party_christmas-socks:before {
+  content: "\e9fb";
+}
+
+.thehanger-icons-party_christmas-tree:before {
+  content: "\e9fc";
+}
+
+.thehanger-icons-party_cookie-man:before {
+  content: "\e9fd";
+}
+
+.thehanger-icons-party_door-bell:before {
+  content: "\e9fe";
+}
+
+.thehanger-icons-party_door-star:before {
+  content: "\e9ff";
+}
+
+.thehanger-icons-party_firework-4:before {
+  content: "\ea00";
+}
+
+.thehanger-icons-party_firework-stars:before {
+  content: "\ea01";
+}
+
+.thehanger-icons-party_present-2:before {
+  content: "\ea02";
+}
+
+.thehanger-icons-party_present-gift:before {
+  content: "\ea03";
+}
+
+.thehanger-icons-party_shopping-discount:before {
+  content: "\ea04";
+}
+
+.thehanger-icons-party_ski-boots:before {
+  content: "\ea05";
+}
+
+.thehanger-icons-party_snowflake:before {
+  content: "\ea06";
+}
+
+.thehanger-icons-party_snowman:before {
+  content: "\ea07";
+}
+
+.thehanger-icons-party_wax-candle:before {
+  content: "\ea08";
+}
+
+.thehanger-icons-music_audio-disc:before {
+  content: "\ea09";
+}
+
+.thehanger-icons-music_old-cassete:before {
+  content: "\ea0a";
+}
+
+.thehanger-icons-medical_gauze:before {
+  content: "\ea0b";
+}
+
+.thehanger-icons-industry_grain-2:before {
+  content: "\ea0c";
+}
+
+.thehanger-icons-health_diet-stats:before {
+  content: "\ea0d";
+}
+
+.thehanger-icons-health_diet-tape:before {
+  content: "\ea0e";
+}
+
+.thehanger-icons-health_heart-rate:before {
+  content: "\ea0f";
+}
+
+.thehanger-icons-health_kg-weight:before {
+  content: "\ea10";
+}
+
+.thehanger-icons-health_scale:before {
+  content: "\ea11";
+}
+
+.thehanger-icons-health_shower-towel:before {
+  content: "\ea12";
+}
+
+.thehanger-icons-health_slim-belly:before {
+  content: "\ea13";
+}
+
+.thehanger-icons-health_smartwatch-heart-rate:before {
+  content: "\ea14";
+}
+
+.thehanger-icons-health_stopwatch:before {
+  content: "\ea15";
+}
+
+.thehanger-icons-health_tape-5:before {
+  content: "\ea16";
+}
+
+.thehanger-icons-health_tape-apple:before {
+  content: "\ea17";
+}
+
+.thehanger-icons-handcrafts_eco-lamp-2:before {
+  content: "\ea18";
+}
+
+.thehanger-icons-handcrafts_leather:before {
+  content: "\ea19";
+}
+
+.thehanger-icons-handcrafts_sewing-machine:before {
+  content: "\ea1a";
+}
+
+.thehanger-icons-handcrafts_small-bobbin:before {
+  content: "\ea1b";
+}
+
+.thehanger-icons-handcrafts_e14-lamp:before {
+  content: "\ea1c";
+}
+
+.thehanger-icons-halloween-easter_axe-blond:before {
+  content: "\ea1d";
+}
+
+.thehanger-icons-halloween-easter_bat:before {
+  content: "\ea1e";
+}
+
+.thehanger-icons-halloween-easter_candle:before {
+  content: "\ea1f";
+}
+
+.thehanger-icons-halloween-easter_cracked-bone:before {
+  content: "\ea20";
+}
+
+.thehanger-icons-halloween-easter_cracked-skull:before {
+  content: "\ea21";
+}
+
+.thehanger-icons-halloween-easter_ghost:before {
+  content: "\ea22";
+}
+
+.thehanger-icons-gaming_controller-directions:before {
+  content: "\ea23";
+}
+
+.thehanger-icons-gaming_controller-symbols:before {
+  content: "\ea24";
+}
+
+.thehanger-icons-gaming_game-controller:before {
+  content: "\ea25";
+}
+
+.thehanger-icons-gaming_game-disc:before {
+  content: "\ea26";
+}
+
+.thehanger-icons-gaming_gaming-mouse:before {
+  content: "\ea27";
+}
+
+.thehanger-icons-gaming_handlet-console:before {
+  content: "\ea28";
+}
+
+.thehanger-icons-gaming_lifes:before {
+  content: "\ea29";
+}
+
+.thehanger-icons-gaming_medal:before {
+  content: "\ea2a";
+}
+
+.thehanger-icons-gaming_pac-man-ghost:before {
+  content: "\ea2b";
+}
+
+.thehanger-icons-gaming_pac-man:before {
+  content: "\ea2c";
+}
+
+.thehanger-icons-gaming_puzzle-piece:before {
+  content: "\ea2d";
+}
+
+.thehanger-icons-gaming_skull:before {
+  content: "\ea2e";
+}
+
+.thehanger-icons-gambling_clover-cards-2:before {
+  content: "\ea2f";
+}
+
+.thehanger-icons-gambling_clover-heart-pike-diamond:before {
+  content: "\ea30";
+}
+
+.thehanger-icons-gambling_diamond-2:before {
+  content: "\ea31";
+}
+
+.thehanger-icons-gambling_dollar-tips-2:before {
+  content: "\ea32";
+}
+
+.thehanger-icons-gambling_fruit-cherry:before {
+  content: "\ea33";
+}
+
+.thehanger-icons-gambling_king:before {
+  content: "\ea34";
+}
+
+.thehanger-icons-gambling_knight:before {
+  content: "\ea35";
+}
+
+.thehanger-icons-gambling_lucky-7:before {
+  content: "\ea36";
+}
+
+.thehanger-icons-gambling_slot-machine:before {
+  content: "\ea37";
+}
+
+.thehanger-icons-gambling_tic-tac-toe:before {
+  content: "\ea38";
+}
+
+.thehanger-icons-furniture_adjustable-lamp:before {
+  content: "\ea39";
+}
+
+.thehanger-icons-furniture_baby-bed:before {
+  content: "\ea3a";
+}
+
+.thehanger-icons-furniture_basin:before {
+  content: "\ea3b";
+}
+
+.thehanger-icons-furniture_bathtub:before {
+  content: "\ea3c";
+}
+
+.thehanger-icons-furniture_bedside-2:before {
+  content: "\ea3d";
+}
+
+.thehanger-icons-furniture_bedside-4:before {
+  content: "\ea3e";
+}
+
+.thehanger-icons-furniture_bedside:before {
+  content: "\ea3f";
+}
+
+.thehanger-icons-furniture_camping-table:before {
+  content: "\ea40";
+}
+
+.thehanger-icons-furniture_chair:before {
+  content: "\ea41";
+}
+
+.thehanger-icons-furniture_closed-door:before {
+  content: "\ea42";
+}
+
+.thehanger-icons-furniture_closet-3:before {
+  content: "\ea43";
+}
+
+.thehanger-icons-furniture_closet:before {
+  content: "\ea44";
+}
+
+.thehanger-icons-furniture_cough-3:before {
+  content: "\ea45";
+}
+
+.thehanger-icons-furniture_cough:before {
+  content: "\ea46";
+}
+
+.thehanger-icons-furniture_desk:before {
+  content: "\ea47";
+}
+
+.thehanger-icons-furniture_dining-table-lamp:before {
+  content: "\ea48";
+}
+
+.thehanger-icons-furniture_floor-lamp:before {
+  content: "\ea49";
+}
+
+.thehanger-icons-furniture_hanger:before {
+  content: "\ea4a";
+}
+
+.thehanger-icons-furniture_home-stairs:before {
+  content: "\ea4b";
+}
+
+.thehanger-icons-furniture_single-bed-side:before {
+  content: "\ea4c";
+}
+
+.thehanger-icons-furniture_sink:before {
+  content: "\ea4d";
+}
+
+.thehanger-icons-furniture_table-lamp:before {
+  content: "\ea4e";
+}
+
+.thehanger-icons-furniture_wall-picture:before {
+  content: "\ea4f";
+}
+
+.thehanger-icons-food_apple:before {
+  content: "\ea50";
+}
+
+.thehanger-icons-food_avocado:before {
+  content: "\ea51";
+}
+
+.thehanger-icons-food_banana:before {
+  content: "\ea52";
+}
+
+.thehanger-icons-food_bread-slice:before {
+  content: "\ea53";
+}
+
+.thehanger-icons-food_burritos-tacos:before {
+  content: "\ea54";
+}
+
+.thehanger-icons-food_cake:before {
+  content: "\ea55";
+}
+
+.thehanger-icons-food_candy:before {
+  content: "\ea56";
+}
+
+.thehanger-icons-food_carrot:before {
+  content: "\ea57";
+}
+
+.thehanger-icons-food_cheese-slice-2:before {
+  content: "\ea58";
+}
+
+.thehanger-icons-food_cherries:before {
+  content: "\ea59";
+}
+
+.thehanger-icons-food_chocolate:before {
+  content: "\ea5a";
+}
+
+.thehanger-icons-food_cookies:before {
+  content: "\ea5b";
+}
+
+.thehanger-icons-food_croissant:before {
+  content: "\ea5c";
+}
+
+.thehanger-icons-food_donut:before {
+  content: "\ea5d";
+}
+
+.thehanger-icons-food_eggplant:before {
+  content: "\ea5e";
+}
+
+.thehanger-icons-food_fish-meat:before {
+  content: "\ea5f";
+}
+
+.thehanger-icons-food_grain:before {
+  content: "\ea60";
+}
+
+.thehanger-icons-food_milk-ration:before {
+  content: "\ea61";
+}
+
+.thehanger-icons-food_pear:before {
+  content: "\ea62";
+}
+
+.thehanger-icons-food_sausage:before {
+  content: "\ea63";
+}
+
+.thehanger-icons-food_watermelon-slice:before {
+  content: "\ea64";
+}
+
+.thehanger-icons-electronics_air-condition:before {
+  content: "\ea65";
+}
+
+.thehanger-icons-electronics_air-purifier:before {
+  content: "\ea66";
+}
+
+.thehanger-icons-electronics_australia-socket:before {
+  content: "\ea67";
+}
+
+.thehanger-icons-electronics_blender:before {
+  content: "\ea68";
+}
+
+.thehanger-icons-electronics_espresso-machine:before {
+  content: "\ea69";
+}
+
+.thehanger-icons-electronics_hair-dryer:before {
+  content: "\ea6a";
+}
+
+.thehanger-icons-electronics_mixer:before {
+  content: "\ea6b";
+}
+
+.thehanger-icons-electronics_monitor:before {
+  content: "\ea6c";
+}
+
+.thehanger-icons-electronics_music-player:before {
+  content: "\ea6d";
+}
+
+.thehanger-icons-electronics_oven-2:before {
+  content: "\ea6e";
+}
+
+.thehanger-icons-electronics_oven:before {
+  content: "\ea6f";
+}
+
+.thehanger-icons-electronics_phone-fax:before {
+  content: "\ea70";
+}
+
+.thehanger-icons-electronics_power-socket:before {
+  content: "\ea71";
+}
+
+.thehanger-icons-electronics_projector:before {
+  content: "\ea72";
+}
+
+.thehanger-icons-electronics_toaster-bread:before {
+  content: "\ea73";
+}
+
+.thehanger-icons-electronics_tooth-brush:before {
+  content: "\ea74";
+}
+
+.thehanger-icons-electronics_tv-monitor:before {
+  content: "\ea75";
+}
+
+.thehanger-icons-electronics_washing-machine:before {
+  content: "\ea76";
+}
+
+.thehanger-icons-hardware_chipset:before {
+  content: "\ea77";
+}
+
+.thehanger-icons-hardware_computer-laptop-connection:before {
+  content: "\ea78";
+}
+
+.thehanger-icons-hardware_hard-drive:before {
+  content: "\ea79";
+}
+
+.thehanger-icons-hardware_ipad:before {
+  content: "\ea7a";
+}
+
+.thehanger-icons-hardware_iphone:before {
+  content: "\ea7b";
+}
+
+.thehanger-icons-hardware_laptop:before {
+  content: "\ea7c";
+}
+
+.thehanger-icons-hardware_monitor:before {
+  content: "\ea7d";
+}
+
+.thehanger-icons-hardware_scanner:before {
+  content: "\ea7e";
+}
+
+.thehanger-icons-hardware_usb-stick:before {
+  content: "\ea7f";
+}
+
+.thehanger-icons-hardware_webcamera:before {
+  content: "\ea80";
+}
+
+.thehanger-icons-hardware_wired-mouse:before {
+  content: "\ea81";
+}
+
+.thehanger-icons-construction_hammer-2:before {
+  content: "\ea82";
+}
+
+.thehanger-icons-construction_metre:before {
+  content: "\ea83";
+}
+
+.thehanger-icons-construction_nail-screw:before {
+  content: "\ea84";
+}
+
+.thehanger-icons-construction_paint-brush:before {
+  content: "\ea85";
+}
+
+.thehanger-icons-construction_paint-roller-2:before {
+  content: "\ea86";
+}
+
+.thehanger-icons-camping_axe:before {
+  content: "\ea87";
+}
+
+.thehanger-icons-camping_barbecue-grill-2:before {
+  content: "\ea88";
+}
+
+.thehanger-icons-camping_boots:before {
+  content: "\ea89";
+}
+
+.thehanger-icons-camping_camping-bag-2:before {
+  content: "\ea8a";
+}
+
+.thehanger-icons-camping_camping-car:before {
+  content: "\ea8b";
+}
+
+.thehanger-icons-cafe_fork-knife-sign:before {
+  content: "\ea8c";
+}
+
+.thehanger-icons-cafe_fork-spoon-knife:before {
+  content: "\ea8d";
+}
+
+.thehanger-icons-cafe_french-fries:before {
+  content: "\ea8e";
+}
+
+.thehanger-icons-cafe_hot-bowl:before {
+  content: "\ea8f";
+}
+
+.thehanger-icons-cafe_hot-coffee:before {
+  content: "\ea90";
+}
+
+.thehanger-icons-cafe_ice-cream:before {
+  content: "\ea91";
+}
+
+.thehanger-icons-cafe_pizza-slice:before {
+  content: "\ea92";
+}
+
+.thehanger-icons-cafe_restaurant-catalog:before {
+  content: "\ea93";
+}
+
+.thehanger-icons-cafe_serving-plate:before {
+  content: "\ea94";
+}
+
+.thehanger-icons-cafe_double-burger:before {
+  content: "\ea95";
+}
+
+.thehanger-icons-cafe_coffee-take-away:before {
+  content: "\ea96";
+}
+
+.thehanger-icons-cafe_coctail-drink:before {
+  content: "\ea97";
+}
+
+.thehanger-icons-cafe_candles:before {
+  content: "\ea98";
+}
+
+.thehanger-icons-cafe_burger:before {
+  content: "\ea99";
+}
+
+.thehanger-icons-cafe_bottle:before {
+  content: "\ea9a";
+}
+
+.thehanger-icons-cafe_bottle-opener:before {
+  content: "\ea9b";
+}
+
+.thehanger-icons-cafe_beer-classic-glass:before {
+  content: "\ea9c";
+}
+
+.thehanger-icons-building_small-home-2:before {
+  content: "\ea9d";
+}
+
+.thehanger-icons-building_country-home-2:before {
+  content: "\ea9e";
+}
+
+.thehanger-icons-clothes_baby-hoodie:before {
+  content: "\e912";
+}
+
+.thehanger-icons-clothes_baseball-hat:before {
+  content: "\e913";
+}
+
+.thehanger-icons-clothes_belt:before {
+  content: "\e914";
+}
+
+.thehanger-icons-clothes_boots:before {
+  content: "\e915";
+}
+
+.thehanger-icons-clothes_bow:before {
+  content: "\e916";
+}
+
+.thehanger-icons-clothes_bra-2:before {
+  content: "\e917";
+}
+
+.thehanger-icons-clothes_bra-underwear-2:before {
+  content: "\e918";
+}
+
+.thehanger-icons-clothes_bra-underwear:before {
+  content: "\e919";
+}
+
+.thehanger-icons-clothes_bra:before {
+  content: "\e91a";
+}
+
+.thehanger-icons-clothes_cap-3:before {
+  content: "\e91b";
+}
+
+.thehanger-icons-clothes_cap-4:before {
+  content: "\e91c";
+}
+
+.thehanger-icons-clothes_dress-2:before {
+  content: "\e91d";
+}
+
+.thehanger-icons-clothes_dress-3:before {
+  content: "\e91e";
+}
+
+.thehanger-icons-clothes_dress-4:before {
+  content: "\e91f";
+}
+
+.thehanger-icons-clothes_dress:before {
+  content: "\e920";
+}
+
+.thehanger-icons-clothes_gentlemen-cap:before {
+  content: "\e921";
+}
+
+.thehanger-icons-clothes_gentlement-shoes:before {
+  content: "\e922";
+}
+
+.thehanger-icons-clothes_glasses:before {
+  content: "\e923";
+}
+
+.thehanger-icons-clothes_gloves:before {
+  content: "\e924";
+}
+
+.thehanger-icons-clothes_hanger-towel:before {
+  content: "\e925";
+}
+
+.thehanger-icons-clothes_hanger:before {
+  content: "\e926";
+}
+
+.thehanger-icons-clothes_hat:before {
+  content: "\e927";
+}
+
+.thehanger-icons-clothes_heels:before {
+  content: "\e928";
+}
+
+.thehanger-icons-clothes_home-slippers:before {
+  content: "\e929";
+}
+
+.thehanger-icons-clothes_hood:before {
+  content: "\e92a";
+}
+
+.thehanger-icons-clothes_jacket:before {
+  content: "\e92b";
+}
+
+.thehanger-icons-clothes_lady-bag-3:before {
+  content: "\e92c";
+}
+
+.thehanger-icons-clothes_lady-bag:before {
+  content: "\e92d";
+}
+
+.thehanger-icons-clothes_lady-shopping-bag:before {
+  content: "\e92e";
+}
+
+.thehanger-icons-clothes_lady-wallet:before {
+  content: "\e92f";
+}
+
+.thehanger-icons-clothes_lipstick:before {
+  content: "\e930";
+}
+
+.thehanger-icons-clothes_long-sleeve-2:before {
+  content: "\e931";
+}
+
+.thehanger-icons-clothes_long-sleeve:before {
+  content: "\e932";
+}
+
+.thehanger-icons-clothes_pants-2:before {
+  content: "\e933";
+}
+
+.thehanger-icons-clothes_pants-3:before {
+  content: "\e934";
+}
+
+.thehanger-icons-clothes_pants:before {
+  content: "\e935";
+}
+
+.thehanger-icons-clothes_ring:before {
+  content: "\e936";
+}
+
+.thehanger-icons-clothes_shirt-long-sleeve-2:before {
+  content: "\e937";
+}
+
+.thehanger-icons-clothes_shirt-long-sleeve-3:before {
+  content: "\e938";
+}
+
+.thehanger-icons-clothes_shirt-long-sleeve-polo:before {
+  content: "\e939";
+}
+
+.thehanger-icons-clothes_shirt-long-sleeve:before {
+  content: "\e93a";
+}
+
+.thehanger-icons-clothes_shirt-short-sleeve-2:before {
+  content: "\e93b";
+}
+
+.thehanger-icons-clothes_shirt-short-sleeve-3:before {
+  content: "\e93c";
+}
+
+.thehanger-icons-clothes_shirt-short-sleeve:before {
+  content: "\e93d";
+}
+
+.thehanger-icons-clothes_shirt:before {
+  content: "\e93e";
+}
+
+.thehanger-icons-clothes_shoes-2:before {
+  content: "\e93f";
+}
+
+.thehanger-icons-clothes_shoes:before {
+  content: "\e940";
+}
+
+.thehanger-icons-clothes_short-pants-2:before {
+  content: "\e941";
+}
+
+.thehanger-icons-clothes_short-pants-3:before {
+  content: "\e942";
+}
+
+.thehanger-icons-clothes_short-pants-4:before {
+  content: "\e943";
+}
+
+.thehanger-icons-clothes_short-pants:before {
+  content: "\e944";
+}
+
+.thehanger-icons-clothes_skirt-3:before {
+  content: "\e945";
+}
+
+.thehanger-icons-clothes_skirt-4:before {
+  content: "\e946";
+}
+
+.thehanger-icons-clothes_skirt-5:before {
+  content: "\e947";
+}
+
+.thehanger-icons-clothes_skirt:before {
+  content: "\e948";
+}
+
+.thehanger-icons-clothes_sleeveless-jacket:before {
+  content: "\e949";
+}
+
+.thehanger-icons-clothes_slippers:before {
+  content: "\e94a";
+}
+
+.thehanger-icons-clothes_sneakers:before {
+  content: "\e94b";
+}
+
+.thehanger-icons-clothes_socks-2:before {
+  content: "\e94c";
+}
+
+.thehanger-icons-clothes_socks:before {
+  content: "\e94d";
+}
+
+.thehanger-icons-clothes_sport-shoes:before {
+  content: "\e94e";
+}
+
+.thehanger-icons-clothes_sunglasses:before {
+  content: "\e94f";
+}
+
+.thehanger-icons-clothes_t-shirt-short-sleeve-2:before {
+  content: "\e950";
+}
+
+.thehanger-icons-clothes_t-shirt-short-sleeve-3:before {
+  content: "\e951";
+}
+
+.thehanger-icons-clothes_t-shirt-short-sleeve-polo:before {
+  content: "\e952";
+}
+
+.thehanger-icons-clothes_t-shirt-short-sleeve:before {
+  content: "\e953";
+}
+
+.thehanger-icons-clothes_t-shirt:before {
+  content: "\e954";
+}
+
+.thehanger-icons-clothes_tie-2:before {
+  content: "\e955";
+}
+
+.thehanger-icons-clothes_tie:before {
+  content: "\e956";
+}
+
+.thehanger-icons-clothes_trendy-shoes:before {
+  content: "\e957";
+}
+
+.thehanger-icons-clothes_underwear-2:before {
+  content: "\e958";
+}
+
+.thehanger-icons-clothes_underwear-3:before {
+  content: "\e959";
+}
+
+.thehanger-icons-clothes_underwear-4:before {
+  content: "\e95a";
+}
+
+.thehanger-icons-clothes_underwear-5:before {
+  content: "\e95b";
+}
+
+.thehanger-icons-clothes_underwear:before {
+  content: "\e95c";
+}
+
+.thehanger-icons-clothes_vest-2:before {
+  content: "\e95d";
+}
+
+.thehanger-icons-clothes_vest:before {
+  content: "\e95e";
+}
+
+.thehanger-icons-clothes_wallet:before {
+  content: "\e95f";
+}
+
+.thehanger-icons-clothes_wrist-watch-analog:before {
+  content: "\e960";
+}
+
+.thehanger-icons-clothes_wrist-watch-digital:before {
+  content: "\e961";
+}
+
+.thehanger-icons-rss:before {
+  content: "\e989";
+}
+
+.thehanger-icons-twitter:before {
+  content: "\e979";
+}
+
+.thehanger-icons-facebook-f:before {
+  content: "\e970";
+}
+
+.thehanger-icons-instagram:before {
+  content: "\e97b";
+}
+
+.thehanger-icons-youtube2:before {
+  content: "\e98b";
+}
+
+.thehanger-icons-amazon:before {
+  content: "\e963";
+}
+
+.thehanger-icons-apple:before {
+  content: "\e964";
+}
+
+.thehanger-icons-slack:before {
+  content: "\e965";
+}
+
+.thehanger-icons-tripadvisor:before {
+  content: "\e966";
+}
+
+.thehanger-icons-wordpress:before {
+  content: "\e967";
+}
+
+.thehanger-icons-youtube:before {
+  content: "\e968";
+}
+
+.thehanger-icons-youtube-play:before {
+  content: "\e969";
+}
+
+.thehanger-icons-yelp:before {
+  content: "\e96a";
+}
+
+.thehanger-icons-houzz:before {
+  content: "\e96b";
+}
+
+.thehanger-icons-google-plus:before {
+  content: "\e96c";
+}
+
+.thehanger-icons-google:before {
+  content: "\e96d";
+}
+
+.thehanger-icons-google2:before {
+  content: "\e982";
+}
+
+.thehanger-icons-github-alt:before {
+  content: "\e96e";
+}
+
+.thehanger-icons-foursquare:before {
+  content: "\e96f";
+}
+
+.thehanger-icons-behance:before {
+  content: "\e971";
+}
+
+.thehanger-icons-foursquare2:before {
+  content: "\e972";
+}
+
+.thehanger-icons-sina-weibo:before {
+  content: "\e973";
+}
+
+.thehanger-icons-skype:before {
+  content: "\e974";
+}
+
+.thehanger-icons-soundcloud:before {
+  content: "\e975";
+}
+
+.thehanger-icons-spotify:before {
+  content: "\e976";
+}
+
+.thehanger-icons-swarm:before {
+  content: "\e977";
+}
+
+.thehanger-icons-vine:before {
+  content: "\e978";
+}
+
+.thehanger-icons-vk:before {
+  content: "\e97a";
+}
+
+.thehanger-icons-xing:before {
+  content: "\e97c";
+}
+
+.thehanger-icons-yelp2:before {
+  content: "\e97d";
+}
+
+.thehanger-icons-dribbble:before {
+  content: "\e97e";
+}
+
+.thehanger-icons-flickr:before {
+  content: "\e980";
+}
+
+.thehanger-icons-github:before {
+  content: "\e981";
+}
+
+.thehanger-icons-lastfm:before {
+  content: "\e984";
+}
+
+.thehanger-icons-linkedin:before {
+  content: "\e985";
+}
+
+.thehanger-icons-pinterest:before {
+  content: "\e986";
+}
+
+.thehanger-icons-stumbleupon:before {
+  content: "\e987";
+}
+
+.thehanger-icons-tumblr:before {
+  content: "\e988";
+}
+
+.thehanger-icons-vimeo:before {
+  content: "\e98a";
+}
+/*# sourceMappingURL=style.css.map */

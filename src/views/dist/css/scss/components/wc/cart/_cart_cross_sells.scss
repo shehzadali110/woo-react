@@ -1,0 +1,25 @@
+.cross-sells
+{
+	margin-top: rem-calc(64);
+	
+	@include breakpoint(large)
+	{
+		margin-top: rem-calc(104);
+	}
+	 
+	> h2
+	{
+		font-size: rem-calc(16); 
+		margin-bottom: rem-calc(32); 
+	}
+
+	ul.products,
+	li.product
+	{
+		@include breakpoint(large)
+		{
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}

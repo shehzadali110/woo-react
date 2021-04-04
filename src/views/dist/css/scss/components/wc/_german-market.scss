@@ -1,0 +1,39 @@
+.archive 
+{
+	.products .woocommerce-de_price_taxrate
+	{
+		margin-top: -1.4rem;
+	}
+
+	.shipping_de.shipping_de_string
+	{
+		margin-bottom: 0px;
+	}
+}
+
+.minicart .jde_hint
+{
+	padding: 0 40px;
+}
+
+.single-product
+{
+	.wgm-extra-costs-eu
+	{
+		margin-bottom: 1.2em;
+	}
+
+	.shipping_de.shipping_de_string 
+	{
+	    margin-bottom: 42px;
+	}
+}
+
+.woocommerce-checkout,
+.woocommerce-cart
+{
+	.order-total .includes_tax
+	{
+		font-size: 11px;
+	}
+}

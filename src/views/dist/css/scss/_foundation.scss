@@ -1,0 +1,23 @@
+// Foundation
+@import '../inc/_vendor/foundation/scss/foundation';
+@import '../inc/_vendor/motion-ui/motion-ui';
+
+// Foundation Include Components
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-visibility-classes;
+@include foundation-table;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-drilldown-menu;
+@include foundation-responsive-embed;
+@include foundation-reveal;
+@include foundation-accordion;
+@include foundation-sticky;
+@include foundation-orbit;

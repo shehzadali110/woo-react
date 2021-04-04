@@ -1,0 +1,25 @@
+.woocommerce-product-rating
+{
+	margin-top: rem-calc(-20); 
+	margin-bottom: rem-calc(24); 
+	display: flex;
+	align-items: center;
+	
+	.star-rating
+	{
+		margin-top: 0;
+		margin-right: 4px; 
+	}
+
+	.woocommerce-review-link
+	{
+		color: inherit; 
+		font-size: rem-calc(11); 
+		opacity: $opacity-dark;
+
+		&:hover
+		{
+			opacity: 1;
+		}
+	}
+}

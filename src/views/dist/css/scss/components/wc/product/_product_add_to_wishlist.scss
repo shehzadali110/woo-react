@@ -1,0 +1,130 @@
+.yith-wcwl-add-to-wishlist
+{
+	font-size: rem-calc(12);
+	line-height: rem-calc(16);
+	margin: 0  auto rem-calc(32);
+	text-align: center;
+
+	@include breakpoint(large)
+	{
+		max-width: 70%;
+		text-align: left;
+		margin: 0  0 rem-calc(48);
+	}
+
+	.yith-wcwl-add-button
+	{
+		> img
+		{
+			display: none !important;
+		}
+
+		.add_to_wishlist
+		{
+			border: 0 !important;
+			font-size: rem-calc(12);
+			line-height: rem-calc(16);
+			display: flex;
+			align-items: center;
+			padding: 0 !important;
+			background: transparent !important;
+
+			&:before
+			{
+				@include the_retailer_pro_icon('\e90b');
+				margin-right: rem-calc(8);
+				font-size: rem-calc(16);
+				margin-top: -2px;
+				display: inline-block;
+			}
+		}
+
+		&.loading
+		{
+			.add_to_wishlist
+			{
+				@include loader();
+
+				&:before
+				{
+					border-top: 1px solid;
+				}
+			}
+		}
+
+		i {
+			display: none;
+		}
+	}
+
+	.yith-wcwl-wishlistaddedbrowse
+	{
+		display: flex;
+		align-items: center;
+
+		.feedback
+		{
+			display: inline-flex;
+			align-items: center;
+			margin-right: rem-calc(6);
+
+			@include breakpoint(small only)
+			{
+				justify-content: center;
+			}
+
+			&:before
+			{
+				@include the_retailer_pro_icon('\e990');
+				margin-right: rem-calc(8);
+				font-size: rem-calc(16);
+				margin-top: -2px;
+				display: inline-block;
+			}
+		}
+
+		a
+		{
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		i {
+			display: none;
+		}
+	}
+
+	.yith-wcwl-wishlistexistsbrowse
+	{
+		display: flex !important;
+
+		.feedback
+		{
+			display: flex;
+			font-size: 0;
+
+			@include breakpoint(small only)
+			{
+				justify-content: center;
+			}
+
+			&:before
+			{
+				@include the_retailer_pro_icon('\e990');
+				margin-right: rem-calc(8);
+				font-size: rem-calc(16);
+				margin-top: -2px;
+				display: inline-block;
+			}
+
+			& + a
+			{
+				display: block;
+			}
+		}
+
+		i {
+			display: none;
+		}
+	}
+}

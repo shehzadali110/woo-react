@@ -1,0 +1,36 @@
+@import "prefooter";
+
+.site-footer
+{
+	font-size: rem-calc(13);
+	position: relative;
+	
+	@import "footer-mixins";
+	@import "footer-style-1";
+
+	a
+	{
+		@include hover_inherit_color_with_opacity;
+	}
+
+	.footer-content
+	{
+		@each $breakpoint, $padding in $content-padding {
+			@include breakpoint($breakpoint) {
+				padding-left: rem-calc($padding);
+				padding-right: rem-calc($padding);
+			}
+		}
+
+		@include large_side_paddings;
+
+		padding-top: rem-calc(40);
+		padding-bottom: rem-calc(40);
+
+		@include breakpoint(large)
+		{
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+	}
+}

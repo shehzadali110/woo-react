@@ -1,0 +1,109 @@
+// ===========================
+// Always em here please
+// ===========================
+
+.topbar
+{
+	display: none;
+	position: relative;
+
+	.header-layout-full &
+	{
+		&:after
+		{
+			border-top: 1px solid;
+		}
+	}
+
+	.header-layout-boxed &
+	{
+		.topbar-content
+		{
+			border-bottom: 1px solid;
+		}
+	}
+
+	&:after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 0;
+		left: 0;
+		bottom: 0px;
+		pointer-events: none;
+	}
+
+	@include breakpoint(xlarge up)
+	{
+		display: block;
+	}
+
+	.topbar-content
+	{
+		display: flex;
+		align-items: center;
+		position: relative;
+		min-height: 3em;
+
+		@each $breakpoint, $padding in $content-padding {
+
+			@include breakpoint($breakpoint) {
+				padding-left: rem-calc($padding);
+				padding-right: rem-calc($padding);
+			}
+		}
+
+		@include large_side_paddings;
+
+		.topbar-wrapper-left
+		{
+			display: flex;
+			flex: 1;
+			align-items: center;
+
+			.topbar-info-1
+			{
+				display: flex;
+				padding-top: rem-calc(8);
+				padding-bottom: rem-calc(8);
+			}
+		}
+
+		.topbar-info-2
+		{
+			display: flex;
+			line-height: 1;
+			justify-content: center;
+			max-width: 33.3%;
+			padding: rem-calc(8) 0;
+			text-align: center;
+		}
+
+		.topbar-navigation
+		{
+			display: flex;
+			flex: 1;
+
+			.navigation-foundation
+			{
+				margin-left: auto;
+
+				> ul
+				{
+					> li
+					{						
+						> a
+						{							
+							> span
+							{
+								padding: 1em 0;
+							}
+						}
+					}
+				}
+			}			
+		}
+	}
+}

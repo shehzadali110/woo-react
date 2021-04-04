@@ -1,0 +1,102 @@
+.sticky_header_placeholder
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;	
+	z-index: 9999;
+
+	@include breakpoint(large down)
+	{
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	body.admin-bar &
+	{
+		top: 32px;
+	}
+
+	transition: all .3s ease;
+
+	opacity: 0;
+	
+	animation: sticky_header_out 0s;
+	animation-fill-mode: forwards;
+	animation-delay: .3s;
+
+	&.visible
+	{		
+		animation: sticky_header_in 0s;
+		animation-fill-mode: forwards;
+
+		opacity: 1;
+	}
+
+
+	// Adjustments
+
+	.gbt-mega-dropdown-wrapper
+	{
+		.gbt-mega-dropdown-button
+		{
+			background: transparent;
+			color: inherit;
+			padding-left: 0;
+			padding-right: 0;
+			width: 3.5em;
+
+			&:hover
+			{
+				background: none;
+				color: inherit;
+			}
+
+			&:before
+			{
+				display: none;
+			}
+		}
+
+		&.is-active
+		{
+			.gbt-mega-dropdown-button
+			{
+				background: none;
+				color: inherit;
+			}
+		}
+	}
+
+	.header-navigation-wrapper
+	{
+		&.with-mega-button
+		{
+			margin-left: 5em;
+		}
+
+		.header-branding
+		{
+			margin-right: 2.5em;
+		}
+
+		.header-navigation
+		{
+			margin-right: 2.5em;
+		}
+	}
+}
+
+.scroll-progress-bar-container
+{
+	height: 1px;
+	
+	.scroll-progress-bar
+	{
+		background: #ff0000;
+		width: 0%;
+		height: 100%;
+		transition: width .3s;
+	}
+}

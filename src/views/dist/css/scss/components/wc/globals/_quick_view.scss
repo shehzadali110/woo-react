@@ -1,0 +1,232 @@
+/* Fix Foundation Reveal */
+
+body.is-reveal-open {
+	overflow: visible !important;
+}
+
+body.progress {
+	cursor: progress !important;
+
+	.getbowtied_product_quick_view_button {
+		cursor: progress !important;
+	}
+
+	ul.products:not(.shop_display_list) .product .main-container .product_image a .wp-post-image {
+		cursor: progress !important;
+	}
+}
+
+/* / Fix Foundation Reveal */
+
+#getbowtied_woocommerce_quickview
+{
+	background: rgba($black, $opacity-ultra-light);
+	transition: opacity .3s ease-in-out;
+	transition-delay: .2s;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99999;
+
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+
+		.getbowtied_qv_content
+		{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+
+	&:focus
+	{
+		outline: none;
+	}
+
+	.close-button
+	{
+		position: absolute;
+		top: 13px;
+		right: 13px;
+		background: none;
+		font-size: 0;
+		padding: rem-calc(5);
+		outline: none;
+
+		@include rotate_close_btn();
+
+		&:after
+		{
+			@include the_retailer_pro_icon('\e9c5');
+			font-size: rem-calc(22);
+		}
+	}
+
+	.getbowtied_qv_content
+	{
+		width: 900px;
+		height: auto;
+		position: relative;
+		max-height: 80vh;
+		overflow: hidden;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .5s ease-in-out;
+
+		@each $breakpoint, $padding in $content-padding {
+			@include breakpoint($breakpoint) {
+				padding: rem-calc($padding) rem-calc($padding + 10px) rem-calc($padding) rem-calc($padding);
+			}
+		}
+
+		&.maybe_scroll
+		{
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+
+		&::-webkit-scrollbar
+        {
+            width: 2px;
+        }
+
+		.site-content
+		{
+			.product
+			{
+				@import '../product/product_gallery';
+				@import '../product/product_title';
+				@import '../product/product_rating';
+				@import '../product/product_price';
+				@import '../product/product_description';
+				@import '../product/product_variable';
+				@import '../product/product_grouped';
+				@import '../product/product_external';
+				@import '../product/product_out_of_stock';
+				@import '../product/product_add_to_cart';
+				@import '../product/product_add_to_wishlist';
+				@import '../product/product_meta';
+
+				.flex-control-thumbs
+				{
+					margin-bottom: 0 !important;
+
+					li
+					{
+						max-width: 100px;
+					}
+				}
+
+				.summary
+				{
+					padding-top: rem-calc(40);
+				}
+
+				.woocommerce-review-link
+				{
+					display: none;
+				}
+
+				.woocommerce-product-details__short-description
+				{
+					margin-bottom: rem-calc(16);
+				}
+
+				.go_to_product_page
+				{
+					font-size: rem-calc(12);
+					display: flex;
+					align-items: center;
+					margin-bottom: rem-calc(48);
+
+					&:before
+					{
+						@include the_retailer_pro_icon('\e9ce');
+						font-size: rem-calc(20);
+						margin-right: 16px;
+					}
+				}
+
+				.flex-active-slide a {
+					pointer-events: none;
+				}
+
+				.woocommerce-product-gallery__image
+				{
+					img
+					{
+						width: 100%;
+					}
+
+					a
+					{
+						pointer-events: none;
+   						cursor: default;
+					}
+				}
+
+				.yith-wcwl-add-to-wishlist
+				{
+					margin-bottom: 2rem;
+
+					.yith-wcwl-wishlistaddedbrowse,
+					.yith-wcwl-wishlistexistsbrowse
+					{
+						.feedback
+						{
+							font-size: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.getbowtied_qv_loading
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: auto;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	font-size: rem-calc(24);
+	background: #FFF;
+	width: 50%;
+	opacity: 0;
+	visibility: hidden;
+	@include global-transition();
+	z-index: 9999;
+
+	@each $breakpoint, $padding in $content-padding {
+		@include breakpoint($breakpoint) {
+			padding: rem-calc($padding) rem-calc($padding + 10px) rem-calc($padding) rem-calc($padding);
+		}
+	}
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include loader(24px, 24px);
+
+	&:before
+	{
+		border-top-color: #000;
+		position: relative;
+		top: 2px;
+		margin-right: 12px;
+	}
+}

@@ -1,0 +1,12 @@
+@mixin widget_meta()
+{
+	li
+	{
+		margin-bottom: rem-calc(8);
+
+		abbr
+		{
+			border-bottom: 1px dashed; 
+		}
+	}
+}

@@ -1,0 +1,291 @@
+.site-header-style-2
+{
+	@import 'minicart';
+	@import 'wishlist';
+
+	position: relative;
+	user-select: none;
+
+	@include breakpoint(large down)
+	{
+		height: 0;
+		overflow: hidden;
+		visibility: none;
+	}
+
+	&:not(.header-sticky)
+	{
+		.header-layout-boxed &
+		{
+			> .row
+			{
+				border-bottom: 1px solid;
+			}
+		}
+
+		.header-layout-full &
+		{
+			border-bottom: 1px solid;
+		}
+	}
+
+	.header-content
+	{
+		position: relative;
+		display: flex;
+
+		@each $breakpoint, $padding in $content-padding {
+
+			@include breakpoint($breakpoint) {
+				padding-left: rem-calc($padding);
+				padding-right: rem-calc($padding);
+			}
+		}
+
+		@include large_side_paddings;
+
+		.header-navigation
+		{
+			display: flex;
+			align-items: center;
+			flex: 1;
+		}
+
+		.header-branding
+		{
+			display: flex;
+			align-items: center;
+			text-align: center;
+
+			.site-title
+			{
+				a
+				{
+					display: inline-block;
+					font-size: rem-calc(30); 
+				}
+			}
+
+			.site-logo
+			{
+				margin: rem-calc(16) auto 0 auto;
+
+				@include breakpoint(medium up)
+				{
+					margin: 0;
+				}
+
+				a
+				{
+					display: inline-block;
+
+					img
+					{
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.header-tools
+		{
+			display: flex;
+			flex: 1;
+			align-items: center;
+			justify-content: flex-end;
+			list-style: none;
+			margin: 0 -10px 0 auto;
+
+			li
+			{
+				display: flex;
+				margin: 0;
+
+				> a
+				{
+					padding: 1.23em 1em;
+					line-height: 1;
+					white-space: nowrap;
+					position: relative;
+
+					i
+					{
+						font-size: 1.85em;
+					}
+
+					.tools_badge
+					{
+						position: absolute;
+						top: 0;
+						left: 100%;
+						padding: .5em .7em;
+						margin: 1.5em 0 0 -2.5em;
+						border-radius: 5em;
+						font-size: .7em;
+					}
+				}
+			}
+
+			@include breakpoint(large)
+			{
+				.dropdown-pane.is-open
+				{
+					animation: minicart_out .2s ease-in-out;
+					animation-fill-mode: forwards;
+					transform-origin: center top;
+				}
+
+				&:hover
+				{
+					.dropdown-pane.is-open
+					{
+						animation: minicart_in .3s ease-in-out;
+						animation-fill-mode: forwards;
+						transform-origin: center top;
+					}
+				}
+			}
+		}
+	}
+
+	&:not(.header-sticky)
+	{		
+		.header-content
+		{
+			padding-top: 3.5em;
+			padding-bottom: 3.5em;
+		}
+	}
+
+	&.header-sticky
+	{
+		.header-layout-full &
+		{
+			&:after
+			{
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 0;
+				left: 0;
+				bottom: 0px;
+				pointer-events: none;
+				border-top: 1px solid;
+			}
+		}
+
+		.header-layout-boxed &
+		{
+			.header-content
+			{
+				&:after
+				{
+					content: "";
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 0;
+					left: 0;
+					bottom: 0px;
+					pointer-events: none;
+					border-top: 1px solid;
+				}
+			}
+		}
+	}
+
+	&.hidden
+	{
+		visibility: hidden;
+		overflow: hidden;
+	}	
+}
+
+// Search Off-Canvas
+.site-search.position-top
+{
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    transform: translateY(-220px);
+    position: fixed;
+    z-index: 9999;
+    transition: transform 0.5s ease;
+    backface-visibility: hidden;
+    border-bottom: 1px solid;
+
+    @import 'header-search';
+
+    &.is-open
+	{
+    	transform: translateX(0);
+    }
+
+    .header-search
+    {
+    	width: 100%;
+    	padding-right: 3%;
+    	position: relative;
+    	margin-top: rem-calc(60);
+
+	    @each $breakpoint, $padding in $content-padding {
+
+			@include breakpoint($breakpoint) {
+				margin-left: rem-calc(2.4*$padding);
+				margin-right: rem-calc(2.4*$padding);
+			}
+		}
+
+		.search-form
+		{
+			width: 100%;
+			max-width: 100%;
+		}
+
+    	.header_search_form .select2 .select2-selection .select2-selection__rendered
+    	{
+    		height: 100%;
+    		line-height: 3.8em;
+    	}
+
+    	.header_search_form .header_search_input_wrapper .header_search_input,
+    	.select2 .select2-selection__rendered,
+    	.header_search_form .select2-dropdown .select2-results ul li
+    	{
+    		font-size: 0.9em !important;
+    	}
+
+    	.header_search_button:after{    color: #000;}
+
+    	.close-button
+    	{
+    		font-size: 0;
+    		position: absolute;
+		    right: -5px;
+		    top: 15px;
+		    left: auto;
+		    background-color: transparent;
+    		padding: 0;
+
+    		@include rotate_close_btn();
+		
+			&:after
+			{
+				@include the_retailer_pro_icon('\e9c5');
+				font-size: rem-calc(22);
+			}
+    	}
+    }
+}
+    
+.admin-bar .site-search.position-top {
+
+	height: 220px;
+
+	@include breakpoint(large up)
+	{
+		padding-top:32px;
+	}
+}

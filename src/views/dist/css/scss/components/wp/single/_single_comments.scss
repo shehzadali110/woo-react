@@ -1,0 +1,27 @@
+.single-comments-container
+{
+	.single-comments-row
+	{
+		padding-bottom: rem-calc(80); 
+
+		@each $breakpoint, $padding in $content-padding {
+
+			@include breakpoint($breakpoint) {
+				padding-left: rem-calc($padding);
+				padding-right: rem-calc($padding);
+			}
+		}
+
+		@include large_side_paddings;
+
+		@include breakpoint(medium)
+		{
+			padding-bottom: rem-calc(100); 
+		}
+
+		@include breakpoint(large)
+		{
+			padding-bottom: rem-calc(120); 
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.woocommerce,
+.getbowtied_qv_content,
+.wc-block-grid__product-rating
+{
+    // Read-Only Stars
+
+    .star-rating,
+    .wc-block-grid__product-rating__stars
+    {
+        @include the_retailer_pro_icon('\e97f\e97f\e97f\e97f\e97f');
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        height: 1em;
+        line-height: 1;
+        font-size: rem-calc(11);
+        width: 5em;
+        margin-right: rem-calc(1);
+
+        &:before
+        {
+            content: "\e97f\e97f\e97f\e97f\e97f";
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        span
+        {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 1.5em;
+
+            &:before
+            {
+                content: "\e97f\e97f\e97f\e97f\e97f";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    // Clickable Stars
+
+    p.stars
+    {
+    	display: inline-block;
+        font-size: rem-calc(30);
+        margin-bottom: 0;
+
+    	span
+        {
+            display: block;
+            line-height: 1;
+        }
+
+        a
+        {
+            position: relative;
+            height: 1em;
+            width: 1em;
+            text-indent: -999em;
+            display: inline-block;
+            text-decoration: none;
+            transition: none;
+            border-bottom: none;
+
+            &:before
+            {
+                @include the_retailer_pro_icon('\e97f');
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1em;
+                height: 1em;
+                line-height: 1;
+                text-indent: 0;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}

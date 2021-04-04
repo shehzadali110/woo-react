@@ -1,0 +1,25 @@
+.categories-list
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 rem-calc(-$grid-column-gutter/2) rem-calc(36);
+	list-style-type: none; 
+	
+	@include breakpoint(large)
+	{
+		margin: 0 rem-calc(-$grid-column-gutter/2) rem-calc(48);
+	}
+
+	@include product_categories();
+	
+}
+
+@include breakpoint(large up)
+{
+	@include shop_categories_per_row(1)
+	@include shop_categories_per_row(2)
+	@include shop_categories_per_row(3)
+	@include shop_categories_per_row(4)
+	@include shop_categories_per_row(5)
+	@include shop_categories_per_row(6)
+}

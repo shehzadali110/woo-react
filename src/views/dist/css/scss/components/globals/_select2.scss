@@ -1,0 +1,171 @@
+.select2
+{
+	width: 100% !important;
+	margin-bottom: $form-spacing;
+	padding: 0;
+
+	.select2-selection
+	{
+		border-radius: 0;
+		background: none;
+
+		&:focus
+		{
+			outline: 0;
+		}
+
+		&.select2_no_border
+		{
+			border-color: transparent;
+		}
+		
+		.select2-selection__rendered
+		{
+			padding: 0 ($form-spacing + rem-calc(8)) 0 0;
+			color: inherit; 
+
+			.select2-selection__clear
+			{
+				font-size: 0;
+                display: flex;
+                align-items: center;
+                padding: 0 rem-calc(5);
+                //background: #ff0000;
+					
+				&:after
+				{
+					@include the_retailer_pro_icon('\e903');
+					font-size: rem-calc(8);
+				}
+			}
+		}
+
+		.select2-selection__arrow
+		{
+			width: auto;
+			height: 100%;
+			top: 1px;
+			display: flex;
+            align-items: center;
+            line-height: inherit;
+            margin-right: $form-spacing;
+			//background: #fff000;
+			
+			b
+			{
+				display: none;			
+			}
+
+			&:after
+			{
+				@include the_retailer_pro_icon('\e904');
+				font-size: .6em;
+				transition: all .7s;
+			}
+		}
+	}
+
+	&.select2-container--open
+	{
+		.select2-selection 
+		{
+			.select2-selection__arrow
+			{
+				&:after
+				{
+					transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+				}
+			}
+		}
+
+		&.select2-container--above
+		{
+			.select2-selection 
+			{
+				&.select2_no_border
+				{
+					border-top-color: inherit;
+				}
+			}
+		}
+
+		&.select2-container--below
+		{
+			.select2-selection 
+			{
+				&.select2_no_border
+				{
+					border-bottom-color: inherit;
+				}
+			}
+		}			
+	}
+}
+
+.select2-container
+{
+	.select2-dropdown
+	{
+		border-radius: 0;
+
+		.select2-search
+		{
+			padding: 0;
+			position: relative;
+
+			.select2-search__field
+			{
+				margin: 0;
+				border-color: transparent;
+				box-shadow: 0px 2px 2px -1px rgba(0,0,0,0.2);
+			}
+		}
+
+		.select2-results
+		{
+			ul
+			{
+				&:focus
+				{
+					outline: 0;
+				}
+
+				li
+				{
+					margin: 0;
+					height: auto;
+					padding-top: .75em;
+					padding-bottom: .75em;
+					padding-left: $form-spacing;
+					padding-right: $form-spacing;
+					font-size: rem-calc(13);
+					line-height: 1.5em;
+
+					&:focus
+					{
+						outline: 0;
+					}
+				}
+			}
+		}
+
+		&.select2_no_border
+		{
+			.select2-results
+			{
+				ul
+				{
+					max-height: 400px;
+				}
+			}
+		}
+	}
+}
+
+body
+{
+	> .select2-container
+	{
+		z-index: 99999;
+	}
+}

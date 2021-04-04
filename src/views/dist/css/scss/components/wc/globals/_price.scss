@@ -1,0 +1,19 @@
+.price
+{
+	del {
+		position: relative;
+		text-decoration: none;
+
+		&::before {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 50%;
+			right: 0;
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-color: inherit;
+			transform:rotate(-20deg);
+		}
+	}
+}

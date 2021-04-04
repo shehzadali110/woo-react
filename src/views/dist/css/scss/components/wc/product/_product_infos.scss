@@ -1,0 +1,7 @@
+.product_infos
+{
+	@include breakpoint(large)
+	{
+		margin-bottom: rem-calc(80);
+	} 
+}

@@ -1,0 +1,36 @@
+.single-product
+{
+	.wcppec-checkout-buttons
+	{
+	    text-align: right;
+	    margin: 0 0 2em 0;
+	    overflow: hidden;
+	}
+
+	.wcppec-checkout-buttons__button
+	{
+	    padding: 0;
+	}
+}
+
+.woocommerce-cart
+{
+	.cart-collaterals .cart_totals .wc-proceed-to-checkout .wcppec-checkout-buttons .wcppec-checkout-buttons__separator
+	{
+	    margin: 0;
+	    padding: 0.5rem 0 0.4rem 0 !important
+	}
+}
+
+.woocommerce-checkout
+{
+	.woocommerce-SavedPaymentMethods.wc-saved-payment-methods li
+	{
+	    list-style: none;
+	}
+
+	.stripe-pf-right
+	{
+	    padding-left: 5px;
+	}
+}

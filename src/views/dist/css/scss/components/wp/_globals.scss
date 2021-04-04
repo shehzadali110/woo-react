@@ -1,0 +1,26 @@
+@import "globals/comments";
+//@import "globals/search_results";
+@import "globals/gallery";
+@import "globals/pagination";
+
+// Not used, but needed fot Theme Check
+
+.wp-caption
+{
+	color: inherit;
+}
+
+.wp-caption-text
+{
+	color: inherit;
+}
+
+.gallery-caption
+{
+	color: inherit;
+}
+
+.bypostauthor
+{
+	color: inherit;
+}

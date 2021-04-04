@@ -1,0 +1,95 @@
+.woocommerce
+{
+	.checkout_coupon
+	{
+		position: relative;
+		max-width: 384px;
+		margin: rem-calc(8) auto rem-calc(48); 
+		
+		p
+		{
+			&:not(.form-row)
+			{
+				font-size: rem-calc(13);
+				margin-bottom: rem-calc(10);
+				text-align: center;
+			}
+
+			&.form-row
+			{
+				width: 100%; 
+				margin-bottom: 0;
+				opacity: 0;
+				transition: opacity ease .5s; 
+				
+				&:before
+				{
+					content: "";
+					width: 0;
+					height: 1px;
+					display: block;  
+					position: absolute;
+					bottom: 0; 
+					transition: width ease .5s;
+				}
+				
+				&.bottom_line
+				{
+					&:before
+					{
+						width: 100%; 
+					}
+				}
+
+				&.show
+				{
+					opacity: 1; 
+				}
+				
+				.input-text
+				{
+					border-top: 0;
+					border-left: 0;
+					border-right: 0;  
+					font-size: rem-calc(13);
+					line-height: rem-calc(16);  
+					width: 100%; 
+					margin-bottom: 0;
+					
+					&:focus
+					{
+						background: none;
+						box-shadow: none; 
+					}
+
+					@include breakpoint(medium down)
+					{
+						padding-left: 0;
+						padding-right: 0;
+					}
+				}
+			}
+
+			&.form-row-last
+			{
+				width: auto; 
+				position: absolute;
+				right: rem-calc(16);
+				bottom: 0;
+			    height: 47px;
+			    transition: opacity ease .3s; 
+				 
+				.button
+				{
+					background: none; 
+					padding-right: 0;
+					z-index: 9; 
+					padding: 0;
+					outline: none;
+					width: auto; 
+    				height: 47px;
+				} 
+			}
+		}
+	}
+}

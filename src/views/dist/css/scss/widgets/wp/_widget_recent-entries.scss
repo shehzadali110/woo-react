@@ -1,0 +1,15 @@
+@mixin widget_recent_entries()
+{
+	li
+	{
+		display: block;
+		margin-bottom: rem-calc(16);
+
+		.post-date
+		{
+			display: block;
+			margin-top: rem-calc(4);
+		}
+
+	}
+}

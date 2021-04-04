@@ -1,0 +1,124 @@
+.single_video_overlay 
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 888;
+	opacity: 0;
+	visibility: hidden;
+	will-change: all;
+	backface-visibility: hidden;
+	transition: all .3s ease-in-out;
+
+	&.active
+	{
+		opacity: 1;
+		visibility: visible;
+		background: rgba($black, $opacity-ultra-light);	
+	}
+}
+
+.single_video_container
+{
+	position: fixed;
+	z-index: 9999; 
+	opacity: 0;
+	visibility: hidden; 
+	transition: all .5s ease;
+
+	width: 80%;
+	height: 40%;
+	bottom: 30%;
+	right: 10%;	
+	
+	@include breakpoint(large)
+	{
+		width: 64%;
+		height: 79%;
+		bottom: 7%;
+		right: 18%;
+	}
+	
+	&.active
+	{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.stuck
+	{
+		width: 175px;
+		height: 100px; 
+		bottom: rem-calc(20);
+		right: rem-calc(20);
+
+		@include breakpoint(medium)
+		{
+			width: 250px;
+			height: 142px; 
+			right: rem-calc(24);
+		}
+
+		@include breakpoint(large)
+		{
+			width: 350px;
+			height: 200px; 
+			right: rem-calc(25);
+		}
+		
+	   .close_video_btn i
+	   {
+			@include breakpoint(small only)
+			{
+				font-size: rem-calc(15);
+			}
+	   }
+	  
+	}
+
+	.youtube-video 
+	{
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		width: 100%; 
+		box-shadow: 0 5px 43px 0 rgba(0,0,0,0.4);
+		
+		iframe 
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.close_video_btn
+	{
+		position: absolute;
+		top: -38px;
+		right: -3px;
+		cursor: pointer;
+		z-index: 9999;
+		display: table;
+
+		@include breakpoint(small only)
+		{
+		    top: -38px;
+		    width: 50px;
+		    height: 38px;
+		    text-align: right;
+		}
+		
+		> i
+		{
+			font-size: rem-calc(24);
+			display: table-cell;
+    		vertical-align: middle;
+			@include global-transition();  
+		}
+	}
+}

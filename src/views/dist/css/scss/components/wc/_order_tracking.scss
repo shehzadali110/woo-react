@@ -1,0 +1,13 @@
+.track_order
+{
+	@include breakpoint(large)
+	{
+		max-width: rem-calc(384);
+		margin: rem-calc(52) auto 0;
+	}
+
+	p.form-row:last-of-type
+	{
+		margin-bottom: 0;
+	}
+}

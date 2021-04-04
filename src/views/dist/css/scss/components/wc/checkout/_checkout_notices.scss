@@ -1,0 +1,22 @@
+.woocommerce
+{
+	.woocommerce-info
+	{
+		font-size: rem-calc(13);
+		line-height: rem-calc(18); 
+	    background: none;
+	    color: inherit;  
+	    justify-content: center; 
+	    margin: 0;
+
+	    &:last-of-type
+	    {
+	        padding-top: 0; 
+	    }
+	    
+		&:before
+		{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,84 @@
+.header-sticky-blog
+{
+
+	@include breakpoint(large down)
+	{
+		display: none;
+	}
+
+	.header-sticky-blog-content
+	{
+		@each $breakpoint, $padding in $content-padding {
+
+			@include breakpoint($breakpoint) {
+				padding-left: rem-calc($padding);
+				padding-right: rem-calc($padding);
+			}
+		}
+
+		@include large_side_paddings;
+
+		display: flex;
+		align-items: center;
+
+		.header-sticky-blog-now-reading
+		{
+			display: flex;
+			align-items: center;
+			padding: rem-calc(10) rem-calc(24) rem-calc(10) 0;
+			border-right: 1px solid;
+		}
+
+		.header-sticky-blog-title
+		{
+			display: flex;
+			align-items: center;
+			flex: 1;
+			padding: 0 rem-calc(24);
+		}
+
+		.header-sticky-blog-buttons
+		{
+			display: flex;
+			align-items: center;
+			border-right: 1px solid;
+
+			ul
+			{
+				display: flex;
+				align-items: center;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+
+				li
+				{
+					display: flex;
+					align-items: center;
+					padding: 0;
+					margin: 0;
+
+					a
+					{
+						display: flex;
+						align-items: center;
+						padding: 0 rem-calc(24);
+						min-height: rem-calc(80);
+						border-left: 1px solid;
+						line-height: 1;
+
+						i
+						{
+							font-size: 1.2em;
+						}
+					}
+
+					span
+					{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+// .woocommerce-tabs {
+
+// 	ul.tabs {
+// 		list-style: none;
+// 		margin: 0;
+// 		display: flex;
+// 		justify-content: center;
+
+// 		li {
+// 			display: block;
+// 			margin: 0;
+// 			position: relative;
+// 			opacity: .5;
+
+// 			&.active
+// 			{
+// 				opacity: 1;
+// 			}
+
+// 			a
+// 			{
+// 				@include small_caps_title;
+
+// 				padding: rem-calc(16);
+// 				display: block;
+// 			}
+// 		}
+// 	}
+
+// 	.panel
+// 	{
+// 		margin: rem-calc(16) auto 0;
+
+// 		> *:last-child
+// 		{
+// 			margin-bottom: 0;
+// 		}
+// 	}
+// }

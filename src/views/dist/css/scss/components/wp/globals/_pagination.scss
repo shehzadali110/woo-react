@@ -1,0 +1,46 @@
+.posts_ajax_button
+{
+	text-align: center;
+	font-size: rem-calc(11);
+	clear: both;
+	margin: 0 auto;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	text-transform: uppercase; 
+	@include global-transition();
+	
+	&:before
+	{
+		@include the_retailer_pro_icon('\e9be');
+		font-size: rem-calc(24);   
+		vertical-align: middle;
+	}
+
+	&.loading 
+	{
+		@include loader(24px, 24px);
+	}
+
+	&.disabled 
+	{
+		cursor: default;
+						
+		&:before
+		{
+			@include the_retailer_pro_icon('\e9cf');
+		}
+	}
+	
+}
+
+body.blog-pagination-infinite_scroll,
+body.blog-pagination-load_more_button {
+	nav.posts-navigation {
+		display: none;
+	}
+	.pagination-container {
+		text-align:center;
+	}
+}
+

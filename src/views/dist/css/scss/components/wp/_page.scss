@@ -1,0 +1,25 @@
+body.page {
+
+	@import "page/page_content";
+	@import "page/page_comments";
+
+	&.content-layout-full
+	{
+		.single-comments-container
+		{
+			border-top: 1px solid;
+		}
+	}
+
+	&.content-layout-boxed
+	{
+		.single-comments-container > .row
+		{
+			border-top: 1px solid;
+		}
+	}
+
+}
+
+@import "page/404";
+@import "page/attachment";

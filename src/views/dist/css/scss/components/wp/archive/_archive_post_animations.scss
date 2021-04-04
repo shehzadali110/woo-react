@@ -1,0 +1,40 @@
+// =============================================================================
+// Shop Product Animation
+// =============================================================================
+
+@keyframes post_fade_in {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+div.animated-blog-articles
+{
+	article
+	{	    
+	    opacity: 0;
+	    transform: scale(.95);
+	    
+	    animation: post_fade_in .25s;
+	    animation-fill-mode: forwards;
+	    animation-delay: 2s;
+
+	    will-change: opacity, transform;
+	}
+
+	&.js_animated
+	{
+		article
+		{
+			animation: none;
+
+		    &.animated
+		    {
+		        opacity: 1;
+		        transform: scale(1);
+		        transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+		    }
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@mixin widget_rss()
+{
+	.rsswidget
+	{
+		color: inherit; 
+	}
+
+	li
+	{
+		.rss-date
+		{
+			display: block;
+			padding: 0;
+			margin: rem-calc(4) 0 0;
+		}
+
+		.rssSummary
+		{
+			margin: rem-calc(8) 0;
+		}
+
+		cite
+		{
+			font-size: inherit;
+			text-transform: none;
+			padding: 0;
+		}
+	}
+}

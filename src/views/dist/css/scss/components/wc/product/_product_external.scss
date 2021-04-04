@@ -1,0 +1,27 @@
+&.product-type-external
+{
+    .add_to_cart_wrapper
+    {
+        margin-bottom: rem-calc(24);
+    }
+
+    p.cart
+    {
+        a.button
+        {
+            width: 100%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: rem-calc(18); 
+            text-transform: none;
+            
+            &:before
+            {
+            	@include the_retailer_pro_icon('\e9ca');
+                font-size: rem-calc(16);
+                margin-right: rem-calc(16); 
+            }
+        }
+    }
+}

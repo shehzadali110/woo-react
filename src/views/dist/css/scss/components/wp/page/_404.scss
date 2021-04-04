@@ -1,0 +1,47 @@
+.error404
+{
+	section
+	{
+		&.not-found
+		{
+			max-width: rem-calc(431);
+			margin: 0 auto;
+			text-align: center;
+			
+			.page-header
+			{
+				padding-top: rem-calc(32);
+				 
+				.page-title
+				{
+					font-size: rem-calc(23);
+					color: inherit;   
+					margin-bottom: rem-calc(8); 
+					
+					&:before
+					{
+						@include the_retailer_pro_icon('\e9c0'); 
+						display: block;
+						font-size: rem-calc(96);
+						margin-bottom: rem-calc(40);  
+					}
+				}
+			}
+
+			.page-content
+			{
+				.error-404-description
+				{
+					font-size: rem-calc(14); 
+					line-height: rem-calc(22); 
+					margin-bottom: rem-calc(48);
+				}
+
+				.error-404-searchform
+				{
+					padding: 0 rem-calc(24); 
+				}
+			}
+		}
+	}
+}

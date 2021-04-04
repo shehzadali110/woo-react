@@ -1,0 +1,19 @@
+.woocommerce-product-details__short-description
+{
+	font-size: rem-calc(14);
+	line-height: rem-calc(22);
+	margin-bottom: rem-calc(48); 
+	
+	> p
+	{
+		&:last-of-type
+		{
+			margin-bottom: 0;
+		}
+	}
+	
+	@include breakpoint(small only)
+	{
+		margin-bottom: rem-calc(47); 
+	}
+}

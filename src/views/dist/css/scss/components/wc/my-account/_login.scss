@@ -1,0 +1,184 @@
+.woocommerce
+{
+	> h2
+	{
+		font-size: rem-calc(19); 
+		max-width: rem-calc(384); 
+		margin: 0 auto rem-calc(32);
+	}
+
+	p.form-row
+	{
+		margin-bottom: rem-calc(24); 
+	}
+
+	> .woocommerce-form-login
+	{
+		max-width: rem-calc(384);
+		margin: 0 auto;
+		position: relative;
+
+		.woocommerce-Button
+		{
+			margin-bottom: rem-calc(24); 
+		}
+
+		.woocommerce-LostPassword
+		{
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			right: 0;
+			line-height: 1;
+			font-size: rem-calc(13);
+
+			a
+			{
+				display: inline-block;
+				line-height: 1.4;
+				border-bottom: 2px solid;
+
+				&:hover
+				{
+					border-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+
+#customer_login
+{
+	&.col2-set
+	{
+		width: 100%;
+		margin: 0 auto;
+
+		@include breakpoint(medium)
+		{
+			display: flex;
+			justify-content: center;
+		}
+
+		@include breakpoint(large)
+		{
+			width: 75%;
+		}
+		
+		.u-column1,
+		.u-column2
+		{
+			width: 100%;
+
+			h2
+			{
+				font-size: rem-calc(19); 
+				margin-bottom: rem-calc(32); 
+			}
+		}
+		
+		.u-column1
+		{
+			&.col-1
+			{
+				margin-right: 0;
+
+				@include breakpoint(medium)
+				{
+					margin-right: rem-calc(40);
+				}
+
+				@include breakpoint(large)
+				{
+					margin-right: rem-calc(120);
+				}
+		
+				.woocommerce-form-login
+				{
+					position: relative;
+
+					.woocommerce-Button
+					{
+						margin-bottom: rem-calc(24); 
+					}
+
+					.woocommerce-form__label-for-checkbox
+					{
+						padding: 0;
+						margin: 0 0 20px;
+						display: flex;
+						line-height: 1;
+
+						.woocommerce-form__input-checkbox
+						{
+							display: flex;
+							padding: 0;
+							margin: 0 rem-calc(16) 0 0;			
+						}
+
+						span {
+							display: flex;
+						}
+					}
+
+					.woocommerce-LostPassword
+					{
+						padding: 0;
+						margin: 0;
+						position: absolute;
+						right: 0;
+						line-height: 1;
+						font-size: rem-calc(13);
+
+						a
+						{
+							display: inline-block;
+							line-height: 1.4;
+							border-bottom: 2px solid;
+
+							&:hover
+							{
+								border-color: transparent;
+							}
+						}
+					}
+				}				
+			}
+		}
+
+		.u-column2
+		{
+			margin-top: rem-calc(80);
+
+			@include breakpoint(medium)
+			{
+				margin-top: 0;
+			}
+
+			&.col-2
+			{
+				.register
+				{
+					.woocommerce-privacy-policy-text
+					{
+						p
+						{
+							font-size: rem-calc(13); 
+							line-height: 2;
+						}
+					}
+
+					.form-row
+					{
+						.woocommerce-password-strength
+						{
+							font-size: rem-calc(13); 
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+}

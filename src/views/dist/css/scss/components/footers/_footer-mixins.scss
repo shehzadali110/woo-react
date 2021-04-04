@@ -1,0 +1,124 @@
+@mixin footer-navigation()
+{
+	display: inline-block;
+	
+	.navigation-foundation
+	{
+		> ul
+		{
+			> li
+			{						
+				> a
+				{							
+					> span
+					{
+						padding: .5em 0;
+					}
+				}
+			}
+		}
+
+		.is-submenu-item a
+		{
+			opacity: 1;
+		}
+	}
+}
+
+@mixin footer-text()
+{
+	margin-bottom: rem-calc(40);
+	margin-top: 8px;
+	
+	@include breakpoint(large)
+	{
+		margin-bottom: 0; 
+	}
+}
+
+@mixin footer-credit-card-icons
+{
+
+	text-align: center;
+	
+	@include breakpoint(large)
+	{
+		text-align: right;
+	}
+	
+	img
+	{
+		max-height: 32px;
+		padding-left: 8px;
+	}
+}
+
+@mixin footer-trigger()
+{
+	.trigger-footer-widget-area
+	{	
+		margin: 0 auto;
+		text-align: center;
+		font-size: rem-calc(40);
+		line-height: rem-calc(40);
+		margin-bottom: rem-calc(40);  
+		
+		.trigger-footer-widget-icon
+		{
+			&:before
+			{
+				color: inherit; 
+			}
+
+		}
+
+		@include breakpoint(large)
+		{
+			display: none;
+		}
+	}
+}
+
+
+@mixin footer-widget-area()
+{
+	.trigger-footer-widget-area + .widget-area
+	{
+		display: none;
+				
+		@include breakpoint(large)
+		{
+			display: block;
+		}
+	}
+
+	.widget-area
+	{		
+		.column
+		{
+			aside
+			{
+				padding-bottom: rem-calc(40);
+				 
+				@include breakpoint(large)
+				{
+					padding-bottom: rem-calc(80);
+				}
+			}
+
+			&:first-child
+			{
+				@include breakpoint(large)
+				{
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+				
+				aside
+				{
+					max-width: rem-calc(384);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,2323 @@
+@import "variables";
+
+@font-face {
+  font-family: 'the-hanger';
+  src:
+    url('#{$icomoon-font-path}/the-hanger.woff2') format('woff2'),
+    url('#{$icomoon-font-path}/the-hanger.ttf') format('truetype'),
+    url('#{$icomoon-font-path}/the-hanger.woff') format('woff'),
+    url('#{$icomoon-font-path}/the-hanger.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="thehanger-icons-"], [class*=" thehanger-icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'the-hanger' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.thehanger-icons-cafe_wine-glass {
+  &:before {
+    content: unicode($thehanger-icons-cafe_wine-glass); 
+  }
+}
+.thehanger-icons-cafe_take-away-drink {
+  &:before {
+    content: unicode($thehanger-icons-cafe_take-away-drink); 
+  }
+}
+.thehanger-icons-cafe_take-away-drink-2 {
+  &:before {
+    content: unicode($thehanger-icons-cafe_take-away-drink-2); 
+  }
+}
+.thehanger-icons-cafe_pizza-slice2 {
+  &:before {
+    content: unicode($thehanger-icons-cafe_pizza-slice2); 
+  }
+}
+.thehanger-icons-health_diet-tape2 {
+  &:before {
+    content: unicode($thehanger-icons-health_diet-tape2); 
+  }
+}
+.thehanger-icons-health_kg-weight2 {
+  &:before {
+    content: unicode($thehanger-icons-health_kg-weight2); 
+  }
+}
+.thehanger-icons-health_scale2 {
+  &:before {
+    content: unicode($thehanger-icons-health_scale2); 
+  }
+}
+.thehanger-icons-health_sunset {
+  &:before {
+    content: unicode($thehanger-icons-health_sunset); 
+  }
+}
+.thehanger-icons-health_tape-52 {
+  &:before {
+    content: unicode($thehanger-icons-health_tape-52); 
+  }
+}
+.thehanger-icons-hotel_hair-dryer {
+  &:before {
+    content: unicode($thehanger-icons-hotel_hair-dryer); 
+  }
+}
+.thehanger-icons-spa_sunflower {
+  &:before {
+    content: unicode($thehanger-icons-spa_sunflower); 
+  }
+}
+.thehanger-icons-spa_swim-pool {
+  &:before {
+    content: unicode($thehanger-icons-spa_swim-pool); 
+  }
+}
+.thehanger-icons-spa_sunbed {
+  &:before {
+    content: unicode($thehanger-icons-spa_sunbed); 
+  }
+}
+.thehanger-icons-spa_stones {
+  &:before {
+    content: unicode($thehanger-icons-spa_stones); 
+  }
+}
+.thehanger-icons-spa_spa-sign {
+  &:before {
+    content: unicode($thehanger-icons-spa_spa-sign); 
+  }
+}
+.thehanger-icons-spa_shower2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_shower2); 
+  }
+}
+.thehanger-icons-spa_small-candles {
+  &:before {
+    content: unicode($thehanger-icons-spa_small-candles); 
+  }
+}
+.thehanger-icons-spa_perfume2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_perfume2); 
+  }
+}
+.thehanger-icons-spa_razor2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_razor2); 
+  }
+}
+.thehanger-icons-spa_mortar-pestle {
+  &:before {
+    content: unicode($thehanger-icons-spa_mortar-pestle); 
+  }
+}
+.thehanger-icons-spa_nail-polish {
+  &:before {
+    content: unicode($thehanger-icons-spa_nail-polish); 
+  }
+}
+.thehanger-icons-spa_night-cream {
+  &:before {
+    content: unicode($thehanger-icons-spa_night-cream); 
+  }
+}
+.thehanger-icons-spa_massage-oil-2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_massage-oil-2); 
+  }
+}
+.thehanger-icons-spa_massage-oil {
+  &:before {
+    content: unicode($thehanger-icons-spa_massage-oil); 
+  }
+}
+.thehanger-icons-spa_lipstick2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_lipstick2); 
+  }
+}
+.thehanger-icons-spa_makeup-brush-set {
+  &:before {
+    content: unicode($thehanger-icons-spa_makeup-brush-set); 
+  }
+}
+.thehanger-icons-spa_makeup-set {
+  &:before {
+    content: unicode($thehanger-icons-spa_makeup-set); 
+  }
+}
+.thehanger-icons-spa_hot-bath {
+  &:before {
+    content: unicode($thehanger-icons-spa_hot-bath); 
+  }
+}
+.thehanger-icons-spa_hand-mirror-2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_hand-mirror-2); 
+  }
+}
+.thehanger-icons-spa_hand-cream2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_hand-cream2); 
+  }
+}
+.thehanger-icons-spa_flower-4 {
+  &:before {
+    content: unicode($thehanger-icons-spa_flower-4); 
+  }
+}
+.thehanger-icons-spa_face-brush {
+  &:before {
+    content: unicode($thehanger-icons-spa_face-brush); 
+  }
+}
+.thehanger-icons-spa_eye-makeup {
+  &:before {
+    content: unicode($thehanger-icons-spa_eye-makeup); 
+  }
+}
+.thehanger-icons-spa_eye-cream {
+  &:before {
+    content: unicode($thehanger-icons-spa_eye-cream); 
+  }
+}
+.thehanger-icons-spa_cream {
+  &:before {
+    content: unicode($thehanger-icons-spa_cream); 
+  }
+}
+.thehanger-icons-spa_comb {
+  &:before {
+    content: unicode($thehanger-icons-spa_comb); 
+  }
+}
+.thehanger-icons-spa_cleansing-oil {
+  &:before {
+    content: unicode($thehanger-icons-spa_cleansing-oil); 
+  }
+}
+.thehanger-icons-spa_clean-brush {
+  &:before {
+    content: unicode($thehanger-icons-spa_clean-brush); 
+  }
+}
+.thehanger-icons-spa_candle-fire {
+  &:before {
+    content: unicode($thehanger-icons-spa_candle-fire); 
+  }
+}
+.thehanger-icons-spa_bamboo {
+  &:before {
+    content: unicode($thehanger-icons-spa_bamboo); 
+  }
+}
+.thehanger-icons-health_tape-apple2 {
+  &:before {
+    content: unicode($thehanger-icons-health_tape-apple2); 
+  }
+}
+.thehanger-icons-health_water-bottle-small {
+  &:before {
+    content: unicode($thehanger-icons-health_water-bottle-small); 
+  }
+}
+.thehanger-icons-ecommerce_shop-location2 {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shop-location2); 
+  }
+}
+.thehanger-icons-mail_mail {
+  &:before {
+    content: unicode($thehanger-icons-mail_mail); 
+  }
+}
+.thehanger-icons-calendar_wall-clock-2 {
+  &:before {
+    content: unicode($thehanger-icons-calendar_wall-clock-2); 
+  }
+}
+.thehanger-icons-phone_phone-symbol {
+  &:before {
+    content: unicode($thehanger-icons-phone_phone-symbol); 
+  }
+}
+.thehanger-icons-phone_iphone {
+  &:before {
+    content: unicode($thehanger-icons-phone_iphone); 
+  }
+}
+.thehanger-icons-three_dots {
+  &:before {
+    content: unicode($thehanger-icons-three_dots); 
+  }
+}
+.thehanger-icons-arrow-left {
+  &:before {
+    content: unicode($thehanger-icons-arrow-left); 
+  }
+}
+.thehanger-icons-arrow-right {
+  &:before {
+    content: unicode($thehanger-icons-arrow-right); 
+  }
+}
+.thehanger-icons-external-link {
+  &:before {
+    content: unicode($thehanger-icons-external-link); 
+  }
+}
+.thehanger-icons-enlarge {
+  &:before {
+    content: unicode($thehanger-icons-enlarge); 
+  }
+}
+.thehanger-icons-video-play {
+  &:before {
+    content: unicode($thehanger-icons-video-play); 
+  }
+}
+.thehanger-icons-building_home {
+  &:before {
+    content: unicode($thehanger-icons-building_home); 
+  }
+}
+.thehanger-icons-security_fingerprint {
+  &:before {
+    content: unicode($thehanger-icons-security_fingerprint); 
+  }
+}
+.thehanger-icons-quick-view {
+  &:before {
+    content: unicode($thehanger-icons-quick-view); 
+  }
+}
+.thehanger-icons-download {
+  &:before {
+    content: unicode($thehanger-icons-download); 
+  }
+}
+.thehanger-icons-design_pencil-2 {
+  &:before {
+    content: unicode($thehanger-icons-design_pencil-2); 
+  }
+}
+.thehanger-icons-arrows_rounded-arrow-left {
+  &:before {
+    content: unicode($thehanger-icons-arrows_rounded-arrow-left); 
+  }
+}
+.thehanger-icons-alignment_column-row-horizontal {
+  &:before {
+    content: unicode($thehanger-icons-alignment_column-row-horizontal); 
+  }
+}
+.thehanger-icons-alignment_align-all-1 {
+  &:before {
+    content: unicode($thehanger-icons-alignment_align-all-1); 
+  }
+}
+.thehanger-icons-alignment_align-all {
+  &:before {
+    content: unicode($thehanger-icons-alignment_align-all); 
+  }
+}
+.thehanger-icons-ui_more-options {
+  &:before {
+    content: unicode($thehanger-icons-ui_more-options); 
+  }
+}
+.thehanger-icons-alignment_align-justify-all {
+  &:before {
+    content: unicode($thehanger-icons-alignment_align-justify-all); 
+  }
+}
+.thehanger-icons-ui_remove_selection {
+  &:before {
+    content: unicode($thehanger-icons-ui_remove_selection); 
+  }
+}
+.thehanger-icons-chat_chat-15 {
+  &:before {
+    content: unicode($thehanger-icons-chat_chat-15); 
+  }
+}
+.thehanger-icons-ui_notice {
+  &:before {
+    content: unicode($thehanger-icons-ui_notice); 
+  }
+}
+.thehanger-icons-close-dark-larger {
+  &:before {
+    content: unicode($thehanger-icons-close-dark-larger); 
+  }
+}
+.thehanger-icons-404 {
+  &:before {
+    content: unicode($thehanger-icons-404); 
+  }
+}
+.thehanger-icons-wishlist-empty {
+  &:before {
+    content: unicode($thehanger-icons-wishlist-empty); 
+  }
+}
+.thehanger-icons-empty-cart {
+  &:before {
+    content: unicode($thehanger-icons-empty-cart); 
+  }
+}
+.thehanger-icons-snapchat {
+  &:before {
+    content: unicode($thehanger-icons-snapchat); 
+  }
+}
+.thehanger-icons-ecommerce_watchlist-eye {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_watchlist-eye); 
+  }
+}
+.thehanger-icons-display-list {
+  &:before {
+    content: unicode($thehanger-icons-display-list); 
+  }
+}
+.thehanger-icons-ui_add_selection {
+  &:before {
+    content: unicode($thehanger-icons-ui_add_selection); 
+  }
+}
+.thehanger-icons-ui_window {
+  &:before {
+    content: unicode($thehanger-icons-ui_window); 
+  }
+}
+.thehanger-icons-seo_video-marketing {
+  &:before {
+    content: unicode($thehanger-icons-seo_video-marketing); 
+  }
+}
+.thehanger-icons-ui_add {
+  &:before {
+    content: unicode($thehanger-icons-ui_add); 
+  }
+}
+.thehanger-icons-ui_minus {
+  &:before {
+    content: unicode($thehanger-icons-ui_minus); 
+  }
+}
+.thehanger-icons-ui_delete {
+  &:before {
+    content: unicode($thehanger-icons-ui_delete); 
+  }
+}
+.thehanger-icons-ui_confirm {
+  &:before {
+    content: unicode($thehanger-icons-ui_confirm); 
+  }
+}
+.thehanger-icons-ui_forbidden {
+  &:before {
+    content: unicode($thehanger-icons-ui_forbidden); 
+  }
+}
+.thehanger-icons-ui_plus-window {
+  &:before {
+    content: unicode($thehanger-icons-ui_plus-window); 
+  }
+}
+.thehanger-icons-ui_minus-window {
+  &:before {
+    content: unicode($thehanger-icons-ui_minus-window); 
+  }
+}
+.thehanger-icons-ui_logout {
+  &:before {
+    content: unicode($thehanger-icons-ui_logout); 
+  }
+}
+.thehanger-icons-ui_edit {
+  &:before {
+    content: unicode($thehanger-icons-ui_edit); 
+  }
+}
+.thehanger-icons-ui_edit-profile {
+  &:before {
+    content: unicode($thehanger-icons-ui_edit-profile); 
+  }
+}
+.thehanger-icons-ui_star_full {
+  &:before {
+    content: unicode($thehanger-icons-ui_star_full); 
+  }
+}
+.thehanger-icons-ui_star {
+  &:before {
+    content: unicode($thehanger-icons-ui_star); 
+  }
+}
+.thehanger-icons-hamburger {
+  &:before {
+    content: unicode($thehanger-icons-hamburger); 
+  }
+}
+.thehanger-icons-search {
+  &:before {
+    content: unicode($thehanger-icons-search); 
+  }
+}
+.thehanger-icons-wishlist {
+  &:before {
+    content: unicode($thehanger-icons-wishlist); 
+  }
+}
+.thehanger-icons-ecommerce_wishlist {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_wishlist); 
+  }
+}
+.thehanger-icons-account-24x24-dark-alt {
+  &:before {
+    content: unicode($thehanger-icons-account-24x24-dark-alt); 
+  }
+}
+.thehanger-icons-account {
+  &:before {
+    content: unicode($thehanger-icons-account); 
+  }
+}
+.thehanger-icons-add-dark {
+  &:before {
+    content: unicode($thehanger-icons-add-dark); 
+  }
+}
+.thehanger-icons-remove-dark {
+  &:before {
+    content: unicode($thehanger-icons-remove-dark); 
+  }
+}
+.thehanger-icons-add-dark-large {
+  &:before {
+    content: unicode($thehanger-icons-add-dark-large); 
+  }
+}
+.thehanger-icons-close-dark {
+  &:before {
+    content: unicode($thehanger-icons-close-dark); 
+  }
+}
+.thehanger-icons-arrow-down-dark {
+  &:before {
+    content: unicode($thehanger-icons-arrow-down-dark); 
+  }
+}
+.thehanger-icons-arrow-left-dark {
+  &:before {
+    content: unicode($thehanger-icons-arrow-left-dark); 
+  }
+}
+.thehanger-icons-arrow-right-dark {
+  &:before {
+    content: unicode($thehanger-icons-arrow-right-dark); 
+  }
+}
+.thehanger-icons-arrow-up-dark {
+  &:before {
+    content: unicode($thehanger-icons-arrow-up-dark); 
+  }
+}
+.thehanger-icons-arrows_refresh {
+  &:before {
+    content: unicode($thehanger-icons-arrows_refresh); 
+  }
+}
+.thehanger-icons-ui_refresh-sync {
+  &:before {
+    content: unicode($thehanger-icons-ui_refresh-sync); 
+  }
+}
+.thehanger-icons-ui_question {
+  &:before {
+    content: unicode($thehanger-icons-ui_question); 
+  }
+}
+.thehanger-icons-ui_options {
+  &:before {
+    content: unicode($thehanger-icons-ui_options); 
+  }
+}
+.thehanger-icons-shopping-bag {
+  &:before {
+    content: unicode($thehanger-icons-shopping-bag); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-bag-2 {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-bag-2); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-bag-3 {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-bag-3); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-bag {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-bag); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-basket-2 {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-basket-2); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-basket {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-basket); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-bags {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-bags); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-cart {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-cart); 
+  }
+}
+.thehanger-icons-ecommerce_cart-checkout {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_cart-checkout); 
+  }
+}
+.thehanger-icons-ecommerce_wallet {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_wallet); 
+  }
+}
+.thehanger-icons-ecommerce_money {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_money); 
+  }
+}
+.thehanger-icons-ecommerce_accepted-cards {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_accepted-cards); 
+  }
+}
+.thehanger-icons-ecommerce_smartphone-shopping {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_smartphone-shopping); 
+  }
+}
+.thehanger-icons-ecommerce_shop {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shop); 
+  }
+}
+.thehanger-icons-ecommerce_shop-location {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shop-location); 
+  }
+}
+.thehanger-icons-ecommerce_purchase-receipt {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_purchase-receipt); 
+  }
+}
+.thehanger-icons-ecommerce_product-tag-6 {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_product-tag-6); 
+  }
+}
+.thehanger-icons-ecommerce_discount-symbol {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_discount-symbol); 
+  }
+}
+.thehanger-icons-ecommerce_discount-coupon {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_discount-coupon); 
+  }
+}
+.thehanger-icons-ecommerce_shopping-coupons {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_shopping-coupons); 
+  }
+}
+.thehanger-icons-ecommerce_discount-coupon-scissors {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_discount-coupon-scissors); 
+  }
+}
+.thehanger-icons-ecommerce_24h-support {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_24h-support); 
+  }
+}
+.thehanger-icons-ecommerce_credit-card {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_credit-card); 
+  }
+}
+.thehanger-icons-ecommerce_cash-register {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_cash-register); 
+  }
+}
+.thehanger-icons-ecommerce_box-transport {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_box-transport); 
+  }
+}
+.thehanger-icons-ecommerce_box-2 {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_box-2); 
+  }
+}
+.thehanger-icons-ecommerce_present {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_present); 
+  }
+}
+.thehanger-icons-ecommerce_money-calculator {
+  &:before {
+    content: unicode($thehanger-icons-ecommerce_money-calculator); 
+  }
+}
+.thehanger-icons-display-grid {
+  &:before {
+    content: unicode($thehanger-icons-display-grid); 
+  }
+}
+.thehanger-icons-ui_expand {
+  &:before {
+    content: unicode($thehanger-icons-ui_expand); 
+  }
+}
+.thehanger-icons-love_valentine-cake {
+  &:before {
+    content: unicode($thehanger-icons-love_valentine-cake); 
+  }
+}
+.thehanger-icons-love_hearts {
+  &:before {
+    content: unicode($thehanger-icons-love_hearts); 
+  }
+}
+.thehanger-icons-sports_badminton {
+  &:before {
+    content: unicode($thehanger-icons-sports_badminton); 
+  }
+}
+.thehanger-icons-sports_baseball-ball {
+  &:before {
+    content: unicode($thehanger-icons-sports_baseball-ball); 
+  }
+}
+.thehanger-icons-sports_basketball-2 {
+  &:before {
+    content: unicode($thehanger-icons-sports_basketball-2); 
+  }
+}
+.thehanger-icons-sports_basketball-arena {
+  &:before {
+    content: unicode($thehanger-icons-sports_basketball-arena); 
+  }
+}
+.thehanger-icons-sports_basketball-table {
+  &:before {
+    content: unicode($thehanger-icons-sports_basketball-table); 
+  }
+}
+.thehanger-icons-sports_basketball {
+  &:before {
+    content: unicode($thehanger-icons-sports_basketball); 
+  }
+}
+.thehanger-icons-sports_billiard-8-ball {
+  &:before {
+    content: unicode($thehanger-icons-sports_billiard-8-ball); 
+  }
+}
+.thehanger-icons-sports_fencing {
+  &:before {
+    content: unicode($thehanger-icons-sports_fencing); 
+  }
+}
+.thehanger-icons-sports_football-ball {
+  &:before {
+    content: unicode($thehanger-icons-sports_football-ball); 
+  }
+}
+.thehanger-icons-sports_roller-skates {
+  &:before {
+    content: unicode($thehanger-icons-sports_roller-skates); 
+  }
+}
+.thehanger-icons-sports_rugby-ball {
+  &:before {
+    content: unicode($thehanger-icons-sports_rugby-ball); 
+  }
+}
+.thehanger-icons-sports_rugby-helmet {
+  &:before {
+    content: unicode($thehanger-icons-sports_rugby-helmet); 
+  }
+}
+.thehanger-icons-sports_sport-shirt {
+  &:before {
+    content: unicode($thehanger-icons-sports_sport-shirt); 
+  }
+}
+.thehanger-icons-sports_stopwatch {
+  &:before {
+    content: unicode($thehanger-icons-sports_stopwatch); 
+  }
+}
+.thehanger-icons-sports_tennis-ball {
+  &:before {
+    content: unicode($thehanger-icons-sports_tennis-ball); 
+  }
+}
+.thehanger-icons-sports_tennis-baseball {
+  &:before {
+    content: unicode($thehanger-icons-sports_tennis-baseball); 
+  }
+}
+.thehanger-icons-sports_tennis-rockets {
+  &:before {
+    content: unicode($thehanger-icons-sports_tennis-rockets); 
+  }
+}
+.thehanger-icons-sports_ticket {
+  &:before {
+    content: unicode($thehanger-icons-sports_ticket); 
+  }
+}
+.thehanger-icons-sports_volleyball {
+  &:before {
+    content: unicode($thehanger-icons-sports_volleyball); 
+  }
+}
+.thehanger-icons-sports_wight-lifting-3 {
+  &:before {
+    content: unicode($thehanger-icons-sports_wight-lifting-3); 
+  }
+}
+.thehanger-icons-spa_flip-flops {
+  &:before {
+    content: unicode($thehanger-icons-spa_flip-flops); 
+  }
+}
+.thehanger-icons-spa_hand-cream {
+  &:before {
+    content: unicode($thehanger-icons-spa_hand-cream); 
+  }
+}
+.thehanger-icons-spa_hand-mirror {
+  &:before {
+    content: unicode($thehanger-icons-spa_hand-mirror); 
+  }
+}
+.thehanger-icons-spa_lipstick {
+  &:before {
+    content: unicode($thehanger-icons-spa_lipstick); 
+  }
+}
+.thehanger-icons-spa_perfume {
+  &:before {
+    content: unicode($thehanger-icons-spa_perfume); 
+  }
+}
+.thehanger-icons-spa_razor-2 {
+  &:before {
+    content: unicode($thehanger-icons-spa_razor-2); 
+  }
+}
+.thehanger-icons-spa_razor {
+  &:before {
+    content: unicode($thehanger-icons-spa_razor); 
+  }
+}
+.thehanger-icons-spa_rose {
+  &:before {
+    content: unicode($thehanger-icons-spa_rose); 
+  }
+}
+.thehanger-icons-spa_scissors {
+  &:before {
+    content: unicode($thehanger-icons-spa_scissors); 
+  }
+}
+.thehanger-icons-spa_shower {
+  &:before {
+    content: unicode($thehanger-icons-spa_shower); 
+  }
+}
+.thehanger-icons-spa_spa-flower {
+  &:before {
+    content: unicode($thehanger-icons-spa_spa-flower); 
+  }
+}
+.thehanger-icons-spa_spa-oil {
+  &:before {
+    content: unicode($thehanger-icons-spa_spa-oil); 
+  }
+}
+.thehanger-icons-party_balloons {
+  &:before {
+    content: unicode($thehanger-icons-party_balloons); 
+  }
+}
+.thehanger-icons-party_christmas-candle {
+  &:before {
+    content: unicode($thehanger-icons-party_christmas-candle); 
+  }
+}
+.thehanger-icons-party_christmas-cute-cap {
+  &:before {
+    content: unicode($thehanger-icons-party_christmas-cute-cap); 
+  }
+}
+.thehanger-icons-party_christmas-glove-2 {
+  &:before {
+    content: unicode($thehanger-icons-party_christmas-glove-2); 
+  }
+}
+.thehanger-icons-party_christmas-socks {
+  &:before {
+    content: unicode($thehanger-icons-party_christmas-socks); 
+  }
+}
+.thehanger-icons-party_christmas-tree {
+  &:before {
+    content: unicode($thehanger-icons-party_christmas-tree); 
+  }
+}
+.thehanger-icons-party_cookie-man {
+  &:before {
+    content: unicode($thehanger-icons-party_cookie-man); 
+  }
+}
+.thehanger-icons-party_door-bell {
+  &:before {
+    content: unicode($thehanger-icons-party_door-bell); 
+  }
+}
+.thehanger-icons-party_door-star {
+  &:before {
+    content: unicode($thehanger-icons-party_door-star); 
+  }
+}
+.thehanger-icons-party_firework-4 {
+  &:before {
+    content: unicode($thehanger-icons-party_firework-4); 
+  }
+}
+.thehanger-icons-party_firework-stars {
+  &:before {
+    content: unicode($thehanger-icons-party_firework-stars); 
+  }
+}
+.thehanger-icons-party_present-2 {
+  &:before {
+    content: unicode($thehanger-icons-party_present-2); 
+  }
+}
+.thehanger-icons-party_present-gift {
+  &:before {
+    content: unicode($thehanger-icons-party_present-gift); 
+  }
+}
+.thehanger-icons-party_shopping-discount {
+  &:before {
+    content: unicode($thehanger-icons-party_shopping-discount); 
+  }
+}
+.thehanger-icons-party_ski-boots {
+  &:before {
+    content: unicode($thehanger-icons-party_ski-boots); 
+  }
+}
+.thehanger-icons-party_snowflake {
+  &:before {
+    content: unicode($thehanger-icons-party_snowflake); 
+  }
+}
+.thehanger-icons-party_snowman {
+  &:before {
+    content: unicode($thehanger-icons-party_snowman); 
+  }
+}
+.thehanger-icons-party_wax-candle {
+  &:before {
+    content: unicode($thehanger-icons-party_wax-candle); 
+  }
+}
+.thehanger-icons-music_audio-disc {
+  &:before {
+    content: unicode($thehanger-icons-music_audio-disc); 
+  }
+}
+.thehanger-icons-music_old-cassete {
+  &:before {
+    content: unicode($thehanger-icons-music_old-cassete); 
+  }
+}
+.thehanger-icons-medical_gauze {
+  &:before {
+    content: unicode($thehanger-icons-medical_gauze); 
+  }
+}
+.thehanger-icons-industry_grain-2 {
+  &:before {
+    content: unicode($thehanger-icons-industry_grain-2); 
+  }
+}
+.thehanger-icons-health_diet-stats {
+  &:before {
+    content: unicode($thehanger-icons-health_diet-stats); 
+  }
+}
+.thehanger-icons-health_diet-tape {
+  &:before {
+    content: unicode($thehanger-icons-health_diet-tape); 
+  }
+}
+.thehanger-icons-health_heart-rate {
+  &:before {
+    content: unicode($thehanger-icons-health_heart-rate); 
+  }
+}
+.thehanger-icons-health_kg-weight {
+  &:before {
+    content: unicode($thehanger-icons-health_kg-weight); 
+  }
+}
+.thehanger-icons-health_scale {
+  &:before {
+    content: unicode($thehanger-icons-health_scale); 
+  }
+}
+.thehanger-icons-health_shower-towel {
+  &:before {
+    content: unicode($thehanger-icons-health_shower-towel); 
+  }
+}
+.thehanger-icons-health_slim-belly {
+  &:before {
+    content: unicode($thehanger-icons-health_slim-belly); 
+  }
+}
+.thehanger-icons-health_smartwatch-heart-rate {
+  &:before {
+    content: unicode($thehanger-icons-health_smartwatch-heart-rate); 
+  }
+}
+.thehanger-icons-health_stopwatch {
+  &:before {
+    content: unicode($thehanger-icons-health_stopwatch); 
+  }
+}
+.thehanger-icons-health_tape-5 {
+  &:before {
+    content: unicode($thehanger-icons-health_tape-5); 
+  }
+}
+.thehanger-icons-health_tape-apple {
+  &:before {
+    content: unicode($thehanger-icons-health_tape-apple); 
+  }
+}
+.thehanger-icons-handcrafts_eco-lamp-2 {
+  &:before {
+    content: unicode($thehanger-icons-handcrafts_eco-lamp-2); 
+  }
+}
+.thehanger-icons-handcrafts_leather {
+  &:before {
+    content: unicode($thehanger-icons-handcrafts_leather); 
+  }
+}
+.thehanger-icons-handcrafts_sewing-machine {
+  &:before {
+    content: unicode($thehanger-icons-handcrafts_sewing-machine); 
+  }
+}
+.thehanger-icons-handcrafts_small-bobbin {
+  &:before {
+    content: unicode($thehanger-icons-handcrafts_small-bobbin); 
+  }
+}
+.thehanger-icons-handcrafts_e14-lamp {
+  &:before {
+    content: unicode($thehanger-icons-handcrafts_e14-lamp); 
+  }
+}
+.thehanger-icons-halloween-easter_axe-blond {
+  &:before {
+    content: unicode($thehanger-icons-halloween-easter_axe-blond); 
+  }
+}
+.thehanger-icons-halloween-easter_bat {
+  &:before {
+    content: unicode($thehanger-icons-halloween-easter_bat); 
+  }
+}
+.thehanger-icons-halloween-easter_candle {
+  &:before {
+    content: unicode($thehanger-icons-halloween-easter_candle); 
+  }
+}
+.thehanger-icons-halloween-easter_cracked-bone {
+  &:before {
+    content: unicode($thehanger-icons-halloween-easter_cracked-bone); 
+  }
+}
+.thehanger-icons-halloween-easter_cracked-skull {
+  &:before {
+    content: unicode($thehanger-icons-halloween-easter_cracked-skull); 
+  }
+}
+.thehanger-icons-halloween-easter_ghost {
+  &:before {
+    content: unicode($thehanger-icons-halloween-easter_ghost); 
+  }
+}
+.thehanger-icons-gaming_controller-directions {
+  &:before {
+    content: unicode($thehanger-icons-gaming_controller-directions); 
+  }
+}
+.thehanger-icons-gaming_controller-symbols {
+  &:before {
+    content: unicode($thehanger-icons-gaming_controller-symbols); 
+  }
+}
+.thehanger-icons-gaming_game-controller {
+  &:before {
+    content: unicode($thehanger-icons-gaming_game-controller); 
+  }
+}
+.thehanger-icons-gaming_game-disc {
+  &:before {
+    content: unicode($thehanger-icons-gaming_game-disc); 
+  }
+}
+.thehanger-icons-gaming_gaming-mouse {
+  &:before {
+    content: unicode($thehanger-icons-gaming_gaming-mouse); 
+  }
+}
+.thehanger-icons-gaming_handlet-console {
+  &:before {
+    content: unicode($thehanger-icons-gaming_handlet-console); 
+  }
+}
+.thehanger-icons-gaming_lifes {
+  &:before {
+    content: unicode($thehanger-icons-gaming_lifes); 
+  }
+}
+.thehanger-icons-gaming_medal {
+  &:before {
+    content: unicode($thehanger-icons-gaming_medal); 
+  }
+}
+.thehanger-icons-gaming_pac-man-ghost {
+  &:before {
+    content: unicode($thehanger-icons-gaming_pac-man-ghost); 
+  }
+}
+.thehanger-icons-gaming_pac-man {
+  &:before {
+    content: unicode($thehanger-icons-gaming_pac-man); 
+  }
+}
+.thehanger-icons-gaming_puzzle-piece {
+  &:before {
+    content: unicode($thehanger-icons-gaming_puzzle-piece); 
+  }
+}
+.thehanger-icons-gaming_skull {
+  &:before {
+    content: unicode($thehanger-icons-gaming_skull); 
+  }
+}
+.thehanger-icons-gambling_clover-cards-2 {
+  &:before {
+    content: unicode($thehanger-icons-gambling_clover-cards-2); 
+  }
+}
+.thehanger-icons-gambling_clover-heart-pike-diamond {
+  &:before {
+    content: unicode($thehanger-icons-gambling_clover-heart-pike-diamond); 
+  }
+}
+.thehanger-icons-gambling_diamond-2 {
+  &:before {
+    content: unicode($thehanger-icons-gambling_diamond-2); 
+  }
+}
+.thehanger-icons-gambling_dollar-tips-2 {
+  &:before {
+    content: unicode($thehanger-icons-gambling_dollar-tips-2); 
+  }
+}
+.thehanger-icons-gambling_fruit-cherry {
+  &:before {
+    content: unicode($thehanger-icons-gambling_fruit-cherry); 
+  }
+}
+.thehanger-icons-gambling_king {
+  &:before {
+    content: unicode($thehanger-icons-gambling_king); 
+  }
+}
+.thehanger-icons-gambling_knight {
+  &:before {
+    content: unicode($thehanger-icons-gambling_knight); 
+  }
+}
+.thehanger-icons-gambling_lucky-7 {
+  &:before {
+    content: unicode($thehanger-icons-gambling_lucky-7); 
+  }
+}
+.thehanger-icons-gambling_slot-machine {
+  &:before {
+    content: unicode($thehanger-icons-gambling_slot-machine); 
+  }
+}
+.thehanger-icons-gambling_tic-tac-toe {
+  &:before {
+    content: unicode($thehanger-icons-gambling_tic-tac-toe); 
+  }
+}
+.thehanger-icons-furniture_adjustable-lamp {
+  &:before {
+    content: unicode($thehanger-icons-furniture_adjustable-lamp); 
+  }
+}
+.thehanger-icons-furniture_baby-bed {
+  &:before {
+    content: unicode($thehanger-icons-furniture_baby-bed); 
+  }
+}
+.thehanger-icons-furniture_basin {
+  &:before {
+    content: unicode($thehanger-icons-furniture_basin); 
+  }
+}
+.thehanger-icons-furniture_bathtub {
+  &:before {
+    content: unicode($thehanger-icons-furniture_bathtub); 
+  }
+}
+.thehanger-icons-furniture_bedside-2 {
+  &:before {
+    content: unicode($thehanger-icons-furniture_bedside-2); 
+  }
+}
+.thehanger-icons-furniture_bedside-4 {
+  &:before {
+    content: unicode($thehanger-icons-furniture_bedside-4); 
+  }
+}
+.thehanger-icons-furniture_bedside {
+  &:before {
+    content: unicode($thehanger-icons-furniture_bedside); 
+  }
+}
+.thehanger-icons-furniture_camping-table {
+  &:before {
+    content: unicode($thehanger-icons-furniture_camping-table); 
+  }
+}
+.thehanger-icons-furniture_chair {
+  &:before {
+    content: unicode($thehanger-icons-furniture_chair); 
+  }
+}
+.thehanger-icons-furniture_closed-door {
+  &:before {
+    content: unicode($thehanger-icons-furniture_closed-door); 
+  }
+}
+.thehanger-icons-furniture_closet-3 {
+  &:before {
+    content: unicode($thehanger-icons-furniture_closet-3); 
+  }
+}
+.thehanger-icons-furniture_closet {
+  &:before {
+    content: unicode($thehanger-icons-furniture_closet); 
+  }
+}
+.thehanger-icons-furniture_cough-3 {
+  &:before {
+    content: unicode($thehanger-icons-furniture_cough-3); 
+  }
+}
+.thehanger-icons-furniture_cough {
+  &:before {
+    content: unicode($thehanger-icons-furniture_cough); 
+  }
+}
+.thehanger-icons-furniture_desk {
+  &:before {
+    content: unicode($thehanger-icons-furniture_desk); 
+  }
+}
+.thehanger-icons-furniture_dining-table-lamp {
+  &:before {
+    content: unicode($thehanger-icons-furniture_dining-table-lamp); 
+  }
+}
+.thehanger-icons-furniture_floor-lamp {
+  &:before {
+    content: unicode($thehanger-icons-furniture_floor-lamp); 
+  }
+}
+.thehanger-icons-furniture_hanger {
+  &:before {
+    content: unicode($thehanger-icons-furniture_hanger); 
+  }
+}
+.thehanger-icons-furniture_home-stairs {
+  &:before {
+    content: unicode($thehanger-icons-furniture_home-stairs); 
+  }
+}
+.thehanger-icons-furniture_single-bed-side {
+  &:before {
+    content: unicode($thehanger-icons-furniture_single-bed-side); 
+  }
+}
+.thehanger-icons-furniture_sink {
+  &:before {
+    content: unicode($thehanger-icons-furniture_sink); 
+  }
+}
+.thehanger-icons-furniture_table-lamp {
+  &:before {
+    content: unicode($thehanger-icons-furniture_table-lamp); 
+  }
+}
+.thehanger-icons-furniture_wall-picture {
+  &:before {
+    content: unicode($thehanger-icons-furniture_wall-picture); 
+  }
+}
+.thehanger-icons-food_apple {
+  &:before {
+    content: unicode($thehanger-icons-food_apple); 
+  }
+}
+.thehanger-icons-food_avocado {
+  &:before {
+    content: unicode($thehanger-icons-food_avocado); 
+  }
+}
+.thehanger-icons-food_banana {
+  &:before {
+    content: unicode($thehanger-icons-food_banana); 
+  }
+}
+.thehanger-icons-food_bread-slice {
+  &:before {
+    content: unicode($thehanger-icons-food_bread-slice); 
+  }
+}
+.thehanger-icons-food_burritos-tacos {
+  &:before {
+    content: unicode($thehanger-icons-food_burritos-tacos); 
+  }
+}
+.thehanger-icons-food_cake {
+  &:before {
+    content: unicode($thehanger-icons-food_cake); 
+  }
+}
+.thehanger-icons-food_candy {
+  &:before {
+    content: unicode($thehanger-icons-food_candy); 
+  }
+}
+.thehanger-icons-food_carrot {
+  &:before {
+    content: unicode($thehanger-icons-food_carrot); 
+  }
+}
+.thehanger-icons-food_cheese-slice-2 {
+  &:before {
+    content: unicode($thehanger-icons-food_cheese-slice-2); 
+  }
+}
+.thehanger-icons-food_cherries {
+  &:before {
+    content: unicode($thehanger-icons-food_cherries); 
+  }
+}
+.thehanger-icons-food_chocolate {
+  &:before {
+    content: unicode($thehanger-icons-food_chocolate); 
+  }
+}
+.thehanger-icons-food_cookies {
+  &:before {
+    content: unicode($thehanger-icons-food_cookies); 
+  }
+}
+.thehanger-icons-food_croissant {
+  &:before {
+    content: unicode($thehanger-icons-food_croissant); 
+  }
+}
+.thehanger-icons-food_donut {
+  &:before {
+    content: unicode($thehanger-icons-food_donut); 
+  }
+}
+.thehanger-icons-food_eggplant {
+  &:before {
+    content: unicode($thehanger-icons-food_eggplant); 
+  }
+}
+.thehanger-icons-food_fish-meat {
+  &:before {
+    content: unicode($thehanger-icons-food_fish-meat); 
+  }
+}
+.thehanger-icons-food_grain {
+  &:before {
+    content: unicode($thehanger-icons-food_grain); 
+  }
+}
+.thehanger-icons-food_milk-ration {
+  &:before {
+    content: unicode($thehanger-icons-food_milk-ration); 
+  }
+}
+.thehanger-icons-food_pear {
+  &:before {
+    content: unicode($thehanger-icons-food_pear); 
+  }
+}
+.thehanger-icons-food_sausage {
+  &:before {
+    content: unicode($thehanger-icons-food_sausage); 
+  }
+}
+.thehanger-icons-food_watermelon-slice {
+  &:before {
+    content: unicode($thehanger-icons-food_watermelon-slice); 
+  }
+}
+.thehanger-icons-electronics_air-condition {
+  &:before {
+    content: unicode($thehanger-icons-electronics_air-condition); 
+  }
+}
+.thehanger-icons-electronics_air-purifier {
+  &:before {
+    content: unicode($thehanger-icons-electronics_air-purifier); 
+  }
+}
+.thehanger-icons-electronics_australia-socket {
+  &:before {
+    content: unicode($thehanger-icons-electronics_australia-socket); 
+  }
+}
+.thehanger-icons-electronics_blender {
+  &:before {
+    content: unicode($thehanger-icons-electronics_blender); 
+  }
+}
+.thehanger-icons-electronics_espresso-machine {
+  &:before {
+    content: unicode($thehanger-icons-electronics_espresso-machine); 
+  }
+}
+.thehanger-icons-electronics_hair-dryer {
+  &:before {
+    content: unicode($thehanger-icons-electronics_hair-dryer); 
+  }
+}
+.thehanger-icons-electronics_mixer {
+  &:before {
+    content: unicode($thehanger-icons-electronics_mixer); 
+  }
+}
+.thehanger-icons-electronics_monitor {
+  &:before {
+    content: unicode($thehanger-icons-electronics_monitor); 
+  }
+}
+.thehanger-icons-electronics_music-player {
+  &:before {
+    content: unicode($thehanger-icons-electronics_music-player); 
+  }
+}
+.thehanger-icons-electronics_oven-2 {
+  &:before {
+    content: unicode($thehanger-icons-electronics_oven-2); 
+  }
+}
+.thehanger-icons-electronics_oven {
+  &:before {
+    content: unicode($thehanger-icons-electronics_oven); 
+  }
+}
+.thehanger-icons-electronics_phone-fax {
+  &:before {
+    content: unicode($thehanger-icons-electronics_phone-fax); 
+  }
+}
+.thehanger-icons-electronics_power-socket {
+  &:before {
+    content: unicode($thehanger-icons-electronics_power-socket); 
+  }
+}
+.thehanger-icons-electronics_projector {
+  &:before {
+    content: unicode($thehanger-icons-electronics_projector); 
+  }
+}
+.thehanger-icons-electronics_toaster-bread {
+  &:before {
+    content: unicode($thehanger-icons-electronics_toaster-bread); 
+  }
+}
+.thehanger-icons-electronics_tooth-brush {
+  &:before {
+    content: unicode($thehanger-icons-electronics_tooth-brush); 
+  }
+}
+.thehanger-icons-electronics_tv-monitor {
+  &:before {
+    content: unicode($thehanger-icons-electronics_tv-monitor); 
+  }
+}
+.thehanger-icons-electronics_washing-machine {
+  &:before {
+    content: unicode($thehanger-icons-electronics_washing-machine); 
+  }
+}
+.thehanger-icons-hardware_chipset {
+  &:before {
+    content: unicode($thehanger-icons-hardware_chipset); 
+  }
+}
+.thehanger-icons-hardware_computer-laptop-connection {
+  &:before {
+    content: unicode($thehanger-icons-hardware_computer-laptop-connection); 
+  }
+}
+.thehanger-icons-hardware_hard-drive {
+  &:before {
+    content: unicode($thehanger-icons-hardware_hard-drive); 
+  }
+}
+.thehanger-icons-hardware_ipad {
+  &:before {
+    content: unicode($thehanger-icons-hardware_ipad); 
+  }
+}
+.thehanger-icons-hardware_iphone {
+  &:before {
+    content: unicode($thehanger-icons-hardware_iphone); 
+  }
+}
+.thehanger-icons-hardware_laptop {
+  &:before {
+    content: unicode($thehanger-icons-hardware_laptop); 
+  }
+}
+.thehanger-icons-hardware_monitor {
+  &:before {
+    content: unicode($thehanger-icons-hardware_monitor); 
+  }
+}
+.thehanger-icons-hardware_scanner {
+  &:before {
+    content: unicode($thehanger-icons-hardware_scanner); 
+  }
+}
+.thehanger-icons-hardware_usb-stick {
+  &:before {
+    content: unicode($thehanger-icons-hardware_usb-stick); 
+  }
+}
+.thehanger-icons-hardware_webcamera {
+  &:before {
+    content: unicode($thehanger-icons-hardware_webcamera); 
+  }
+}
+.thehanger-icons-hardware_wired-mouse {
+  &:before {
+    content: unicode($thehanger-icons-hardware_wired-mouse); 
+  }
+}
+.thehanger-icons-construction_hammer-2 {
+  &:before {
+    content: unicode($thehanger-icons-construction_hammer-2); 
+  }
+}
+.thehanger-icons-construction_metre {
+  &:before {
+    content: unicode($thehanger-icons-construction_metre); 
+  }
+}
+.thehanger-icons-construction_nail-screw {
+  &:before {
+    content: unicode($thehanger-icons-construction_nail-screw); 
+  }
+}
+.thehanger-icons-construction_paint-brush {
+  &:before {
+    content: unicode($thehanger-icons-construction_paint-brush); 
+  }
+}
+.thehanger-icons-construction_paint-roller-2 {
+  &:before {
+    content: unicode($thehanger-icons-construction_paint-roller-2); 
+  }
+}
+.thehanger-icons-camping_axe {
+  &:before {
+    content: unicode($thehanger-icons-camping_axe); 
+  }
+}
+.thehanger-icons-camping_barbecue-grill-2 {
+  &:before {
+    content: unicode($thehanger-icons-camping_barbecue-grill-2); 
+  }
+}
+.thehanger-icons-camping_boots {
+  &:before {
+    content: unicode($thehanger-icons-camping_boots); 
+  }
+}
+.thehanger-icons-camping_camping-bag-2 {
+  &:before {
+    content: unicode($thehanger-icons-camping_camping-bag-2); 
+  }
+}
+.thehanger-icons-camping_camping-car {
+  &:before {
+    content: unicode($thehanger-icons-camping_camping-car); 
+  }
+}
+.thehanger-icons-cafe_fork-knife-sign {
+  &:before {
+    content: unicode($thehanger-icons-cafe_fork-knife-sign); 
+  }
+}
+.thehanger-icons-cafe_fork-spoon-knife {
+  &:before {
+    content: unicode($thehanger-icons-cafe_fork-spoon-knife); 
+  }
+}
+.thehanger-icons-cafe_french-fries {
+  &:before {
+    content: unicode($thehanger-icons-cafe_french-fries); 
+  }
+}
+.thehanger-icons-cafe_hot-bowl {
+  &:before {
+    content: unicode($thehanger-icons-cafe_hot-bowl); 
+  }
+}
+.thehanger-icons-cafe_hot-coffee {
+  &:before {
+    content: unicode($thehanger-icons-cafe_hot-coffee); 
+  }
+}
+.thehanger-icons-cafe_ice-cream {
+  &:before {
+    content: unicode($thehanger-icons-cafe_ice-cream); 
+  }
+}
+.thehanger-icons-cafe_pizza-slice {
+  &:before {
+    content: unicode($thehanger-icons-cafe_pizza-slice); 
+  }
+}
+.thehanger-icons-cafe_restaurant-catalog {
+  &:before {
+    content: unicode($thehanger-icons-cafe_restaurant-catalog); 
+  }
+}
+.thehanger-icons-cafe_serving-plate {
+  &:before {
+    content: unicode($thehanger-icons-cafe_serving-plate); 
+  }
+}
+.thehanger-icons-cafe_double-burger {
+  &:before {
+    content: unicode($thehanger-icons-cafe_double-burger); 
+  }
+}
+.thehanger-icons-cafe_coffee-take-away {
+  &:before {
+    content: unicode($thehanger-icons-cafe_coffee-take-away); 
+  }
+}
+.thehanger-icons-cafe_coctail-drink {
+  &:before {
+    content: unicode($thehanger-icons-cafe_coctail-drink); 
+  }
+}
+.thehanger-icons-cafe_candles {
+  &:before {
+    content: unicode($thehanger-icons-cafe_candles); 
+  }
+}
+.thehanger-icons-cafe_burger {
+  &:before {
+    content: unicode($thehanger-icons-cafe_burger); 
+  }
+}
+.thehanger-icons-cafe_bottle {
+  &:before {
+    content: unicode($thehanger-icons-cafe_bottle); 
+  }
+}
+.thehanger-icons-cafe_bottle-opener {
+  &:before {
+    content: unicode($thehanger-icons-cafe_bottle-opener); 
+  }
+}
+.thehanger-icons-cafe_beer-classic-glass {
+  &:before {
+    content: unicode($thehanger-icons-cafe_beer-classic-glass); 
+  }
+}
+.thehanger-icons-building_small-home-2 {
+  &:before {
+    content: unicode($thehanger-icons-building_small-home-2); 
+  }
+}
+.thehanger-icons-building_country-home-2 {
+  &:before {
+    content: unicode($thehanger-icons-building_country-home-2); 
+  }
+}
+.thehanger-icons-clothes_baby-hoodie {
+  &:before {
+    content: unicode($thehanger-icons-clothes_baby-hoodie); 
+  }
+}
+.thehanger-icons-clothes_baseball-hat {
+  &:before {
+    content: unicode($thehanger-icons-clothes_baseball-hat); 
+  }
+}
+.thehanger-icons-clothes_belt {
+  &:before {
+    content: unicode($thehanger-icons-clothes_belt); 
+  }
+}
+.thehanger-icons-clothes_boots {
+  &:before {
+    content: unicode($thehanger-icons-clothes_boots); 
+  }
+}
+.thehanger-icons-clothes_bow {
+  &:before {
+    content: unicode($thehanger-icons-clothes_bow); 
+  }
+}
+.thehanger-icons-clothes_bra-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_bra-2); 
+  }
+}
+.thehanger-icons-clothes_bra-underwear-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_bra-underwear-2); 
+  }
+}
+.thehanger-icons-clothes_bra-underwear {
+  &:before {
+    content: unicode($thehanger-icons-clothes_bra-underwear); 
+  }
+}
+.thehanger-icons-clothes_bra {
+  &:before {
+    content: unicode($thehanger-icons-clothes_bra); 
+  }
+}
+.thehanger-icons-clothes_cap-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_cap-3); 
+  }
+}
+.thehanger-icons-clothes_cap-4 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_cap-4); 
+  }
+}
+.thehanger-icons-clothes_dress-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_dress-2); 
+  }
+}
+.thehanger-icons-clothes_dress-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_dress-3); 
+  }
+}
+.thehanger-icons-clothes_dress-4 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_dress-4); 
+  }
+}
+.thehanger-icons-clothes_dress {
+  &:before {
+    content: unicode($thehanger-icons-clothes_dress); 
+  }
+}
+.thehanger-icons-clothes_gentlemen-cap {
+  &:before {
+    content: unicode($thehanger-icons-clothes_gentlemen-cap); 
+  }
+}
+.thehanger-icons-clothes_gentlement-shoes {
+  &:before {
+    content: unicode($thehanger-icons-clothes_gentlement-shoes); 
+  }
+}
+.thehanger-icons-clothes_glasses {
+  &:before {
+    content: unicode($thehanger-icons-clothes_glasses); 
+  }
+}
+.thehanger-icons-clothes_gloves {
+  &:before {
+    content: unicode($thehanger-icons-clothes_gloves); 
+  }
+}
+.thehanger-icons-clothes_hanger-towel {
+  &:before {
+    content: unicode($thehanger-icons-clothes_hanger-towel); 
+  }
+}
+.thehanger-icons-clothes_hanger {
+  &:before {
+    content: unicode($thehanger-icons-clothes_hanger); 
+  }
+}
+.thehanger-icons-clothes_hat {
+  &:before {
+    content: unicode($thehanger-icons-clothes_hat); 
+  }
+}
+.thehanger-icons-clothes_heels {
+  &:before {
+    content: unicode($thehanger-icons-clothes_heels); 
+  }
+}
+.thehanger-icons-clothes_home-slippers {
+  &:before {
+    content: unicode($thehanger-icons-clothes_home-slippers); 
+  }
+}
+.thehanger-icons-clothes_hood {
+  &:before {
+    content: unicode($thehanger-icons-clothes_hood); 
+  }
+}
+.thehanger-icons-clothes_jacket {
+  &:before {
+    content: unicode($thehanger-icons-clothes_jacket); 
+  }
+}
+.thehanger-icons-clothes_lady-bag-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_lady-bag-3); 
+  }
+}
+.thehanger-icons-clothes_lady-bag {
+  &:before {
+    content: unicode($thehanger-icons-clothes_lady-bag); 
+  }
+}
+.thehanger-icons-clothes_lady-shopping-bag {
+  &:before {
+    content: unicode($thehanger-icons-clothes_lady-shopping-bag); 
+  }
+}
+.thehanger-icons-clothes_lady-wallet {
+  &:before {
+    content: unicode($thehanger-icons-clothes_lady-wallet); 
+  }
+}
+.thehanger-icons-clothes_lipstick {
+  &:before {
+    content: unicode($thehanger-icons-clothes_lipstick); 
+  }
+}
+.thehanger-icons-clothes_long-sleeve-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_long-sleeve-2); 
+  }
+}
+.thehanger-icons-clothes_long-sleeve {
+  &:before {
+    content: unicode($thehanger-icons-clothes_long-sleeve); 
+  }
+}
+.thehanger-icons-clothes_pants-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_pants-2); 
+  }
+}
+.thehanger-icons-clothes_pants-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_pants-3); 
+  }
+}
+.thehanger-icons-clothes_pants {
+  &:before {
+    content: unicode($thehanger-icons-clothes_pants); 
+  }
+}
+.thehanger-icons-clothes_ring {
+  &:before {
+    content: unicode($thehanger-icons-clothes_ring); 
+  }
+}
+.thehanger-icons-clothes_shirt-long-sleeve-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-long-sleeve-2); 
+  }
+}
+.thehanger-icons-clothes_shirt-long-sleeve-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-long-sleeve-3); 
+  }
+}
+.thehanger-icons-clothes_shirt-long-sleeve-polo {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-long-sleeve-polo); 
+  }
+}
+.thehanger-icons-clothes_shirt-long-sleeve {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-long-sleeve); 
+  }
+}
+.thehanger-icons-clothes_shirt-short-sleeve-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-short-sleeve-2); 
+  }
+}
+.thehanger-icons-clothes_shirt-short-sleeve-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-short-sleeve-3); 
+  }
+}
+.thehanger-icons-clothes_shirt-short-sleeve {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt-short-sleeve); 
+  }
+}
+.thehanger-icons-clothes_shirt {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shirt); 
+  }
+}
+.thehanger-icons-clothes_shoes-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shoes-2); 
+  }
+}
+.thehanger-icons-clothes_shoes {
+  &:before {
+    content: unicode($thehanger-icons-clothes_shoes); 
+  }
+}
+.thehanger-icons-clothes_short-pants-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_short-pants-2); 
+  }
+}
+.thehanger-icons-clothes_short-pants-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_short-pants-3); 
+  }
+}
+.thehanger-icons-clothes_short-pants-4 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_short-pants-4); 
+  }
+}
+.thehanger-icons-clothes_short-pants {
+  &:before {
+    content: unicode($thehanger-icons-clothes_short-pants); 
+  }
+}
+.thehanger-icons-clothes_skirt-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_skirt-3); 
+  }
+}
+.thehanger-icons-clothes_skirt-4 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_skirt-4); 
+  }
+}
+.thehanger-icons-clothes_skirt-5 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_skirt-5); 
+  }
+}
+.thehanger-icons-clothes_skirt {
+  &:before {
+    content: unicode($thehanger-icons-clothes_skirt); 
+  }
+}
+.thehanger-icons-clothes_sleeveless-jacket {
+  &:before {
+    content: unicode($thehanger-icons-clothes_sleeveless-jacket); 
+  }
+}
+.thehanger-icons-clothes_slippers {
+  &:before {
+    content: unicode($thehanger-icons-clothes_slippers); 
+  }
+}
+.thehanger-icons-clothes_sneakers {
+  &:before {
+    content: unicode($thehanger-icons-clothes_sneakers); 
+  }
+}
+.thehanger-icons-clothes_socks-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_socks-2); 
+  }
+}
+.thehanger-icons-clothes_socks {
+  &:before {
+    content: unicode($thehanger-icons-clothes_socks); 
+  }
+}
+.thehanger-icons-clothes_sport-shoes {
+  &:before {
+    content: unicode($thehanger-icons-clothes_sport-shoes); 
+  }
+}
+.thehanger-icons-clothes_sunglasses {
+  &:before {
+    content: unicode($thehanger-icons-clothes_sunglasses); 
+  }
+}
+.thehanger-icons-clothes_t-shirt-short-sleeve-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_t-shirt-short-sleeve-2); 
+  }
+}
+.thehanger-icons-clothes_t-shirt-short-sleeve-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_t-shirt-short-sleeve-3); 
+  }
+}
+.thehanger-icons-clothes_t-shirt-short-sleeve-polo {
+  &:before {
+    content: unicode($thehanger-icons-clothes_t-shirt-short-sleeve-polo); 
+  }
+}
+.thehanger-icons-clothes_t-shirt-short-sleeve {
+  &:before {
+    content: unicode($thehanger-icons-clothes_t-shirt-short-sleeve); 
+  }
+}
+.thehanger-icons-clothes_t-shirt {
+  &:before {
+    content: unicode($thehanger-icons-clothes_t-shirt); 
+  }
+}
+.thehanger-icons-clothes_tie-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_tie-2); 
+  }
+}
+.thehanger-icons-clothes_tie {
+  &:before {
+    content: unicode($thehanger-icons-clothes_tie); 
+  }
+}
+.thehanger-icons-clothes_trendy-shoes {
+  &:before {
+    content: unicode($thehanger-icons-clothes_trendy-shoes); 
+  }
+}
+.thehanger-icons-clothes_underwear-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_underwear-2); 
+  }
+}
+.thehanger-icons-clothes_underwear-3 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_underwear-3); 
+  }
+}
+.thehanger-icons-clothes_underwear-4 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_underwear-4); 
+  }
+}
+.thehanger-icons-clothes_underwear-5 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_underwear-5); 
+  }
+}
+.thehanger-icons-clothes_underwear {
+  &:before {
+    content: unicode($thehanger-icons-clothes_underwear); 
+  }
+}
+.thehanger-icons-clothes_vest-2 {
+  &:before {
+    content: unicode($thehanger-icons-clothes_vest-2); 
+  }
+}
+.thehanger-icons-clothes_vest {
+  &:before {
+    content: unicode($thehanger-icons-clothes_vest); 
+  }
+}
+.thehanger-icons-clothes_wallet {
+  &:before {
+    content: unicode($thehanger-icons-clothes_wallet); 
+  }
+}
+.thehanger-icons-clothes_wrist-watch-analog {
+  &:before {
+    content: unicode($thehanger-icons-clothes_wrist-watch-analog); 
+  }
+}
+.thehanger-icons-clothes_wrist-watch-digital {
+  &:before {
+    content: unicode($thehanger-icons-clothes_wrist-watch-digital); 
+  }
+}
+.thehanger-icons-rss {
+  &:before {
+    content: unicode($thehanger-icons-rss); 
+  }
+}
+.thehanger-icons-twitter {
+  &:before {
+    content: unicode($thehanger-icons-twitter); 
+  }
+}
+.thehanger-icons-facebook-f {
+  &:before {
+    content: unicode($thehanger-icons-facebook-f); 
+  }
+}
+.thehanger-icons-instagram {
+  &:before {
+    content: unicode($thehanger-icons-instagram); 
+  }
+}
+.thehanger-icons-youtube2 {
+  &:before {
+    content: unicode($thehanger-icons-youtube2); 
+  }
+}
+.thehanger-icons-amazon {
+  &:before {
+    content: unicode($thehanger-icons-amazon); 
+  }
+}
+.thehanger-icons-apple {
+  &:before {
+    content: unicode($thehanger-icons-apple); 
+  }
+}
+.thehanger-icons-slack {
+  &:before {
+    content: unicode($thehanger-icons-slack); 
+  }
+}
+.thehanger-icons-tripadvisor {
+  &:before {
+    content: unicode($thehanger-icons-tripadvisor); 
+  }
+}
+.thehanger-icons-wordpress {
+  &:before {
+    content: unicode($thehanger-icons-wordpress); 
+  }
+}
+.thehanger-icons-youtube {
+  &:before {
+    content: unicode($thehanger-icons-youtube); 
+  }
+}
+.thehanger-icons-youtube-play {
+  &:before {
+    content: unicode($thehanger-icons-youtube-play); 
+  }
+}
+.thehanger-icons-yelp {
+  &:before {
+    content: unicode($thehanger-icons-yelp); 
+  }
+}
+.thehanger-icons-houzz {
+  &:before {
+    content: unicode($thehanger-icons-houzz); 
+  }
+}
+.thehanger-icons-google-plus {
+  &:before {
+    content: unicode($thehanger-icons-google-plus); 
+  }
+}
+.thehanger-icons-google {
+  &:before {
+    content: unicode($thehanger-icons-google); 
+  }
+}
+.thehanger-icons-google2 {
+  &:before {
+    content: unicode($thehanger-icons-google2); 
+  }
+}
+.thehanger-icons-github-alt {
+  &:before {
+    content: unicode($thehanger-icons-github-alt); 
+  }
+}
+.thehanger-icons-foursquare {
+  &:before {
+    content: unicode($thehanger-icons-foursquare); 
+  }
+}
+.thehanger-icons-behance {
+  &:before {
+    content: unicode($thehanger-icons-behance); 
+  }
+}
+.thehanger-icons-foursquare2 {
+  &:before {
+    content: unicode($thehanger-icons-foursquare2); 
+  }
+}
+.thehanger-icons-sina-weibo {
+  &:before {
+    content: unicode($thehanger-icons-sina-weibo); 
+  }
+}
+.thehanger-icons-skype {
+  &:before {
+    content: unicode($thehanger-icons-skype); 
+  }
+}
+.thehanger-icons-soundcloud {
+  &:before {
+    content: unicode($thehanger-icons-soundcloud); 
+  }
+}
+.thehanger-icons-spotify {
+  &:before {
+    content: unicode($thehanger-icons-spotify); 
+  }
+}
+.thehanger-icons-swarm {
+  &:before {
+    content: unicode($thehanger-icons-swarm); 
+  }
+}
+.thehanger-icons-vine {
+  &:before {
+    content: unicode($thehanger-icons-vine); 
+  }
+}
+.thehanger-icons-vk {
+  &:before {
+    content: unicode($thehanger-icons-vk); 
+  }
+}
+.thehanger-icons-xing {
+  &:before {
+    content: unicode($thehanger-icons-xing); 
+  }
+}
+.thehanger-icons-yelp2 {
+  &:before {
+    content: unicode($thehanger-icons-yelp2); 
+  }
+}
+.thehanger-icons-dribbble {
+  &:before {
+    content: unicode($thehanger-icons-dribbble); 
+  }
+}
+.thehanger-icons-flickr {
+  &:before {
+    content: unicode($thehanger-icons-flickr); 
+  }
+}
+.thehanger-icons-github {
+  &:before {
+    content: unicode($thehanger-icons-github); 
+  }
+}
+.thehanger-icons-lastfm {
+  &:before {
+    content: unicode($thehanger-icons-lastfm); 
+  }
+}
+.thehanger-icons-linkedin {
+  &:before {
+    content: unicode($thehanger-icons-linkedin); 
+  }
+}
+.thehanger-icons-pinterest {
+  &:before {
+    content: unicode($thehanger-icons-pinterest); 
+  }
+}
+.thehanger-icons-stumbleupon {
+  &:before {
+    content: unicode($thehanger-icons-stumbleupon); 
+  }
+}
+.thehanger-icons-tumblr {
+  &:before {
+    content: unicode($thehanger-icons-tumblr); 
+  }
+}
+.thehanger-icons-vimeo {
+  &:before {
+    content: unicode($thehanger-icons-vimeo); 
+  }
+}
+

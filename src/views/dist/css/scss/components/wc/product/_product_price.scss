@@ -1,0 +1,10 @@
+.price
+{
+	@include product_price(28, 0);
+	margin: 0 0 rem-calc(24);
+
+	del:before
+	{
+		border-top-width: 2px;
+	}
+}

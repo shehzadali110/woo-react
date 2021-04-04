@@ -1,0 +1,32 @@
+section.related,
+section.upsells
+{
+	ul.products
+	{
+		@include breakpoint(medium down)
+		{
+			padding-top: 0;
+		}
+	}
+	
+	.product
+	{
+		width: calc(100%  / 2 ); 
+		
+		@include breakpoint(medium)
+		{
+			width: calc(100% / 4); 
+		}
+	}
+
+	> h2
+	{
+		margin-bottom: rem-calc(32);
+		font-size: rem-calc(16); 
+	}
+
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+}

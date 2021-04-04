@@ -1,0 +1,15 @@
+.product_meta
+{
+	font-size: rem-calc(11); 
+	
+	> span
+	{
+		display: block;
+		margin-bottom: rem-calc(4); 
+	}
+	
+	a
+	{
+		color: inherit;
+	}
+}

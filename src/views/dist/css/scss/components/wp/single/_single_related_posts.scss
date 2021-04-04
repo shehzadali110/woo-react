@@ -1,0 +1,168 @@
+.single_related_post_container
+{
+	.single_related_posts
+	{
+		width: 100%;
+		
+		@each $breakpoint, $padding in $content-padding
+		{
+			@include breakpoint($breakpoint) {
+				padding: rem-calc($padding*1.35) rem-calc($padding) rem-calc($padding*0.8);
+			}
+
+			@include breakpoint(small only) {
+				padding-bottom: rem-calc($padding*0.8);
+			}
+		}
+
+		@include large_side_paddings;
+		
+		.entry-title
+		{
+			font-size: rem-calc(16); 
+			margin-bottom: rem-calc(32); 
+
+			@include breakpoint(small down)
+			{
+				margin-bottom: rem-calc(20);
+				font-size: rem-calc(13);
+				text-transform: uppercase;
+			}
+		}
+		 
+		.related-post
+		{
+			display: flex;
+			margin-bottom: rem-calc(24);
+			
+			&:last-child
+			{
+				margin-bottom: 0;
+			}
+			
+			@include breakpoint(large)
+			{
+				margin-bottom: 0;
+			} 
+
+			@include breakpoint(medium)
+			{
+				display: inline-block;
+			}
+
+			&.sticky
+			{
+				.related_post_content
+				{
+					.related_post_title
+					{
+						a
+						{
+							&:before
+							{
+								content: "★";
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+
+			&.with-image
+			{
+				.related_post_content
+				{
+					width: 70%;
+			
+					@include breakpoint(medium)
+					{
+						width: 100%; 
+					} 
+
+					@include breakpoint(small only)
+					{
+						padding-left: rem-calc(17);
+					} 
+				}
+			}
+
+			.related_post_image
+			{
+				display: block;
+
+				.wp-post-image.size-medium
+				{
+					display: block;
+					max-width: 300px;
+					width: 100%;
+
+					@include breakpoint(medium)
+					{
+						margin-bottom: rem-calc(20);
+					}
+
+					@include breakpoint(small only)
+					{
+						display: none;
+					}
+				}
+
+				.wp-post-image.size-thumbnail
+				{
+					display: none;
+					max-width: 150px;
+					width: 100%;
+					
+					@include breakpoint(medium)
+					{
+						margin-bottom: rem-calc(20);
+					}
+
+					@include breakpoint(small only)
+					{
+						display: block
+					}
+				}
+			}
+
+			.related_post_content
+			{
+				transition: transform .3s ease-in-out;
+				will-change: transform;
+
+				.date
+				{
+					font-size: rem-calc(11);   
+					line-height: rem-calc(15); 
+					display: inline-block;
+					margin-bottom: rem-calc(12); 
+					@include global-transition();
+				}
+
+				.related_post_title
+				{
+					font-size: rem-calc(13); 
+					line-height: rem-calc(18); 
+					word-wrap: break-word; 
+
+					@include breakpoint(medium)
+					{
+						font-size: rem-calc(16); 
+						line-height: rem-calc(22);
+					}
+				}
+			}
+
+			&:hover
+			{
+				.related_post_image
+				{
+					@include breakpoint(large)
+					{
+						transform: scale3d(0.98, 0.98, 0.98);
+					}
+				}
+			}
+		}
+	}
+}

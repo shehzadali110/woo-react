@@ -1,0 +1,10 @@
+.single-comments-container
+{
+	> .row
+	{
+		@include breakpoint(large)
+		{
+			padding-bottom: rem-calc(120); 
+		}
+	}
+}

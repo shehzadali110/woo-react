@@ -1,0 +1,35 @@
+@import "archive/archive_header";
+@import "archive/archive_highlighted_posts";
+@import "archive/archive_popular_posts";
+@import "archive/archive_post_animations";
+
+.blog-listing
+{
+	
+	@import "archive/archive_post_navigation";
+
+	.blog-articles
+	{
+		@import "archive/archive_blog_articles";
+				
+		.post,
+		.type-page
+		{
+			margin-bottom: rem-calc(48);
+		
+			@include breakpoint(medium)
+			{
+				margin-bottom: rem-calc(32);
+			} 
+
+			@import "archive/archive_post_content";
+			@import "archive/archive_post_more_link";
+
+			&:last-child
+			{
+				//margin-bottom: 0;
+			}
+		}
+	}
+
+}

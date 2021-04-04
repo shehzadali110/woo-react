@@ -1,0 +1,415 @@
+$avatar-size: 47 !default;
+
+@mixin comments_title
+{
+	font-size: rem-calc(20);
+	margin-bottom: rem-calc(60);
+	max-width: rem-calc(500);
+
+	@include breakpoint(small only)
+	{
+		font-size: rem-calc(17);
+	}
+
+	b
+	{
+		font-weight: normal;
+	}
+}
+
+@mixin comments_subtitle
+{
+	color: inherit;
+}
+
+.comments-area
+{
+	margin-top: rem-calc(30);
+
+	@include breakpoint(medium)
+	{
+		margin-top: rem-calc(80);
+	}
+	 	
+	.comments-title
+	{
+		@include comments_title;
+
+		&__post-title
+		{
+			@include comments_subtitle;
+		}
+	}
+
+	.comment-list
+	{
+		list-style: none;
+		margin: 0;
+		
+		> .comment
+		{
+			&:last-child
+			{
+				margin-bottom: rem-calc(80); 
+
+				@include breakpoint(medium)
+				{
+					margin-bottom: rem-calc(104); 
+				}
+			}
+		}
+
+		li.pingback
+		{
+			font-size: rem-calc(10);
+			padding: 25px 25px 25px 35px;
+			border: 1px solid;
+			text-transform: uppercase;
+			margin-bottom: 35px;
+
+			+ .comment
+			{
+				margin-top: rem-calc(60);
+			}
+
+			a.url
+			{
+				font-size: rem-calc(16);
+				text-transform: none;
+				padding: 0px 10px;
+			}
+
+			.edit-link
+			{
+				text-transform: uppercase; 
+				font-size: rem-calc(10);
+				line-height: rem-calc(13); 
+				margin-left: rem-calc(16); 
+				
+				.comment-edit-link
+				{
+					color: inherit;  
+					display: inline-flex;
+					align-items: center;
+					
+					&:before
+					{
+						@include the_retailer_pro_icon('\e9bc');
+						font-size: rem-calc(14); 
+						margin-right: rem-calc(8); 
+					}
+				}
+			}
+		}
+		
+		.comment
+		{
+			margin: 0;
+			position: relative;
+			min-height: rem-calc($avatar-size);
+			margin-bottom: rem-calc(50); 
+			padding-left: rem-calc(72);
+			
+			@include breakpoint(small only)
+			{
+				padding-left: 0;
+			}
+			
+			&.byuser
+			{
+				img.avatar
+				{
+					border: 1px solid; 
+				}
+			}
+			
+			article.comment-body
+			{
+				
+				@include breakpoint(small only)
+				{
+					padding-left: rem-calc(72);
+				}
+				 
+				.comment-meta
+				{
+					.comment-author
+					{
+						.avatar
+						{
+							max-width: rem-calc($avatar-size);
+							height: auto;
+							border-radius: 50%;
+							position: absolute;
+							left: 0;
+							top: 0;
+						}
+						.says
+						{
+							display: none;
+						}
+
+						b.fn
+						{
+							//line-height: 1.4;
+							font-weight: normal;
+						}
+					}
+
+					.comment-metadata
+					{
+						margin-bottom: rem-calc(16);
+						 
+						> a
+						{
+							color: inherit; 
+							font-size: rem-calc(12);
+							line-height: rem-calc(16);
+
+							&:hover
+							{
+								opacity: 1;
+							}
+						}
+
+						.edit-link
+						{
+							text-transform: uppercase; 
+							font-size: rem-calc(10);
+							line-height: rem-calc(13); 
+							margin-left: rem-calc(16); 
+							
+							.comment-edit-link
+							{
+								color: inherit;  
+								display: inline-flex;
+								align-items: center;
+								
+								&:before
+								{
+									@include the_retailer_pro_icon('\e9bc');
+									font-size: rem-calc(14); 
+									margin-right: rem-calc(8); 
+								}
+							}
+						}
+					}
+				}
+
+
+				.comment-content
+				{
+					padding: 0;
+					margin-bottom: rem-calc(18); 
+					
+					p:last-child
+					{
+						margin-bottom: 0;
+					}
+				}
+
+				.reply
+				{
+					> a
+					{
+						color: inherit;
+						font-size: rem-calc(10);  
+						text-transform: uppercase;
+						line-height: rem-calc(13);  
+						display: flex;
+						align-items: center; 
+						
+						&:before
+						{
+							@include the_retailer_pro_icon('\e9bf');
+							margin-right: rem-calc(10);
+							font-size: rem-calc(16);  
+							
+						}
+					}
+				}
+
+				& + .comment-respond
+				{
+					margin-top: rem-calc(48); 
+					margin-bottom: rem-calc(104); 
+					border-top: 1px solid;
+					padding-top: rem-calc(49);
+					margin-left: rem-calc(-72); 
+
+					.comment-reply-title
+					{
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						
+						small
+						{
+							font-size: rem-calc(10);
+							line-height: rem-calc(13); 
+							text-transform: uppercase;
+							
+							a
+							{
+								display: flex;
+								align-items: center;
+								
+								&:after
+								{
+									@include the_retailer_pro_icon('\e903');
+									font-size: rem-calc(8); 
+									margin-left: rem-calc(8);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.children
+			{
+				margin-top: rem-calc(49); 
+				margin-left: 0;
+				list-style-type: none; 
+				
+				@include breakpoint(small only)
+				{
+					padding-left: rem-calc(20); 
+				}
+			}
+		}
+	}
+
+	.comments-pagination
+	{
+		margin-bottom: rem-calc(80);
+		 
+		.nav-links
+		{
+			align-items: center;
+			
+			.page-numbers
+			{
+				margin-right: rem-calc(32); 
+				font-size: rem-calc(13);
+				line-height: rem-calc(24); 
+				display: inline-block;
+
+				&.current,
+				&:hover
+				{
+					opacity: 1;
+				}
+
+				&.prev,
+				&.next
+				{
+					position: relative;
+					top: -1px; 
+					
+					&:after
+					{
+						font-size: rem-calc(8); 
+						vertical-align: middle;
+					}
+				}
+
+				&.prev
+				{
+					margin-right: rem-calc(22);
+					
+					
+					@include breakpoint(large)
+					{
+						margin-left: rem-calc(-10); 
+					}
+					 
+					&:after
+					{
+						@include the_retailer_pro_icon('\e905');
+					}
+				}
+
+				&.next
+				{
+					@include breakpoint(large)
+					{
+						margin-left: rem-calc(-10); 
+					}
+					 
+					&:after
+					{
+						@include the_retailer_pro_icon('\e906');
+					}
+				}
+			}
+		}
+	}
+
+	.comment-respond
+	{
+		.comment-reply-title
+		{
+			font-size: rem-calc(19); 
+			margin-bottom: rem-calc(8); 
+		}
+
+		.comment-form
+		{
+			font-size: 0;
+			 
+			.comment-notes,
+			.logged-in-as > a
+			{
+				font-size: rem-calc(14);
+				opacity: $opacity-dark;  
+				margin-bottom: rem-calc(48);
+			}
+
+			.logged-in-as > a
+			{
+				margin-right: rem-calc(5);
+				border-bottom: 1px solid;
+
+				&:hover
+				{
+					opacity: 1;
+				}
+			}
+
+			.comment-form-comment
+			{
+				margin-bottom: rem-calc(24); 
+			}
+
+			.form-submit
+			{
+				margin-bottom: 0;
+			}
+
+			.comment-form-author,
+			.comment-form-email,
+			.comment-form-url
+			{
+				@include breakpoint(medium)
+				{
+					float: left;
+					width: 32%;
+					margin-right: 2%;
+				}
+
+				  
+				input
+				{
+					margin-bottom: 0;
+				} 
+			}
+
+			.comment-form-url
+			{
+				margin-right: 0;
+			}
+			
+		}
+	}
+}

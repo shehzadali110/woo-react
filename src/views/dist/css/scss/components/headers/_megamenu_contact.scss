@@ -1,0 +1,79 @@
+.megamenu_contact
+{
+	@each $breakpoint, $padding in $content-padding
+	{
+		@include breakpoint($breakpoint) {
+			padding: rem-calc($padding);
+		}
+	}
+
+	img
+	{
+		width: auto;
+		
+		@include breakpoint(small only)
+		{
+			margin-bottom: rem-calc(20)
+		}
+
+		opacity: 0;
+		animation: megamenu_contact_img;
+		animation-duration: .4s;
+		animation-fill-mode: forwards;
+	}
+
+	.megamenu_contact_placeholder_image
+	{
+		height: 251px;
+		width: 100%;
+		margin-bottom: rem-calc(32);
+
+		@include breakpoint(large)
+		{
+			margin-bottom: 0;
+		}
+	}
+
+	.megamenu_contact_info
+	{
+		@each $breakpoint, $padding in $content-padding
+		{
+			@include breakpoint($breakpoint)
+			{
+				padding-left: rem-calc($padding);
+			}
+
+			@if $breakpoint == 'small' {
+				padding-left: 0;
+			}
+		}
+
+		p
+		{
+			margin-bottom: rem-calc(24);
+			display: flex;
+
+			opacity: 0;
+			animation: megamenu_contact;
+			animation-duration: .4s;
+			animation-fill-mode: forwards;
+
+			@for $i from 1 through 10 {
+				&:nth-child(#{$i}) {
+					animation-delay: (0.1s * $i);
+				}
+			}
+
+			> span
+			{
+
+			}
+
+			i
+			{
+				font-size: rem-calc(24);
+				margin-right: rem-calc(17);
+			}
+		}
+	}
+}

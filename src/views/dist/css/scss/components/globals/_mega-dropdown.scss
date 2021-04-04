@@ -1,0 +1,162 @@
+.gbt-mega-dropdown-wrapper
+{
+	@include breakpoint(large up)
+	{
+		position: absolute;
+		z-index: 999;
+	}
+
+	pointer-events: none;
+	width: 100%;
+	min-height: 100%;
+
+	.gbt-mega-dropdown
+	{
+		position: relative;
+
+		.gbt-mega-dropdown-button
+		{
+			position: relative;
+			pointer-events: auto;
+			white-space: nowrap;
+
+			@include breakpoint(large down)
+			{
+				transition: none;
+			}
+
+			@include breakpoint(large up)
+			{
+				position: absolute;
+			}
+
+			i
+			{
+				line-height: 0;
+				padding-right: rem-calc(16);
+				font-size: 1.4em;
+			}
+
+			display: flex;
+			bottom: 100%;
+			width: 100%;
+			line-height: 1;
+			align-items: center;
+
+			&:after
+			{
+				@include the_retailer_pro_icon('\e904');
+				font-size: .7em;
+				margin-left: auto;
+				transition: all .7s;
+				z-index: 2;
+			}
+
+			@include breakpoint(large down)
+			{
+				&:before
+				{
+					position: absolute;
+					content: "";
+					width: 5.5em;
+					height: 100%;
+					top: 0;
+					right: 0;
+					z-index: 1;
+					@include global-transition();
+				}
+			}
+
+			@each $breakpoint, $padding in $content-padding
+			{
+				@include breakpoint($breakpoint) {
+					padding: rem-calc($padding);
+					padding-top: 1.6924em; // same as first level menu items, pls
+					padding-bottom: 1.6924em; // same as first level menu items, pls
+				}
+			}
+		}
+
+		.gbt-mega-dropdown-content
+		{
+			height: 0;
+			overflow: hidden;
+			visibility: hidden;
+			pointer-events: auto;
+
+			.gbt-mega-dropdown-content-inside
+			{
+				padding-top: 1.5em;
+				padding-bottom: 1.5em;
+				@include dropdowns_shadow;
+				@include drilldown_navigation;
+			}
+		}
+	}
+
+	.gbt-mega-dropdown-megamenu-offset
+	{
+		@include breakpoint(large up)
+		{
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: rem-calc(-$grid-column-gutter/2);
+		}
+	}
+
+	.gbt-mega-dropdown-megamenu-placeholder
+	{
+		height: 100%;
+	}
+
+	.gbt-mega-menu-content
+	{
+		top: 0 !important;
+		pointer-events: auto;
+	}
+
+	&:hover
+	{
+		.gbt-mega-dropdown-button
+		{
+			&:after
+			{
+				transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+			}
+		}
+	}
+
+	&.is-active
+	{
+		.gbt-mega-dropdown
+		{
+			.gbt-mega-dropdown-content
+			{
+				height: auto;
+				overflow: visible;
+				visibility: visible;
+
+				/*ul.mega-dropdown-categories,
+				ul.mega-dropdown-menu
+				{
+					opacity: 0;
+					animation: megadropdown_categories;
+					animation-duration: .4s;
+					animation-fill-mode: forwards;
+					animation-delay: .2s;
+				}*/
+			}
+		}
+	}
+
+	.megamenu_icon_list
+	{
+		a
+		{
+			width: calc(100% / 6);
+		}
+	}
+
+	@include gbt-mega-dropdown-animation;
+	@include foundation_dropdown-pane_animation("left");
+}

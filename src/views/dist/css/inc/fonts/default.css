@@ -1,0 +1,21 @@
+/* Theme Secondary Font */
+
+@font-face {
+  font-family: "NeueEinstellung";
+  src: url("neueeinstellung/NeueEinstellung-Normal.eot");
+  src: url("neueeinstellung/NeueEinstellung-Normal.eot")
+      format("embedded-opentype"),
+    url("neueeinstellung/NeueEinstellung-Normal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueEinstellung";
+  src: url("neueeinstellung/NeueEinstellung-Medium.eot");
+  src: url("neueeinstellung/NeueEinstellung-Medium.eot")
+      format("embedded-opentype"),
+    url("neueeinstellung/NeueEinstellung-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

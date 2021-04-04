@@ -1,0 +1,565 @@
+.header-mobiles-wrapper
+{
+	transition: all .3s ease;
+
+	@include breakpoint(large)
+	{
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	&.header-sticky
+	{
+		position: fixed;
+		top: 0;
+		z-index: 9999;
+		width: 100%;
+		transition: all .3s ease;
+
+		.header-mobiles-content
+		{
+			overflow-y: scroll;
+		    overflow-x: hidden;
+
+			&.visible
+			{
+				padding-bottom: 40px;
+			}
+		}
+	}
+
+	.header-mobiles
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 5em;
+		border-bottom: 1px solid;
+
+		@each $breakpoint, $padding in $content-padding {
+
+			@include breakpoint($breakpoint) {
+				padding-left: rem-calc($padding);
+				padding-right: rem-calc($padding);
+			}
+		}
+
+		.site-logo
+		{
+			img
+			{
+				max-height: 3em;
+				width: auto;
+
+				@include breakpoint(small only)
+				{
+					max-width: 140px !important;
+				}
+			}
+		}
+
+		.header-mobiles-menu
+		{
+			display: flex;
+			flex: 1;
+			align-items: center;
+
+			a
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-transform: uppercase;
+				font-size: .85em;
+				line-height: 1;
+				padding-top: 0.5em;
+
+				&:before
+				{
+					@include the_retailer_pro_icon('\e909');
+					font-size: 1.75em;
+					margin-right: .5em;
+					margin-top: -0.2em;
+				}
+			}
+
+			&.active
+			{
+				a
+				{
+					&:before
+					{
+						@include the_retailer_pro_icon('\e9c5');
+					}
+				}
+			}
+		}
+
+		.header-mobiles-branding
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1em;
+		}
+
+		.header-mobiles-tools
+		{
+			display: flex;
+			flex: 1;
+			align-items: center;
+
+			ul.header-tools
+			{
+				display: flex;
+				align-items: center;
+				list-style: none;
+				padding: 0;
+				margin: 0 0 0 auto;
+
+				li
+				{
+					display: flex;
+					margin: 0;
+
+					> a
+					{
+						padding: 0 .7em;
+						line-height: 1;
+						white-space: nowrap;
+						position: relative;
+
+						i
+						{
+							font-size: 1.4em;
+
+							@include breakpoint(medium)
+							{
+								font-size: 1.75em;
+							}
+						}
+
+						.tools_badge
+						{
+							position: absolute;
+							font-size: .7em;
+							top: 0;
+							left: 100%;
+							padding: .3em .5em;
+							margin: -0.25em 0 0 -1.75em;
+							border-radius: 5em;
+
+							@include breakpoint(medium)
+							{
+								top: 0;
+								left: 100%;
+								padding: .4em .6em;
+								margin: 0 0 0 -2em;
+								border-radius: 5em;
+							}
+						}
+					}
+
+					&.header-mobiles-search.active
+					{
+						a
+						{
+							i:before
+							{
+								@include the_retailer_pro_icon('\e9c5');
+							}
+						}
+					}
+				}
+
+				@include breakpoint(large)
+				{
+					.dropdown-pane.is-open
+					{
+						animation: minicart_out .2s ease-in-out;
+						animation-fill-mode: forwards;
+						transform-origin: center top;
+					}
+
+					&:hover
+					{
+						.dropdown-pane.is-open
+						{
+							animation: minicart_in .3s ease-in-out;
+							animation-fill-mode: forwards;
+							transform-origin: center top;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header-mobiles-content
+	{
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+		overflow: hidden;
+		transition: opacity .7s;
+
+		&.visible
+		{
+			opacity: 1;
+			visibility: visible;
+			height: auto;
+		}
+
+		@include drilldown_navigation;
+
+		.header-mobiles-info-2
+		{
+			text-align: center;
+			padding: 1em;
+			border-bottom: 1px solid;
+		}
+
+		.header-mobiles-mega-dropdown-button
+		{
+			display: flex;
+
+			@each $breakpoint, $padding in $content-padding
+			{
+				@include breakpoint($breakpoint) {
+					padding: rem-calc($padding);
+				}
+			}
+
+			i
+			{
+				font-size: 1.4em;
+			}
+
+			span
+			{
+				@each $breakpoint, $padding in $content-padding
+				{
+					@include breakpoint($breakpoint) {
+						padding: 0 rem-calc($padding);
+					}
+				}
+			}
+
+			&:after
+			{
+				@include the_retailer_pro_icon('\e904');
+				font-size: .7em;
+				margin-left: auto;
+				margin-right: 1em;
+				transition: all .7s;
+				line-height: 2em;
+			}
+
+			&.active
+			{
+				&:after
+				{
+					transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+				}
+			}
+		}
+
+		.gbt-mega-dropdown-content
+		{
+			border-bottom: 1px solid;
+			opacity: 0;
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+			transition: opacity .7s;
+
+			&.visible
+			{
+				opacity: 1;
+				visibility: visible;
+				height: auto;
+			}
+		}
+
+		ul li:first-child:before
+		{
+			border: none;
+		}
+
+		.gbt-mega-menu-content
+		{
+			box-shadow: none;
+
+			.megamenu_category_wrapper,
+			.megamenu_icon_list
+			{
+				@each $breakpoint, $padding in $content-padding
+				{
+					@include breakpoint($breakpoint) {
+						padding: 0.5rem rem-calc($padding - $grid-column-gutter/2) 1.25rem;
+						margin: 0 1.2em;
+					}
+				}
+			}
+
+			.megamenu_category_wrapper
+			{
+				.megamenu_category_list
+				{
+					.megamenu_category
+					{
+						margin-bottom: 2rem;
+					}
+				}
+			}
+
+			.megamenu_blog_wrapper
+			{
+				.megamenu_posts_category_list
+				{
+					@each $breakpoint, $padding in $content-padding
+					{
+						@include breakpoint($breakpoint) {
+							padding: 0 rem-calc($padding - $grid-column-gutter/2);
+							margin: 0 1.2em;
+						}
+					}
+					border: 0;
+
+					dt
+					{
+						&:before
+						{
+							display: none;
+						}
+
+						a
+						{
+							padding: 0;
+							border: 0;
+						    min-height: 3em;
+
+							&:after
+							{
+								display: none;
+							}
+						}
+					}
+				}
+
+				.megamenu_posts
+				{
+					display: none;
+				}
+			}
+
+			.megamenu_contact
+			{
+				@each $breakpoint, $padding in $content-padding
+				{
+					@include breakpoint($breakpoint) {
+						padding: 1.5rem rem-calc($padding);
+						margin: 0 1.2em;
+					}
+				}
+			}
+		}
+
+		.header-mobiles-large-categories
+		{
+			border-bottom: 1px solid;
+			opacity: 0;
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+			transition: opacity .7s;
+
+			&.visible
+			{
+				opacity: 1;
+				visibility: visible;
+				height: auto;
+				padding: 1.2em 0 2.5em 0;
+			}
+
+			@import 'megamenu_icons_list';
+
+			.megamenu_icon_list a
+			{
+				i
+				{
+					font-size: 3em;
+				}
+
+				span
+				{
+					margin-top: 1em;
+				}
+			}
+		}
+
+		.header-mobiles-primary-menu
+		{
+			padding: .5em 0;
+			border-bottom: 1px solid;
+
+			.is-drilldown ul li
+			{
+				padding: 0;
+
+				&:before
+				{
+					border: none;
+				}
+
+				> a
+				{
+					line-height: 1.4em;
+					min-height: 3em;
+				}
+
+				& .is-submenu-parent-item
+				{
+					margin-bottom: 0.5rem;
+				}
+
+				.js-drilldown-back
+				{
+					border-bottom: 1px solid;
+					margin-bottom: 1em;
+
+					a
+					{
+						font-size: .85em;
+					    margin-bottom: .2em;
+
+						&:before
+						{
+							font-size: .85em;
+						    margin-top: -0.2em;
+						    margin-right: 1.2em;
+    						margin-left: -0.5em;
+						}
+					}
+				}
+			}
+		}
+
+		.header-mobiles-ecomm-menu
+		{
+			padding: .5em 0;
+			border-bottom: 1px solid;
+
+			ul
+			{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				li
+				{
+					padding: 0;
+					margin: 0;
+
+					a
+					{
+						display: flex;
+
+						@each $breakpoint, $padding in $content-padding
+						{
+							@include breakpoint($breakpoint) {
+								padding: .75em rem-calc($padding);
+							}
+						}
+
+						i
+						{
+							font-size: 1.75em;
+							margin-right: .5em;
+						}
+
+						span
+						{
+							height: 1.4em;
+							line-height: 2em;
+						}
+					}
+				}
+			}
+		}
+
+		.header-mobiles-secondary-menu
+		{
+			padding: .5em 0;
+			border-bottom: 1px solid;
+
+			.is-drilldown ul li
+			{
+				&:before
+				{
+					border: none;
+				}
+
+				> a
+				{
+					line-height: 1.4em;
+					min-height: 3em;
+				}
+			}
+		}
+
+		.header-mobiles-topbar-menu
+		{
+			padding: .5em 0;
+			border-bottom: 1px solid;
+
+			.is-drilldown ul li
+			{
+				&:before
+				{
+					border: none;
+				}
+
+				> a
+				{
+					line-height: 1.4em;
+					min-height: 3em;
+				}
+			}
+		}
+
+		.header-mobiles-info-1
+		{
+			text-align: center;
+
+			@each $breakpoint, $padding in $content-padding
+			{
+				@include breakpoint($breakpoint) {
+					padding: .5em rem-calc($padding) 1.5em rem-calc($padding);
+				}
+			}
+		}
+	}
+
+	.header-mobiles-search-content
+	{
+		display: none;
+
+		.header-mobiles-search-content-inside
+		{
+			@each $breakpoint, $padding in $content-padding
+			{
+				@include breakpoint($breakpoint) {
+					padding: rem-calc($padding) rem-calc($padding) rem-calc(10) rem-calc($padding);
+				}
+			}
+
+			.search-form,
+			.woocommerce-product-search
+			{
+
+			}
+		}
+	}
+}

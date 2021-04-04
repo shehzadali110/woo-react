@@ -1,0 +1,43 @@
+&.woocommerce-edit-account
+{
+	.edit-account
+	{
+		.woocommerce-form-row
+		{
+			@include half_input();
+
+			input
+			{
+				&.woocommerce-Input--email 
+				{
+					margin-bottom: rem-calc(68); 
+				}
+			}
+
+			span
+			{
+				em
+				{
+					font-size: rem-calc(13);
+					font-style: normal;
+				}
+			}
+
+			&.woocommerce-form-row--wide 
+			{
+				&:last-child
+				{
+					margin-bottom: rem-calc(24);
+				}
+			}
+		}
+
+		fieldset
+		{
+			legend
+			{
+				margin-bottom: rem-calc(32); 
+			}
+		}
+	}
+}

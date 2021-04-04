@@ -1,0 +1,69 @@
+&.summary
+{
+	position: relative;
+	font-size: rem-calc(14); 
+	margin-bottom: rem-calc(48);
+
+	@include breakpoint(large)
+	{
+		margin-bottom: rem-calc(80);
+	} 
+
+	@include breakpoint(medium down)
+	{
+		display: flex;
+		flex-direction: column;
+		
+		.woocommerce-breadcrumb
+		{
+			order: 1; 
+		}
+
+		.product_title
+		{
+			order: 2;
+		}
+
+		.woocommerce-product-rating
+		{
+			order: 3;
+		}
+
+		.price
+		{
+			order: 4;
+		}
+
+		.woocommerce-product-details__short-description
+		{
+			order: 5;
+		}
+
+		.stock
+		{
+			order: 6;
+		}
+
+		.add_to_cart_wrapper,
+		.cart
+		{
+			order: 7;
+		}
+
+		.yith-wcwl-add-to-wishlist
+		{
+			order: 8;
+		}
+
+		.woocommerce-gb_accordion
+		{
+			order: 10;
+		}
+
+		.product_meta
+		{
+			order: 11;
+		}
+	}
+}
+

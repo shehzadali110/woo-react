@@ -1,0 +1,22 @@
+@mixin widget_archive()
+{
+	@include widget_dropdown();
+	@include widget_links_list;
+
+	ul
+	{
+		li
+		{
+
+			> a
+			{
+			}
+
+			> .count
+			{
+				margin-left: rem-calc(4);
+				font-size: 11px; 
+			}
+		}
+	}
+}
