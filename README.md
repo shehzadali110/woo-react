@@ -42,23 +42,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Configuration Setup :wrench:
 
-* _Note_ Below is for changing the wordpress rest api endpoint implementation. Location: `wp-content/themes/yourTheme/functions.php`
+* _Note_ Below is for changing the wordpress rest api endpoint implementation. 
+  Location: `wp-content/themes/yourTheme/functions.php`
    
-   ```ruby
+```ruby
 
-        flush_rewrite_rules(true);
-        add_filter( 'rest_url_prefix', 'api_slug');
-        function api_slug( $slug ) {
-            return 'api';
-        }
-        
-   ```
+    flush_rewrite_rules(true);
+    add_filter( 'rest_url_prefix', 'api_slug');
+    function api_slug( $slug ) {
+        return 'api';
+    }
+    
+```
 
-* _Note_ Below is for apply the woocommerce rest api implementation. Location: `https://domainName.com/wp-admin/admin.php?page=wc-settings&tab=advanced&section=keys`
+* _Note_ Below is for apply the woocommerce rest api implementation. 
+  Location: `https://domainName.com/wp-admin/admin.php?page=wc-settings&tab=advanced&section=keys`
 
-    ```ruby
-        clicked on Add Key
-    ```
+```ruby
+    clicked on Add Key
+```
 
 ## Author :bust_in_silhouette:
 
