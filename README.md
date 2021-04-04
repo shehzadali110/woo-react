@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# [Woocommerce with React](https://github.com/shehzadali110/woo-react) :rocket:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is a React WooCommerce theme, built with React JS, Webpack, Babel, Woocommerce Api
 
-## Available Scripts
+## Important Note ⭐:
+The code for the Video Tutorial is in the branch [youtube-course](https://github.com/imranhsayed/woo-next/tree/youtube-course)
+However, since there is continuous contribution and updates to this project. The 'master'
+branch is upto date with those changes. You can also refer to the PR notes for changes.
 
-In the project directory, you can run:
+## Demo Desktop :video_camera:
 
-### `npm start`
+![](demos/home-demo.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live Demo:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Wp Live Site](http://sainstore.move.pk/)
+[React Live Site](http://almovie.move.pk/)
 
-### `npm test`
+## Checkout Page Demo
+![](demos/Checkout-page.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Payment Demo ( Paypal example )
+![](demos/paypal-payment-demo.gif)
 
-### `npm run build`
+## Order Received Demo
+![](demos/order-received-demo.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Features:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. WooCommerce Store in React( contains: Products Page, Single Product Page, AddToCart, CartPage ).
+2. SSR
+3. SEO friendly
+4. Automatic Code Splitting
+5. Hot Reloading
+6. Prefetching
+8. Woocommerce Api
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started :rocket:
 
-### `npm run eject`
+These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installing :wrench:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone this repo using terminal `git clone git@github.com:shehzadali110/woo-react`
+2. `cd woo-next`
+3. `npm install Or yarn install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Add GraphQl support for WordPress
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Download and activate the following plugins , in your WordPress plugin directory:
 
-## Learn More
+* [wp-graphql](https://github.com/imranhsayed/woo-next/tree/master/wordpress/plugins) Exposes graphql for WordPress ( **Tested with v-0.8.0** of this plugin )
+* [wp-graphql-woocommerce](https://github.com/imranhsayed/woo-next/tree/master/wordpress/plugins) Adds Woocommerce functionality to a WPGraphQL schema ( **Tested with v-0.5.0** of this plugin )
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Make sure Woocommerce plugin is also installed in your WordPress site. You can also import default wooCommerce products that come with wooCommerce Plugin for development ( if you don't have any products in your WordPress install ) `WP Dashboard > Tools > Import > WooCommerce products(CSV)`: The WooCommerce default products csv file is available at `wp-content/plugins/woocommerce/sample-data/sample_products.csv`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Hero Carousel.
+To use Hero carousel, create a category called 'offers' from WordPress Dashboard > Products > Categories.
+Now create and assign as many child categories to this parent 'offers' category with name, description and image.
+These Child categories data will automatically be used to create hero carousel on the frontend. 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Configuration(for GraphQL implementation) :wrench:
 
-### Analyzing the Bundle Size
+* _Note_ Below is for GraphQL implementation , for REST API check [feature/rest-api](https://github.com/imranhsayed/woo-next/tree/feature/rest-api) branch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. (Required) Create a `.env` file taking reference from `.env-example` and  update your WordPressSite URL.
+2. (optional) You can update your productImagePlaceholder, singleImagePlaceholder in `client-config.js`
+   
+   ```ruby
+   const clientConfig = {
+       productImagePlaceholder: 'https://via.placeholder.com/800', // e.g https://via.placeholder.com/434 - Placeholder image URL for index page
+       singleImagePlaceholder: 'https://via.placeholder.com/200', // e.g https://via.placeholder.com/200 - Placeholder image URL for individual product page
+   };
+   
+   export default clientConfig;
+   ```
 
-### Making a Progressive Web App
+## Common Commands :computer:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* `dev` Runs server in development mode
 
-### Advanced Configuration
+## Versioning :bookmark_tabs:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+I use [Git](https://github.com/) for versioning. 
 
-### Deployment
+## Author :bust_in_silhouette:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* **[Imran Sayed](https://twitter.com/imranhsayed)**
 
-### `npm run build` fails to minify
+## License :page_with_curl:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
