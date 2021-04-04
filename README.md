@@ -73,6 +73,10 @@ These instructions will get you a copy of the project up and running on your loc
     
 ```
 
+### Starting Application :wrench:
+
+1. `npm start`
+
 ## Author :bust_in_silhouette:
 
 * **[Shehzad Ali](https://github.com/shehzadali110/)**
