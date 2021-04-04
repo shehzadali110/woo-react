@@ -7,23 +7,14 @@ The code for the Video Tutorial is in the branch [youtube-course](https://github
 However, since there is continuous contribution and updates to this project. The 'master'
 branch is upto date with those changes. You can also refer to the PR notes for changes.
 
+## Live Sites:
+
+* [Wp Site](http://sainstore.move.pk/)
+* [React Site](http://almovie.move.pk/)
+
 ## Demo Desktop :video_camera:
 
 ![](demos/home-demo.gif)
-
-## Live Demo:
-
-[Wp Live Site](http://sainstore.move.pk/)
-[React Live Site](http://almovie.move.pk/)
-
-## Checkout Page Demo
-![](demos/Checkout-page.gif)
-
-## Payment Demo ( Paypal example )
-![](demos/paypal-payment-demo.gif)
-
-## Order Received Demo
-![](demos/order-received-demo.gif)
 
 # Features:
 
